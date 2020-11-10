@@ -3,11 +3,11 @@
   <title>c10udlnk</title>
   
   <subtitle>r3ver5e &amp; PwN</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://c10udlnk.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://c10udlnk.github.io/"/>
   <updated>2020-11-09T11:20:07.654Z</updated>
-  <id>http://example.com/</id>
+  <id>https://c10udlnk.github.io/</id>
   
   <author>
     <name>c10udlnk</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2020/11/09/hello-world/"/>
-    <id>http://example.com/2020/11/09/hello-world/</id>
+    <link href="https://c10udlnk.github.io/2020/11/09/hello-world/"/>
+    <id>https://c10udlnk.github.io/2020/11/09/hello-world/</id>
     <published>2020-11-09T11:20:07.654Z</published>
     <updated>2020-11-09T11:20:07.654Z</updated>
     

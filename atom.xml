@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.github.io/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.github.io/"/>
-  <updated>2020-11-27T13:09:01.045Z</updated>
+  <updated>2020-12-05T05:40:50.919Z</updated>
   <id>https://c10udlnk.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RE套路 - 关于pyinstaller打包的exe文件</title>
+    <link href="https://c10udlnk.github.io/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/"/>
+    <id>https://c10udlnk.github.io/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/</id>
+    <published>2020-12-04T11:09:38.000Z</published>
+    <updated>2020-12-05T05:40:50.919Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为见到好多re题都是这个图标 ↓ 的exe，于是决定总结一下这种python题目的套路（其实是怕太久没遇到就忘了怎么做了。</p><a id="more"></a><img src="/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/image-20201205132623712.png" class="" title="image-20201205132623712"><p>BTW：此篇blog主要是为了方便自己<s>复制粘贴</s>，所以命令里也直接放上路径了，把对应路径替换成自己的就好。</p><blockquote><p>环境和工具：win10 + wsl + 010Editor</p><p>pyinstxtractor项目地址：<a href="https://github.com/extremecoders-re/pyinstxtractor">extremecoders-re/pyinstxtractor: PyInstaller Extractor</a></p><p>uncompyle6安装方法见：<a href="https://www.cnblogs.com/pcat/p/11625300.html">uncompyle6安装使用方法</a></p></blockquote><h1 id="pyinstxtractor"><a class="markdownIt-Anchor" href="#pyinstxtractor"></a> pyinstxtractor</h1><p>在cmd运行（easyRE当前目录下打开：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp D:\_CTF_\_Tools_\pyinstxtractor.py .</span><br><span class="line">python2 pyinstxtractor.py easyRE.exe</span><br></pre></td></tr></table></figure><p>其中第一行是将pyinstxtractor.py复制到当前目录下，然后第二行是使用pyinstxtractor。</p><p>会在当前目录生成easyRE.exe_extracted文件夹，其中<strong>有用的是<code>easyRE</code>和<code>struct</code>（都没有后缀）</strong>。</p><h1 id="将无后缀文件改为pyc"><a class="markdownIt-Anchor" href="#将无后缀文件改为pyc"></a> 将无后缀文件改为.pyc</h1><p>原easyRE文件的开头。</p><img src="/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/image-20201102001918771.png" class=""><p>struct文件的开头。</p><img src="/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/image-20201102002058477.png" class="" title="image-20201102002058477"><p><strong>ctrl+shift+i -&gt; 写下要增加的字节数size，右边value填0 -&gt; 在struct文件里ctrl+c -&gt; 回来光标在最开始时ctrl+v。</strong></p><img src="/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/image-20201102003044827.png" class="" title="image-20201102003044827"><p>得到</p><img src="/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/image-20201102003412300.png" class="" title="image-20201102003412300"><p>这一步是将前面少了的文件头部分插入到easyRE的开头，形成新的二进制文件（不然会报错<code>Invalid pyc/pyo file - Magic value mismatch!</code>），并增加后缀名<code>.pyc</code>。</p><p>（补充二进制数据的目的是为了保证Magic value能match上，具体原理自行搜索。</p><h1 id="uncompyle6"><a class="markdownIt-Anchor" href="#uncompyle6"></a> uncompyle6</h1><p>最后在cmd输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uncompyle6 easyRE.pyc &gt; easyRE.py</span><br></pre></td></tr></table></figure><p>即可获取<code>easyRE.py</code>，有源代码就能逆啦0v0。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;因为见到好多re题都是这个图标 ↓ 的exe，于是决定总结一下这种python题目的套路（其实是怕太久没遇到就忘了怎么做了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.github.io/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.github.io/tags/u5eful/"/>
+    
+  </entry>
   
   <entry>
     <title>【从无到有】Pintool安装&amp;使用</title>

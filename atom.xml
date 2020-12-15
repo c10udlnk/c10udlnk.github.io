@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.github.io/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.github.io/"/>
-  <updated>2020-12-09T04:14:05.480Z</updated>
+  <updated>2020-12-15T09:23:07.361Z</updated>
   <id>https://c10udlnk.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RE套路 - 关于使用IDA 7.0前端进行的动态调试</title>
+    <link href="https://c10udlnk.github.io/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/"/>
+    <id>https://c10udlnk.github.io/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/</id>
+    <published>2020-12-14T11:02:24.000Z</published>
+    <updated>2020-12-15T09:23:07.361Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理一下<strong>IDA 7.0</strong>下几种常见文件类型的动态调试。</p><p>环境是win10+WSL2（WSL1调Linux文件一直有bug搞不定= =建议升2）。</p><a id="more"></a><p>P.S. 以下操作均在<strong>断点设置完毕</strong>以后进行，IDA动态调试开始时不会停在程序入口处，而会停在第一个断点或需要控制台进行相应操作处。</p><h1 id="windows"><a class="markdownIt-Anchor" href="#windows"></a> Windows</h1><h2 id="64位"><a class="markdownIt-Anchor" href="#64位"></a> 64位</h2><h3 id="选择debugger"><a class="markdownIt-Anchor" href="#选择debugger"></a> 选择debugger</h3><p>在IDA中：Debugger -&gt; Select debugger -&gt; Local Windows debugger -&gt; OK</p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215165123644.png" class="" title="image-20201215165123644"><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215165404966.png" class="" title="image-20201215165404966"><h3 id="开始调试"><a class="markdownIt-Anchor" href="#开始调试"></a> 开始调试</h3><p>按F9即可开始调试。</p><h2 id="32位"><a class="markdownIt-Anchor" href="#32位"></a> 32位</h2><h3 id="选择debugger-2"><a class="markdownIt-Anchor" href="#选择debugger-2"></a> 选择debugger</h3><p>同Windows 64位操作。</p><h3 id="进行设置"><a class="markdownIt-Anchor" href="#进行设置"></a> 进行设置</h3><blockquote><p>IDA 7.2及高版本中win32位程序可不用进行如下配置就能进行动态调试。</p></blockquote><p>打开IDA目录下<code>./dbgsrv/win32_remote.exe</code></p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215165819304.png" class="" title="image-20201215165819304"><p>图中所选的高亮部分即为ip地址，ip地址左侧<code>0.0.0.0:23946</code>处23946即为端口号。</p><p>在IDA中：Debugger -&gt; Process options，打开调试配置窗口。</p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215170325772.png" class="" title="image-20201215170325772"><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215170051313.png" class="" title="image-20201215170051313"><p>将ip地址填入Hostname一栏，端口号填入Port一栏，其余为默认。</p><h3 id="开始调试-2"><a class="markdownIt-Anchor" href="#开始调试-2"></a> 开始调试</h3><p>同Windows 64位操作。</p><h1 id="linux"><a class="markdownIt-Anchor" href="#linux"></a> Linux</h1><h2 id="64位-2"><a class="markdownIt-Anchor" href="#64位-2"></a> 64位</h2><h3 id="选择debugger-3"><a class="markdownIt-Anchor" href="#选择debugger-3"></a> 选择debugger</h3><p>在IDA中：Debugger -&gt; Select debugger -&gt; Remote Linux debugger -&gt; OK</p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215170800417.png" class="" title="image-20201215170800417"><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215170814834.png" class="" title="image-20201215170814834"><h3 id="进行设置-2"><a class="markdownIt-Anchor" href="#进行设置-2"></a> 进行设置</h3><p>将IDA目录下<code>./dbgsrv/linux_server64</code>复制到需要调试的文件同目录下。</p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215171149641.png" class="" title="image-20201215171149641"><p>打开WSL2并定位至该目录。</p><blockquote><p>第一次使用需给权限（偷懒直接给777），不然<code>./linux_server64</code>无法运行</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 ./linux_server64</span><br></pre></td></tr></table></figure><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215171326819.png" class="" title="image-20201215171326819"></blockquote><p>运行<code>./linux_server64</code></p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215171631806.png" class="" title="image-20201215171631806"><p>在IDA中：Debugger -&gt; Process options，打开调试配置窗口。</p><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215171706497.png" class="" title="image-20201215171706497"><img src="/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/image-20201215171851733.png" class="" title="image-20201215171851733"><p>红框处将Application和Input file均改为<code>./文件名</code>（例如此处文件名为linux64，则改为<code>./linux64</code>）；Directory处清空（意思为当前目录）。</p><p>蓝框处Hostname一栏填<code>127.0.0.1</code>（代表本机），Port一栏填端口号（linux_server64处的23946）。</p><h3 id="开始调试-3"><a class="markdownIt-Anchor" href="#开始调试-3"></a> 开始调试</h3><p>同Windows 64位操作。</p><h2 id="32位-2"><a class="markdownIt-Anchor" href="#32位-2"></a> 32位</h2><p>其余操作均与Linux 64位同，除了要把所有的<code>./linux_server64</code>换成<code>./linux_server</code>。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;整理一下&lt;strong&gt;IDA 7.0&lt;/strong&gt;下几种常见文件类型的动态调试。&lt;/p&gt;
+&lt;p&gt;环境是win10+WSL2（WSL1调Linux文件一直有bug搞不定= =建议升2）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.github.io/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.github.io/tags/u5eful/"/>
+    
+  </entry>
   
   <entry>
     <title>XCTF刷题小记</title>

@@ -3,11 +3,11 @@
   <title>c10udlnk_Log</title>
   
   <subtitle>r3ver5e &amp; PwN</subtitle>
-  <link href="https://c10udlnk.github.io/atom.xml" rel="self"/>
+  <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
-  <link href="https://c10udlnk.github.io/"/>
+  <link href="https://c10udlnk.top/"/>
   <updated>2020-12-19T13:20:31.320Z</updated>
-  <id>https://c10udlnk.github.io/</id>
+  <id>https://c10udlnk.top/</id>
   
   <author>
     <name>c10udlnk</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【从无到有】qira在Ubuntu 18.04下的安装&amp;使用</title>
-    <link href="https://c10udlnk.github.io/2020/12/19/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91qira%E5%9C%A8Ubuntu-18-04%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/"/>
-    <id>https://c10udlnk.github.io/2020/12/19/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91qira%E5%9C%A8Ubuntu-18-04%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://c10udlnk.top/2020/12/19/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91qira%E5%9C%A8Ubuntu-18-04%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/"/>
+    <id>https://c10udlnk.top/2020/12/19/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91qira%E5%9C%A8Ubuntu-18-04%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/</id>
     <published>2020-12-19T06:52:31.000Z</published>
     <updated>2020-12-19T13:20:31.320Z</updated>
     
@@ -30,21 +30,21 @@
     
     
     
-    <category term="Tools" scheme="https://c10udlnk.github.io/categories/Tools/"/>
+    <category term="Tools" scheme="https://c10udlnk.top/categories/Tools/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="zero2one/入门" scheme="https://c10udlnk.github.io/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>RE套路/从EASYHOOK学inline hook</title>
-    <link href="https://c10udlnk.github.io/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8EEASYHOOK%E5%AD%A6inline-hook/"/>
-    <id>https://c10udlnk.github.io/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8EEASYHOOK%E5%AD%A6inline-hook/</id>
+    <link href="https://c10udlnk.top/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8EEASYHOOK%E5%AD%A6inline-hook/"/>
+    <id>https://c10udlnk.top/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8EEASYHOOK%E5%AD%A6inline-hook/</id>
     <published>2020-12-16T12:46:47.000Z</published>
     <updated>2020-12-19T14:17:05.689Z</updated>
     
@@ -57,21 +57,21 @@
     
     
     
-    <category term="Skills" scheme="https://c10udlnk.github.io/categories/Skills/"/>
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="u5eful" scheme="https://c10udlnk.github.io/tags/u5eful/"/>
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
     
   </entry>
   
   <entry>
     <title>RE套路/从crackme学nsPack手动脱壳</title>
-    <link href="https://c10udlnk.github.io/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8Ecrackme%E5%AD%A6nsPack%E6%89%8B%E5%8A%A8%E8%84%B1%E5%A3%B3/"/>
-    <id>https://c10udlnk.github.io/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8Ecrackme%E5%AD%A6nsPack%E6%89%8B%E5%8A%A8%E8%84%B1%E5%A3%B3/</id>
+    <link href="https://c10udlnk.top/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8Ecrackme%E5%AD%A6nsPack%E6%89%8B%E5%8A%A8%E8%84%B1%E5%A3%B3/"/>
+    <id>https://c10udlnk.top/2020/12/16/RE%E5%A5%97%E8%B7%AF-%E4%BB%8Ecrackme%E5%AD%A6nsPack%E6%89%8B%E5%8A%A8%E8%84%B1%E5%A3%B3/</id>
     <published>2020-12-16T11:12:44.000Z</published>
     <updated>2020-12-16T12:30:36.458Z</updated>
     
@@ -83,21 +83,21 @@
     
     
     
-    <category term="Skills" scheme="https://c10udlnk.github.io/categories/Skills/"/>
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="u5eful" scheme="https://c10udlnk.github.io/tags/u5eful/"/>
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
     
   </entry>
   
   <entry>
     <title>RE套路 - 关于使用IDA 7.0前端进行的动态调试</title>
-    <link href="https://c10udlnk.github.io/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/"/>
-    <id>https://c10udlnk.github.io/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/</id>
+    <link href="https://c10udlnk.top/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/"/>
+    <id>https://c10udlnk.top/2020/12/14/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8E%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/</id>
     <published>2020-12-14T11:02:24.000Z</published>
     <updated>2020-12-15T09:23:07.361Z</updated>
     
@@ -109,21 +109,21 @@
     
     
     
-    <category term="Skills" scheme="https://c10udlnk.github.io/categories/Skills/"/>
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="u5eful" scheme="https://c10udlnk.github.io/tags/u5eful/"/>
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
     
   </entry>
   
   <entry>
     <title>XCTF刷题小记</title>
-    <link href="https://c10udlnk.github.io/2020/12/09/H4veFun-w1th-C7F/"/>
-    <id>https://c10udlnk.github.io/2020/12/09/H4veFun-w1th-C7F/</id>
+    <link href="https://c10udlnk.top/2020/12/09/H4veFun-w1th-C7F/"/>
+    <id>https://c10udlnk.top/2020/12/09/H4veFun-w1th-C7F/</id>
     <published>2020-12-09T00:35:39.000Z</published>
     <updated>2020-12-17T14:40:18.138Z</updated>
     
@@ -134,21 +134,21 @@
     
     
     
-    <category term="刷题log" scheme="https://c10udlnk.github.io/categories/%E5%88%B7%E9%A2%98log/"/>
+    <category term="刷题log" scheme="https://c10udlnk.top/categories/%E5%88%B7%E9%A2%98log/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="wp" scheme="https://c10udlnk.github.io/tags/wp/"/>
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
     
   </entry>
   
   <entry>
     <title>RE套路 - 关于pyinstaller打包的exe文件</title>
-    <link href="https://c10udlnk.github.io/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/"/>
-    <id>https://c10udlnk.github.io/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/</id>
+    <link href="https://c10udlnk.top/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/"/>
+    <id>https://c10udlnk.top/2020/12/04/RE%E5%A5%97%E8%B7%AF-%E5%85%B3%E4%BA%8Epyinstaller%E6%89%93%E5%8C%85%E7%9A%84exe%E6%96%87%E4%BB%B6/</id>
     <published>2020-12-04T11:09:38.000Z</published>
     <updated>2020-12-05T05:45:54.856Z</updated>
     
@@ -159,21 +159,21 @@
     
     
     
-    <category term="Skills" scheme="https://c10udlnk.github.io/categories/Skills/"/>
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="u5eful" scheme="https://c10udlnk.github.io/tags/u5eful/"/>
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
     
   </entry>
   
   <entry>
     <title>【从无到有】Pintool安装&amp;使用</title>
-    <link href="https://c10udlnk.github.io/2020/11/27/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91Pintool%E5%AE%89%E8%A3%85&amp;%E4%BD%BF%E7%94%A8/"/>
-    <id>https://c10udlnk.github.io/2020/11/27/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91Pintool%E5%AE%89%E8%A3%85&amp;%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://c10udlnk.top/2020/11/27/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91Pintool%E5%AE%89%E8%A3%85&amp;%E4%BD%BF%E7%94%A8/"/>
+    <id>https://c10udlnk.top/2020/11/27/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91Pintool%E5%AE%89%E8%A3%85&amp;%E4%BD%BF%E7%94%A8/</id>
     <published>2020-11-27T11:03:08.000Z</published>
     <updated>2020-12-19T06:52:55.149Z</updated>
     
@@ -185,21 +185,21 @@
     
     
     
-    <category term="Tools" scheme="https://c10udlnk.github.io/categories/Tools/"/>
+    <category term="Tools" scheme="https://c10udlnk.top/categories/Tools/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="zero2one/入门" scheme="https://c10udlnk.github.io/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>【wp】HSCTF2020_PC逆向</title>
-    <link href="https://c10udlnk.github.io/2020/11/27/%E3%80%90wp%E3%80%91HSCTF2020-PC%E9%80%86%E5%90%91/"/>
-    <id>https://c10udlnk.github.io/2020/11/27/%E3%80%90wp%E3%80%91HSCTF2020-PC%E9%80%86%E5%90%91/</id>
+    <link href="https://c10udlnk.top/2020/11/27/%E3%80%90wp%E3%80%91HSCTF2020-PC%E9%80%86%E5%90%91/"/>
+    <id>https://c10udlnk.top/2020/11/27/%E3%80%90wp%E3%80%91HSCTF2020-PC%E9%80%86%E5%90%91/</id>
     <published>2020-11-27T05:46:00.000Z</published>
     <updated>2020-12-03T04:38:55.975Z</updated>
     
@@ -211,21 +211,21 @@
     
     
     
-    <category term="Write up" scheme="https://c10udlnk.github.io/categories/Write-up/"/>
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="wp" scheme="https://c10udlnk.github.io/tags/wp/"/>
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
     
   </entry>
   
   <entry>
     <title>angr_ctf刷题小记</title>
-    <link href="https://c10udlnk.github.io/2020/11/11/angr-ctf%E5%88%B7%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
-    <id>https://c10udlnk.github.io/2020/11/11/angr-ctf%E5%88%B7%E9%A2%98%E5%B0%8F%E8%AE%B0/</id>
+    <link href="https://c10udlnk.top/2020/11/11/angr-ctf%E5%88%B7%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
+    <id>https://c10udlnk.top/2020/11/11/angr-ctf%E5%88%B7%E9%A2%98%E5%B0%8F%E8%AE%B0/</id>
     <published>2020-11-11T00:43:55.000Z</published>
     <updated>2020-12-09T00:58:52.548Z</updated>
     
@@ -239,19 +239,19 @@
     
     
     
-    <category term="刷题log" scheme="https://c10udlnk.github.io/categories/%E5%88%B7%E9%A2%98log/"/>
+    <category term="刷题log" scheme="https://c10udlnk.top/categories/%E5%88%B7%E9%A2%98log/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
   </entry>
   
   <entry>
     <title>【从无到有】配置IDA</title>
-    <link href="https://c10udlnk.github.io/2020/11/10/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91%E9%85%8D%E7%BD%AEIDA/"/>
-    <id>https://c10udlnk.github.io/2020/11/10/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91%E9%85%8D%E7%BD%AEIDA/</id>
+    <link href="https://c10udlnk.top/2020/11/10/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91%E9%85%8D%E7%BD%AEIDA/"/>
+    <id>https://c10udlnk.top/2020/11/10/%E3%80%90%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E3%80%91%E9%85%8D%E7%BD%AEIDA/</id>
     <published>2020-11-10T13:54:51.000Z</published>
     <updated>2020-12-19T13:58:32.866Z</updated>
     
@@ -264,21 +264,21 @@
     
     
     
-    <category term="Tools" scheme="https://c10udlnk.github.io/categories/Tools/"/>
+    <category term="Tools" scheme="https://c10udlnk.top/categories/Tools/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="zero2one/入门" scheme="https://c10udlnk.github.io/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>CTF：从0到1 -&gt; zero2one</title>
-    <link href="https://c10udlnk.github.io/2020/11/10/CTF%EF%BC%9A%E4%BB%8E0%E5%88%B01-zero2one/"/>
-    <id>https://c10udlnk.github.io/2020/11/10/CTF%EF%BC%9A%E4%BB%8E0%E5%88%B01-zero2one/</id>
+    <link href="https://c10udlnk.top/2020/11/10/CTF%EF%BC%9A%E4%BB%8E0%E5%88%B01-zero2one/"/>
+    <id>https://c10udlnk.top/2020/11/10/CTF%EF%BC%9A%E4%BB%8E0%E5%88%B01-zero2one/</id>
     <published>2020-11-10T09:05:20.000Z</published>
     <updated>2020-12-11T06:50:57.043Z</updated>
     
@@ -293,21 +293,21 @@
     
     
     
-    <category term="安利" scheme="https://c10udlnk.github.io/categories/%E5%AE%89%E5%88%A9/"/>
+    <category term="安利" scheme="https://c10udlnk.top/categories/%E5%AE%89%E5%88%A9/"/>
     
     
-    <category term="CTF" scheme="https://c10udlnk.github.io/tags/CTF/"/>
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
     
-    <category term="Reverse" scheme="https://c10udlnk.github.io/tags/Reverse/"/>
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
     
-    <category term="zero2one/入门" scheme="https://c10udlnk.github.io/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://c10udlnk.github.io/2020/11/09/hello-world/"/>
-    <id>https://c10udlnk.github.io/2020/11/09/hello-world/</id>
+    <link href="https://c10udlnk.top/2020/11/09/hello-world/"/>
+    <id>https://c10udlnk.top/2020/11/09/hello-world/</id>
     <published>2020-11-09T11:20:07.654Z</published>
     <updated>2020-11-10T11:16:57.184Z</updated>
     

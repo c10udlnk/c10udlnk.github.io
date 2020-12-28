@@ -29,7 +29,7 @@
 <h2 id="elf"><a class="markdownIt-Anchor" href="#elf"></a> elf</h2>
 <p>在<a target="_blank" rel="noopener" href="https://github.com/extremecoders-re/pyinstxtractor/wiki/Extracting-Linux-ELF-binaries">pyinstxtractor官方项目的wiki</a>中有提到如何解压elf，在此把第一种简单的方法记录下来（亲测有效。</p>
 <p>在wsl运行（同样是当前目录，这里文件名是main</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp /mnt/d/_CTF_/_Tools_/pyinstxtractor.py .</span><br><span class="line">objcopy --dump-section pydata=easyRE.dump easyRE</span><br><span class="line">python2 pyinstxtractor.py easyRE.dump</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp /mnt/d/_CTF_/_Tools_/pyinstxtractor.py .</span><br><span class="line">objcopy --dump-section pydata=easyRE.dump easyRE</span><br><span class="line">python2 pyinstxtractor.py easyRE.dump</span><br></pre></td></tr></table></figure>
 <p>就多了第二行，这里是把elf里pydata段分离开，具体看官方解释。</p>
 <p>然后会在当前目录下生成easyRE.dump_extracted文件夹，同样<strong>是<code>easyRE</code>（一般是解包提示是entry point的名字）和<code>struct</code>有用</strong>。</p>
 <h1 id="补头将无后缀文件改为pyc"><a class="markdownIt-Anchor" href="#补头将无后缀文件改为pyc"></a> 补头，将无后缀文件改为.pyc</h1>

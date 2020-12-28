@@ -144,7 +144,7 @@ table td {
   vertical-align: top;
 }
 *::selection {
-  background: #7f3f7f;
+  background: #37f;
   color: #f7f7f7;
 }
 .text-center {

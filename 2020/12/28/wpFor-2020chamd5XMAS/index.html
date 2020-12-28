@@ -24,7 +24,7 @@
 <p>所以果断走流程解包（单个文件处理可以看-&gt;<a href="https://c10udlnk.top/2020/12/04/reSkillsOn-Pyinstaller-extracted-to-python/">RE套路 - 关于pyinstaller打包文件的复原 | c10udlnk_Log</a>，这里不细讲了，重点在多文件的批量处理）。</p>
 <h1 id="bat批量应用python脚本"><a class="markdownIt-Anchor" href="#bat批量应用python脚本"></a> bat批量应用python脚本</h1>
 <p>这里写bat脚本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">for %%i in (*) do (</span><br><span class="line">    echo %%i</span><br><span class="line">    python2 pyinstxtractor.py %%i</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">for</span> %%i <span class="keyword">in</span> (*) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    python2 pyinstxtractor.py %%i</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>(*)指当前目录，%%i就像平时用的for(int i=0;…)的那个i一样是个变量，echo是为了看处理到哪个文件了。</p>
 <p>处理结束后得到59个解压文件包</p>
 <img src="/2020/12/28/wpFor-2020chamd5XMAS/image-20201225233445463.png" class="" title="image-20201225233445463">
@@ -40,7 +40,7 @@
 <p>注意：这里提前用010Editor看了一下以数字命名的文件和struct是差八个字节，有点特殊。</p>
 <h1 id="bat批量应用指令"><a class="markdownIt-Anchor" href="#bat批量应用指令"></a> bat批量应用指令</h1>
 <p>然后写bat脚本执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">for %%i in (*) do (</span><br><span class="line">    echo %%i</span><br><span class="line">    uncompyle6 %%i &gt; %%i.py</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">for</span> %%i <span class="keyword">in</span> (*) <span class="keyword">do</span> (</span><br><span class="line">    <span class="built_in">echo</span> %%i</span><br><span class="line">    uncompyle6 %%i &gt; %%i.py</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>得到59个python文件。</p>
 <p>这里其实是出来像<code>1.pyc.py</code>这样的文件，有强迫症的朋友（比如我）可以写个脚本把中间的.pyc去掉hhh。</p>
 <h1 id="python和命令行的批量自动交互"><a class="markdownIt-Anchor" href="#python和命令行的批量自动交互"></a> python和命令行的批量自动交互</h1>

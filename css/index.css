@@ -94,7 +94,7 @@ hr {
   position: relative;
   margin: 2rem auto;
   width: calc(100% - 4px);
-  border: 2px dashed #5c7699;
+  border: 2px dashed #a7adda;
   background: #fff;
 }
 hr:hover:before {
@@ -751,7 +751,7 @@ footer.is-mobile {
   color: #858585;
 }
 .recent-post-item .article-meta .sticky {
-  color: #7f3f7f;
+  color: #a73fcf;
 }
 .recent-post-item .article-meta i {
   margin: 0 0.2rem 0 0.3rem;
@@ -783,7 +783,7 @@ footer.is-mobile {
   transition: all 0.2s ease-in-out;
 }
 .recent-post-item .more:hover {
-  background: #7f3f7f;
+  background: #a73fcf;
 }
 .recent-post-item .article-title {
   display: block;
@@ -815,7 +815,7 @@ footer.is-mobile {
   cursor: pointer;
 }
 .tag-cloud a:hover {
-  color: #7f3f7f !important;
+  color: #a73fcf !important;
 }
 .tag-cloud__title {
   font-size: 1.8rem;
@@ -827,7 +827,7 @@ footer.is-mobile {
 }
 .article-sort {
   padding-left: 1rem;
-  border-left: 0.1rem solid #5c7699;
+  border-left: 0.1rem solid #a7adda;
 }
 .article-sort-title {
   position: relative;
@@ -837,7 +837,7 @@ footer.is-mobile {
   line-height: 1;
 }
 .article-sort-title:hover:before {
-  border-color: #7f3f7f;
+  border-color: #a73fcf;
 }
 .article-sort-title:before {
   position: absolute;
@@ -864,7 +864,7 @@ footer.is-mobile {
   z-index: 0;
   width: 0.1rem;
   height: 1.3rem;
-  background: #5c7699;
+  background: #a7adda;
   content: "";
 }
 .article-sort-item {
@@ -877,7 +877,7 @@ footer.is-mobile {
   transition: all 0.2s ease-in-out;
 }
 .article-sort-item:hover:before {
-  border-color: #7f3f7f;
+  border-color: #a73fcf;
 }
 .article-sort-item:before {
   position: absolute;
@@ -904,7 +904,7 @@ footer.is-mobile {
 }
 .article-sort-item.year:before {
   top: 0.7rem;
-  border-color: #7f3f7f;
+  border-color: #a73fcf;
 }
 .article-sort-item__time {
   position: absolute;
@@ -967,7 +967,7 @@ footer.is-mobile {
   width: 100%;
   height: 1.5rem;
   background: rgba(0,0,0,0.5);
-  color: #5c7699;
+  color: #a7adda;
   text-align: center;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -1066,7 +1066,7 @@ footer.is-mobile {
   cursor: pointer;
 }
 #pagination .page-number.current {
-  background: #89d4f4;
+  background: #7d84bd;
   color: #fff;
   cursor: default;
 }
@@ -1405,7 +1405,7 @@ footer.is-mobile {
   line-height: 1.2rem;
 }
 #content-inner ul > li:hover:before {
-  border-color: #7f3f7f;
+  border-color: #a73fcf;
 }
 #content-inner ul > li:before {
   top: 10px;
@@ -1645,7 +1645,7 @@ a.fancybox:focus {
   transition: all 0.2s ease-in-out;
 }
 #sidebar .toggle-sidebar-info span:hover {
-  background: #89d4f4;
+  background: #7d84bd;
 }
 #sidebar .author-info {
   margin-left: -0.25rem;
@@ -1666,7 +1666,7 @@ a.fancybox:focus {
   line-height: 1.6rem;
 }
 #sidebar .author-info .follow-button a:hover {
-  background: #7f3f7f;
+  background: #a73fcf;
 }
 #sidebar .author-info.hide {
   display: none;
@@ -1726,10 +1726,10 @@ a.fancybox:focus {
   content: "";
 }
 #sidebar .author-info-articles .article-meta:hover {
-  background: #92d7f5;
+  background: #878ec2;
 }
 #sidebar .author-info-articles .article-meta:hover .pull-right {
-  color: #89d4f4;
+  color: #7d84bd;
 }
 #sidebar .author-info-links__title {
   margin-bottom: 0.4rem;
@@ -1753,7 +1753,7 @@ a.fancybox:focus {
   transition: all 0.2s ease-in-out;
 }
 #sidebar .author-info-links__name:hover {
-  background: #7f3f7f;
+  background: #a73fcf;
 }
 #sidebar .author-info-links__name:before {
   position: absolute;
@@ -1791,15 +1791,15 @@ a.fancybox:focus {
   transition: all 0.2s ease-in-out;
 }
 #sidebar .sidebar-toc .toc-link.active {
-  border-right-color: #43bbee;
-  background: #89d4f4;
+  border-right-color: #555ea7;
+  background: #7d84bd;
   color: #fff;
 }
 #sidebar .sidebar-toc__progress {
   position: relative;
   margin-top: -0.3rem;
   padding-left: 0.6rem;
-  color: #89d4f4;
+  color: #7d84bd;
 }
 #sidebar .sidebar-toc__progress .progress-notice {
   margin-right: 0.4rem;
@@ -1811,7 +1811,7 @@ a.fancybox:focus {
 #sidebar .sidebar-toc__progress-bar {
   width: 0;
   height: 1px;
-  background: #89d4f4;
+  background: #7d84bd;
 }
 .search-dialog {
   position: fixed;
@@ -1883,7 +1883,7 @@ a.fancybox:focus {
   padding-left: 1.5rem;
 }
 #local-search .local-search__hit-item:hover:before {
-  border-color: #7f3f7f;
+  border-color: #a73fcf;
 }
 #local-search .local-search__hit-item:before {
   position: absolute;

@@ -73,7 +73,7 @@
 <p>然后根据上下文以及上图可以推断出r1-r5分别对应如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r1 -&gt; eax;</span><br><span class="line">r2 -&gt; ebx;</span><br><span class="line">r3 -&gt; ecx;</span><br><span class="line">r4 -&gt; edx;</span><br><span class="line">r5 -&gt; esi;</span><br></pre></td></tr></table></figure>
 <p>patch程序，多余字节直接nop（因为不记得有些机器码了所以直接用keypatch。</p>
-<img src="/2021/02/02/wpFor-2021HWSTrial/image-20210201143334498.png" class="" title="image-20210201143334498">
+<img src="/2021/02/02/wpFor-2021HWSTrial/image-20210202104517341.png" class="" title="image-20210202104517341">
 <p>然后得到反编译的加密函数。</p>
 <img src="/2021/02/02/wpFor-2021HWSTrial/image-20210201144054388.png" class="" title="image-20210201144054388">
 <p>根据逻辑逆向写出exp：</p>

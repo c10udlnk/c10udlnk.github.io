@@ -51,7 +51,7 @@
 <p>在官方wp里，魔改的具体信息已经给了：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> lu_byte <span class="title">LoadByte</span> <span class="params">(LoadState *S)</span> </span>&#123;</span><br><span class="line">    lu_byte x;</span><br><span class="line">    LoadVar(S, x);</span><br><span class="line">    <span class="comment">//x ^= 0xff; 此行为魔改部分</span></span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="跟着官方wp走不通的思路"><a class="markdownIt-Anchor" href="#跟着官方wp走不通的思路"></a> 跟着官方wp走不通的思路</h3>
-<p><strong>本部分可跳过</strong>，最后因为刚刚接触lua，对这个语言不熟悉，卡在创造不出帖子里提到的**“用于 dump 的函数，尽量覆盖所有的指令操作，否则只能提取出已有的指令”**的lua函数，帖子里的test无法在5.3版本的lua中提取出所有字节码，需要自己动手创造（。</p>
+<p><strong>本部分可跳过</strong>，最后因为刚刚接触lua，对这个语言不熟悉，卡在创造不出帖子里提到的 <strong>“用于 dump 的函数，尽量覆盖所有的指令操作，否则只能提取出已有的指令”</strong> 的lua函数，帖子里的test无法在5.3版本的lua中提取出所有字节码，需要自己动手创造（。</p>
 <p>因为这里LoadByte的魔改会影响到下一步的opcode顺序还原，所以要先把这些错误字节xor回去。</p>
 <p>又因为LoadByte的更改只影响到部分字节，我们并不清楚具体哪些字节遭到了祸害，所以想到了一个比较笨的方法就是重新编译一个lua解释器，这样我们就有了opcode顺序魔改前的解释器和魔改后的解释器（题目所给的）。</p>
 <p>（如果有师傅有更好的办法求告知&gt;&lt;）</p>

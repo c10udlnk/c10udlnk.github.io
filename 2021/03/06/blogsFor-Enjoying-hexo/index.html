@@ -72,8 +72,7 @@
 <p>输入以下语句查看设置是否成功：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> git config user.name</span><br><span class="line"><span class="variable">$</span> git config user.email</span><br></pre></td></tr></table></figure>
 <p>输入以下语句生成SSH key：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;GitHub注册的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-<p>（注意这里邮箱一定要GitHub注册时填的那个 存疑）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span> <span class="string">&quot;邮箱&quot;</span></span><br></pre></td></tr></table></figure>
 <p>然后连敲三次回车（全部设置默认）</p>
 <p>会出现这样的文字：</p>
 <img src="/2021/03/06/blogsFor-Enjoying-hexo/image-20210313093103816.png" class="" title="image-20210313093103816">

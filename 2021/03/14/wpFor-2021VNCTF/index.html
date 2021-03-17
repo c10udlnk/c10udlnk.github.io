@@ -14,10 +14,11 @@
 <a id="more"></a>
 <img src="/2021/03/14/wpFor-2021VNCTF/image-20210314232358706.png" class="" title="image-20210314232358706">
 <p>比赛地址：<a target="_blank" rel="noopener" href="https://buuoj.cn/vnctf_2021">https://buuoj.cn/vnctf_2021</a></p>
+<p>官方wp：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/39XndZUJR-vQetfzkQFVgA">V&amp;NCTF2021 官方WP（RE部分）</a>（其他部分的wp在公众号上自行寻找）</p>
 <h1 id="reverse"><a class="markdownIt-Anchor" href="#reverse"></a> Reverse</h1>
 <h2 id="notsudoku"><a class="markdownIt-Anchor" href="#notsudoku"></a> notsudoku</h2>
 <p>看到这个名字dna动了一下（之前hsctf新生赛我也出了一个not_a_sudoku的题，还以为这个也是数织，被骗进来做了x），不过这个题目实际上是个魔方阵，读懂源码就很简单了。</p>
-<p>附件图标是典型的pyinstaller打包的exe文件，本来以为参考<a href="https://c10udlnk.top/2020/12/04/reSkillsOn-Pyinstaller-extracted-to-python/">RE套路 - 关于pyinstaller打包文件的复原 | c10udlnk_Log</a>的方法是可以正常复原的，但是走到uncompyle6就会报错</p>
+<p>附件图标是典型的pyinstaller打包的exe文件，先参考<a href="https://c10udlnk.top/2020/12/04/reSkillsOn-Pyinstaller-extracted-to-python/">RE套路 - 关于pyinstaller打包文件的复原 | c10udlnk_Log</a>的方法，pyinstxtractor、补头、改后缀名，然后走到uncompyle6这一步就会报错</p>
 <img src="/2021/03/14/wpFor-2021VNCTF/image-20210315001056338.png" class="" title="image-20210315001056338">
 <p>第一反应是做了混淆或者在打包的时候做了魔改，于是试了一下解压文件夹里的<code>pyiboot01_bootstrap</code>，发现是能正常走流程反编译的，所以魔改的猜测不成立，只剩下混淆pyc。</p>
 <p>然后去找py打包的原理和各种反混淆的文章看，试图手动去混淆然后用uncompyle6反编译（做了四个小时的原因找到了X_X），然后在某篇文章里看到“……pyc文件随便在网上找个在线工具都可以进行反编译，所以我们要进行加密……”，突然灵光一闪：我为什么不试试在线的反编译工具？</p>

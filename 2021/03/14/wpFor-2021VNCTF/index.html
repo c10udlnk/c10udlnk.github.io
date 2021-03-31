@@ -93,7 +93,7 @@
 <p>然后通过findcrypt插件找到AES的S box常数，通过交叉引用和函数伪代码确定<code>sub_42944</code>为AES的加密函数。</p>
 <p>而上面<code>sub_40E80</code>很明显是给v21赋了几个常见常数</p>
 <img src="/2021/03/14/wpFor-2021VNCTF/image-20210315211642345.png" class="" title="image-20210315211642345">
-<p>乐了，这不就是md5常数吗。看了一下下面的几个函数，差不多确定了就就是个md5。</p>
+<p>乐了，这不就是md5常数吗。看了一下下面的几个函数，差不多确定了就是个md5。</p>
 <p>然后猜测是用md5(“Hello from C++”)做key对密文进行AES解密，就能得到flag。</p>
 <p>写exp尝试一下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> AES</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">from</span> binascii <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">key=unhexlify(md5(<span class="string">b&#x27;Hello from C++&#x27;</span>).hexdigest())</span><br><span class="line">cipher=unhexlify(<span class="string">&quot;B28216EE5ECD5FFAFF8254E60B4BAEAA&quot;</span>)</span><br><span class="line">aes=AES.new(key,AES.MODE_ECB)</span><br><span class="line">text=aes.decrypt(cipher)</span><br><span class="line">print(text)</span><br></pre></td></tr></table></figure>

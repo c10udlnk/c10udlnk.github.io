@@ -30,7 +30,7 @@ window.onload = function(){
         context.fillStyle = "rgba(238,238,238,.09)";//遮盖层
         context.fillRect(0,0,W,H);
         //给字体设置样式
-        context.font = "600 "+fontSize+"px  Georgia";
+        context.font = "600 "+fontSize+"px  Consolas";
         //给字体添加颜色
         context.fillStyle = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"][parseInt(Math.random() * 10)];//randColor();可以rgb,hsl, 标准色，十六进制颜色
         //写入画布中

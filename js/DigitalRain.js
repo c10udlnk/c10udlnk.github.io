@@ -1,21 +1,33 @@
 window.onload = function(){
-    //获取画布对象
-    var canvas = document.getElementById("mycanvas");
-    //获取画布的上下文
-    var context =canvas.getContext("2d");
-    var s = window.screen;
-    var W = canvas.width = s.width;
-    var H = canvas.height;
+    var canvas = document.createElement('canvas'),
+    context = canvas.getContext('2d'),
+    pr = window.devicePixelRatio || 1,
+    width = window.innerWidth,
+    height = window.innerHeight
+    canvas.width = width * pr
+    canvas.height = height * pr
+    context.scale(pr, pr)
+    context.globalAlpha = 0.8
+    canvas.style.cssText =
+    'opacity:0.8;position:fixed;top:0;left:0;z-index:-1;width:100%;height:100%;pointer-events:none;'
+    // create canvas
+    document.getElementsByTagName('body')[0].appendChild(canvas);
+    // var canvas = document.getElementById("mycanvas");
+    // //获取画布的上下文
+    // var context =canvas.getContext("2d");
+    // var s = window.screen;
+    // var W = canvas.width = s.width;
+    // var H = canvas.height;
     //获取浏览器屏幕的宽度和高度
     //var W = window.innerWidth;
     //var H = window.innerHeight;
     //设置canvas的宽度和高度
-    canvas.width = W;
-    canvas.height = H;
+    // canvas.width = W;
+    // canvas.height = H;
     //每个文字的字体大小
     var fontSize = 12;
     //计算列
-    var colunms = Math.floor(W /fontSize);  
+    var colunms = Math.floor(canvas.width /fontSize);  
     //记录每列文字的y轴坐标
     var drops = [];
     //给每一个文字初始化一个起始点的位置
@@ -28,7 +40,7 @@ window.onload = function(){
     //绘画的函数
     function draw(){
         context.fillStyle = "rgba(238,238,238,.09)";//遮盖层
-        context.fillRect(0,0,W,H);
+        context.fillRect(0,0,canvas.width,canvas.height);
         //给字体设置样式
         context.font = "600 "+fontSize+"px  Consolas";
         //给字体添加颜色

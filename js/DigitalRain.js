@@ -1,6 +1,6 @@
 window.onload = function(){
     //获取画布对象
-    var canvas = document.getElementById("canvas");
+    var canvas = document.getElementById("mycanvas");
     //获取画布的上下文
     var context =canvas.getContext("2d");
     var s = window.screen;

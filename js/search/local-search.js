@@ -73,6 +73,7 @@ $(function () {
             var dataUrl = data.url
             var indexTitle = -1
             var indexContent = -1
+            var firstOccur = -1
             // only match artiles with not empty titles and contents
             if (dataTitle !== '' && dataContent !== '') {
               keywords.forEach(function (keyword, i) {
@@ -84,13 +85,51 @@ $(function () {
                   if (indexContent < 0) {
                     indexContent = 0
                   }
+                  if (i === 0) {
+                    firstOccur = indexContent
+                  }
                 }
               })
+            } else {
+              isMatch = false
             }
             // show search results
             if (isMatch) {
-              str += '<div class="local-search__hit-item"><a href="' + dataUrl + '" class="search-result-title">' + dataTitle + '</a>' + '</div>'
-              count += 1
+              const content = data.content.trim().replace(/<[^>]+>/g, '')
+              if (firstOccur >= 0) {
+                // cut out 130 characters
+                let start = firstOccur - 30
+                let end = firstOccur + 100
+
+                if (start < 0) {
+                  start = 0
+                }
+
+                if (start === 0) {
+                  end = 100
+                }
+
+                if (end > content.length) {
+                  end = content.length
+                }
+
+                let matchContent = content.substring(start, end)
+
+                // highlight all keywords
+                keywords.forEach(function (keyword) {
+                  const regS = new RegExp(keyword, 'gi')
+                  matchContent = matchContent.replace(regS, '<span class="search-keyword">' + keyword + '</span>')
+                  dataTitle = dataTitle.replace(regS, '<span class="search-keyword">' + keyword + '</span>')
+                })
+
+                str += '<div class="local-search__hit-item"><a href="' + dataUrl + '" class="search-result-title">' + dataTitle + '</a>'
+                count += 1
+
+                if (dataContent !== '') {
+                  str += '<p class="search-result">...' + matchContent + '...</p>'
+                }
+              }
+              str += '</div>'
               $('.local-search-stats__hr').show()
             }
           })
@@ -98,6 +137,7 @@ $(function () {
             str += '<div id="local-search__hits-empty">' + GLOBAL_CONFIG.localSearch.languages.hits_empty.replace(/\$\{query}/, this.value.trim()) +
               '</div>'
           }
+          str += '</div>'
           $resultContent.innerHTML = str
         })
       }

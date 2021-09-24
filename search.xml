@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>WSL/WSL2迁移笔记</title>
+      <link href="p/blogsFor-migrating-wsl/"/>
+      <url>p/blogsFor-migrating-wsl/</url>
+      
+        <content type="html"><![CDATA[<p>WSL默认把虚拟磁盘装在C盘，所以很容易导致C盘爆炸= =</p><p>为了帮C盘减轻负担，于是有了这篇WSL的迁移笔记。</p><a id="more"></a><h1 id="查看wsl列表"><a class="markdownIt-Anchor" href="#查看wsl列表"></a> 查看wsl列表</h1><p>首先用</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> -<span class="literal">-all</span> <span class="literal">-v</span></span><br></pre></td></tr></table></figure><p>查看当前的子系统</p><img src="/p/blogsFor-migrating-wsl/image-20210924203303767.png" class="" title="image-20210924203303767"><p>这边我们要迁移的是我日常默认使用的<code>Ubuntu-18.04</code>（可以看到现在是处于running状态，并且是wsl默认启动的子系统）。</p><h1 id="wsl导出备份"><a class="markdownIt-Anchor" href="#wsl导出备份"></a> wsl导出备份</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-export</span> 子系统名称 备份包存放路径</span><br></pre></td></tr></table></figure><p>导出备份tar包</p><img src="/p/blogsFor-migrating-wsl/image-20210924205543288.png" class="" title="image-20210924205543288"><h1 id="注销原wsl"><a class="markdownIt-Anchor" href="#注销原wsl"></a> 注销原wsl</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-unregister</span> 子系统名称</span><br></pre></td></tr></table></figure><img src="/p/blogsFor-migrating-wsl/image-20210924205656406.png" class="" title="image-20210924205656406"><p>这时再用<code>wsl --list --all -v</code>查看就会发现该子系统已不存在了</p><img src="/p/blogsFor-migrating-wsl/image-20210924205753841.png" class="" title="image-20210924205753841"><h1 id="导入wsl"><a class="markdownIt-Anchor" href="#导入wsl"></a> 导入wsl</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-import</span> 子系统名称 新路径 备份包存放路径</span><br></pre></td></tr></table></figure><p>其中新路径要为空文件夹</p><img src="/p/blogsFor-migrating-wsl/image-20210924213620274.png" class="" title="image-20210924213620274"><h1 id="设置默认登录用户名"><a class="markdownIt-Anchor" href="#设置默认登录用户名"></a> 设置默认登录用户名</h1><p>如果此时打开该子系统，会发现是默认以root身份登录的（这肯定不行啊hhh，并且shell也会跟着登录用户还原。</p><img src="/p/blogsFor-migrating-wsl/image-20210924214256224.png" class="" title="image-20210924214256224"><p>所以在子系统中用<code>cat /etc/passwd</code>查看用户列表并找到之前用wsl时的默认登录用户名：</p><img src="/p/blogsFor-migrating-wsl/image-20210924213918336.png" class="" title="image-20210924213918336"><p>然后在powershell里敲：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">子系统 config -<span class="literal">-default</span><span class="literal">-user</span> 上面的默认登录用户名</span><br></pre></td></tr></table></figure><img src="/p/blogsFor-migrating-wsl/image-20210924214203567.png" class="" title="image-20210924214203567"><p>把默认登录用户还原成以前用的那个。</p><img src="/p/blogsFor-migrating-wsl/image-20210924214359813.png" class="" title="image-20210924214359813"><p>这样wsl迁移工作就大功告成啦~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
+            
+            <tag> 折腾经历 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【wp】2021DASCTF July X CBCTF 4th</title>
       <link href="p/wpFor-2021JulyDASCTF/"/>
       <url>p/wpFor-2021JulyDASCTF/</url>

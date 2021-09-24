@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.top/"/>
-  <updated>2021-08-02T13:48:37.998Z</updated>
+  <updated>2021-09-24T13:45:10.259Z</updated>
   <id>https://c10udlnk.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WSL/WSL2迁移笔记</title>
+    <link href="https://c10udlnk.top/p/blogsFor-migrating-wsl/"/>
+    <id>https://c10udlnk.top/p/blogsFor-migrating-wsl/</id>
+    <published>2021-09-24T08:20:35.000Z</published>
+    <updated>2021-09-24T13:45:10.259Z</updated>
+    
+    <content type="html"><![CDATA[<p>WSL默认把虚拟磁盘装在C盘，所以很容易导致C盘爆炸= =</p><p>为了帮C盘减轻负担，于是有了这篇WSL的迁移笔记。</p><a id="more"></a><h1 id="查看wsl列表"><a class="markdownIt-Anchor" href="#查看wsl列表"></a> 查看wsl列表</h1><p>首先用</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-list</span> -<span class="literal">-all</span> <span class="literal">-v</span></span><br></pre></td></tr></table></figure><p>查看当前的子系统</p><img src="/p/blogsFor-migrating-wsl/image-20210924203303767.png" class="" title="image-20210924203303767"><p>这边我们要迁移的是我日常默认使用的<code>Ubuntu-18.04</code>（可以看到现在是处于running状态，并且是wsl默认启动的子系统）。</p><h1 id="wsl导出备份"><a class="markdownIt-Anchor" href="#wsl导出备份"></a> wsl导出备份</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-export</span> 子系统名称 备份包存放路径</span><br></pre></td></tr></table></figure><p>导出备份tar包</p><img src="/p/blogsFor-migrating-wsl/image-20210924205543288.png" class="" title="image-20210924205543288"><h1 id="注销原wsl"><a class="markdownIt-Anchor" href="#注销原wsl"></a> 注销原wsl</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-unregister</span> 子系统名称</span><br></pre></td></tr></table></figure><img src="/p/blogsFor-migrating-wsl/image-20210924205656406.png" class="" title="image-20210924205656406"><p>这时再用<code>wsl --list --all -v</code>查看就会发现该子系统已不存在了</p><img src="/p/blogsFor-migrating-wsl/image-20210924205753841.png" class="" title="image-20210924205753841"><h1 id="导入wsl"><a class="markdownIt-Anchor" href="#导入wsl"></a> 导入wsl</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl -<span class="literal">-import</span> 子系统名称 新路径 备份包存放路径</span><br></pre></td></tr></table></figure><p>其中新路径要为空文件夹</p><img src="/p/blogsFor-migrating-wsl/image-20210924213620274.png" class="" title="image-20210924213620274"><h1 id="设置默认登录用户名"><a class="markdownIt-Anchor" href="#设置默认登录用户名"></a> 设置默认登录用户名</h1><p>如果此时打开该子系统，会发现是默认以root身份登录的（这肯定不行啊hhh，并且shell也会跟着登录用户还原。</p><img src="/p/blogsFor-migrating-wsl/image-20210924214256224.png" class="" title="image-20210924214256224"><p>所以在子系统中用<code>cat /etc/passwd</code>查看用户列表并找到之前用wsl时的默认登录用户名：</p><img src="/p/blogsFor-migrating-wsl/image-20210924213918336.png" class="" title="image-20210924213918336"><p>然后在powershell里敲：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">子系统 config -<span class="literal">-default</span><span class="literal">-user</span> 上面的默认登录用户名</span><br></pre></td></tr></table></figure><img src="/p/blogsFor-migrating-wsl/image-20210924214203567.png" class="" title="image-20210924214203567"><p>把默认登录用户还原成以前用的那个。</p><img src="/p/blogsFor-migrating-wsl/image-20210924214359813.png" class="" title="image-20210924214359813"><p>这样wsl迁移工作就大功告成啦~</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;WSL默认把虚拟磁盘装在C盘，所以很容易导致C盘爆炸= =&lt;/p&gt;
+&lt;p&gt;为了帮C盘减轻负担，于是有了这篇WSL的迁移笔记。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="折腾经历" scheme="https://c10udlnk.top/tags/%E6%8A%98%E8%85%BE%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>【wp】2021DASCTF July X CBCTF 4th</title>
@@ -502,32 +528,6 @@
     <summary type="html">&lt;p&gt;本文通过攻防世界Reverse答题进阶区的一道EASYHOOK，大致了解一下inline hook的流程。&lt;/p&gt;
 &lt;p&gt;P.S. 查了一下wp大多是直接动态调试看的= =，感觉并不能很深刻地理解hook。看流程其实有两个方法，除了动态识别流程以外，还可以静态分析流程（虽然比较麻烦但能更容易理解？实战的时候还是直接动调吧）。&lt;/p&gt;
 &lt;p&gt;P.S.S. 本文并非wp，只是记录关键hook部分罢了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
-    
-    
-    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
-    
-    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
-    
-    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RE套路/从crackme学nsPack手动脱壳</title>
-    <link href="https://c10udlnk.top/p/reSkillsOn-Unpack-from-nsPack/"/>
-    <id>https://c10udlnk.top/p/reSkillsOn-Unpack-from-nsPack/</id>
-    <published>2020-12-16T11:12:44.000Z</published>
-    <updated>2020-12-28T14:35:42.133Z</updated>
-    
-    <content type="html"><![CDATA[<p>刷题总得学到什么，不能刷完就忘了怎么做了（。），于是有了这个RE套路的子系列——从例题学技巧。</p><p>本文通过攻防世界Reverse答题进阶区的一道crackme，记录nsPack北斗壳的手工脱壳流程。</p><a id="more"></a><blockquote><p>例题：<a href="https://adworld.xctf.org.cn/task/answer?type=reverse&amp;number=4&amp;grade=1&amp;id=4966&amp;page=2">crackme</a></p><p>环境及工具：win10(vmware) + ExEinfoPE + OllyDBG + PE Tools + ImportREC</p><p>参考链接：<a href="https://blog.csdn.net/qq_42967398/article/details/94761189">nSPack 手工脱壳过程_A_dmin的博客-CSDN博客</a></p></blockquote><h1 id="日常第一步查壳"><a class="markdownIt-Anchor" href="#日常第一步查壳"></a> 日常第一步查壳</h1><p>用ExEinfoPE打开，显而易见是nsPack壳，于是打开虚拟机使用OD脱壳（OD扔虚拟机上了）。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216192612131.png" class="" title="image-20201216192612131"><p>P.S. 如果直接用IDA打开会报错<code>Truncated section '.nsp1' at file offsets 0x400..0x1A00; Will read 0x1445 bytes</code>和这个↓</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216193158740.png" class="" title="image-20201216193158740"><p><code>The imports segment seems to be destroyed. This MAY mean that the file was packed or otherwise modified in order to make it more difficult to analyze. If you want to see the imports segment in the original form, please reload it with the 'make imports section' checkbox cleared.</code></p><p>这时候就要警惕有壳了。</p><h1 id="od打开寻找oep"><a class="markdownIt-Anchor" href="#od打开寻找oep"></a> OD打开寻找OEP</h1><blockquote><p>脱壳原理为ESP定律（即堆栈平衡定律），是应用频率最高的脱壳方法之一，详情指路 -&gt; <a href="https://www.freebuf.com/column/231580.html">ESP定律原理详解 - FreeBuf网络安全行业门户</a>。</p></blockquote><p>将crackme.exe用OD打开</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216194654748.png" class="" title="image-20201216194654748"><p>F8单步执行，可以看到只有ESP和EIP发生了变化。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216194754284.png" class="" title="image-20201216194754284"><p>在ESP地址处右键-&gt;HW break[ESP]，下硬件断点，这样程序再次访问0x0019FF70内存地址时程序会抛出异常暂停运行（具体原理看上面的ESP定律）。简单来说就是程序加载时会用push将当前状态保存在栈中，这时已执行<code>pushfd</code>，ESP指向栈顶元素，于是在下次访问该内存地址时，就是执行<code>popfd</code>之后。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216200103948.png" class="" title="image-20201216200103948"><p>所以在按下F9时，程序会停在这里。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216200851737.png" class="" title="image-20201216200851737"><p>这里是一个跳转语句，根据北斗的特性可知这里跳转到了OEP，即程序真正的入口，按F7步入，并记住该地址（0x00401336），后面有用。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216201053418.png" class="" title="image-20201216201053418"><h1 id="dump内存"><a class="markdownIt-Anchor" href="#dump内存"></a> dump内存</h1><p>OD不要关（整个脱壳步骤结束以后才可以关），打开PE Tools来dump内存（注意要以管理员身份运行，不然读不到正在调试中的crackme.exe）。找到该文件右键-&gt;Dump Full-&gt;保存，此时可以在文件同名目录下看到Dumped.exe。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216201531388.png" class="" title="image-20201216201531388"><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216201713462.png" class="" title="image-20201216201713462"><h1 id="修复iat"><a class="markdownIt-Anchor" href="#修复iat"></a> 修复IAT</h1><p>这个就是脱壳后的程序，但是不能正常运行，所以我们需要修复IAT。</p><p>打开ImportREC（同样要以管理员身份运行），依次进行：</p><ol><li>附加活动进程（找到正在调试中的crackme.exe）。</li><li>填入OEP（即上面记住的地址0x00401336-基地址0x00400000=0x00001336，基地址为底部记录中的“映像基地址”）。</li><li>点“自动搜索”。</li><li>点“获取输入表”。</li><li>点“修复转存文件”-&gt;选择Dumped.exe-&gt;打开。</li></ol><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216202501062.png" class="" title="image-20201216202501062"><p>此时文件夹中生成Dumped_.exe，此为<strong>最终脱壳后可运行的程序</strong>。</p><img src="/p/reSkillsOn-Unpack-from-nsPack/image-20201216202815682.png" class="" title="image-20201216202815682"><h1 id="成功脱壳"><a class="markdownIt-Anchor" href="#成功脱壳"></a> 成功脱壳</h1><p>（这时候OD可以关闭了）此后按正常逆向流程走就可。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;刷题总得学到什么，不能刷完就忘了怎么做了（。），于是有了这个RE套路的子系列——从例题学技巧。&lt;/p&gt;
-&lt;p&gt;本文通过攻防世界Reverse答题进阶区的一道crackme，记录nsPack北斗壳的手工脱壳流程。&lt;/p&gt;</summary>
     
     
     

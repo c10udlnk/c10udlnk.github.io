@@ -92,7 +92,7 @@ MySpine.prototype = {
         this.widget.canvas.onclick = this.interact.bind(this),
         this.widget.state.addListener({
             complete: t=>{
-                this.isPlayingVoice && t.loop ? this.playRandAnimation({
+                (this.isPlayingVoice && t.loop) || this.isIdle() ? this.playRandAnimation({
                     name: t.animation.name,
                     loop: !0
                 }) : this.playRandAnimation(this.getAnimationList("idle"))

@@ -1,5 +1,6 @@
 function MySpine(t) {
     this.config = t,
+    this.urlPrefix = t.spineDir + "sd_21miku_" + t.models[Number.parseInt(Math.random()*t.models.length)] + "_r/",
     this.widget = null,
     this.widgetContainer = document.querySelector(".myspine-spine-widget"),
     this.voiceText = document.createElement("div"),
@@ -166,7 +167,7 @@ MySpine.prototype = {
         this.playVoice(this.getVoice("interact")))
     },
     getUrl: function(t) {
-        return this.config.urlPrefix + t
+        return this.urlPrefix + t
     },
     getAnimationList: function(t) {
         var e = this.config.behaviors[t];
@@ -191,7 +192,7 @@ MySpine.prototype = {
         }
     },
     playVoice: function(t) {
-        if (this.getUrl(t.voice) == this.config.urlPrefix) {
+        if (this.getUrl(t.voice) == this.urlPrefix) {
             return;
         }
         t && (this.isPlayingVoice = !0,

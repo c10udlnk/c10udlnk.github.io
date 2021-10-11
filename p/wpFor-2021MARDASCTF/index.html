@@ -221,7 +221,8 @@ if (true) {
     <link type="text/css" href="/css/_third-party/myspine.css"></link>
     <script>
         new MySpine({
-            urlPrefix: "/spine_models/sd_21miku_normal_r/",
+            spineDir: "/spine_models/",
+            models: [{"name":"normal"},{"name":"band"},{"name":"idol"},{"name":"night"},{"name":"street"},{"name":"wonder"}],
             styles: {"widget":{"width":"200px","height":"200px"},"voiceText":{"color":"#e6e6e6"}},
             skin: "default",
             atlas: "sekai_atlas.atlas",

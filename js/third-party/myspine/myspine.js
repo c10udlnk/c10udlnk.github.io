@@ -1,6 +1,6 @@
 function MySpine(t) {
     this.config = t,
-    this.urlPrefix = t.spineDir + "sd_21miku_" + t.models[Number.parseInt(Math.random()*t.models.length)] + "_r/",
+    this.urlPrefix = t.spineDir + "sd_21miku_" + t.models[Number.parseInt(Math.random()*t.models.length)].name + "_r/",
     this.widget = null,
     this.widgetContainer = document.querySelector(".myspine-spine-widget"),
     this.voiceText = document.createElement("div"),
@@ -218,11 +218,22 @@ MySpine.prototype = {
         }
         return !1;
     },
+    isInteract: function() {
+        var e = this.widget.state.tracks[0].animation;
+        for (const v of this.getAnimationList("interact")) {
+            if (v.name == e.name) {
+                return !0;
+            }
+        }
+        return !1;
+    },
     changeIdleAnimation: function() {
         var t = Date.now()
-          , e = t - this.lastInteractTime
-          , i = Math.floor(e / 1e3 / 60 / 60);
-        Math.floor(e / 1e3 / 60 - 60 * i) >= this.config.behaviors.idle.maxMinutes && (this.lastInteractTime = t,
-        this.playRandAnimation(this.getAnimationList("idle")))
+          , e = t - this.lastInteractTime;
+        if ((this.isIdle() && e/1e3/60 >= this.config.behaviors.idle.maxMinutes) || 
+            (this.isInteract() && e/1e3 >= this.config.behaviors.interact.maxPlaySec)) {
+             this.lastInteractTime = t,
+             this.playRandAnimation(this.getAnimationList("idle"))
+        }
     }
 };

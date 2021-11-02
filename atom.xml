@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.top/"/>
-  <updated>2021-11-01T11:59:04.316Z</updated>
+  <updated>2021-11-02T03:43:57.831Z</updated>
   <id>https://c10udlnk.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://c10udlnk.top/p/blogsFor-hexo-puttingLivelySpineModels/"/>
     <id>https://c10udlnk.top/p/blogsFor-hexo-puttingLivelySpineModels/</id>
     <published>2021-11-01T07:30:47.000Z</published>
-    <updated>2021-11-01T11:59:04.316Z</updated>
+    <updated>2021-11-02T03:43:57.831Z</updated>
     
-    <content type="html"><![CDATA[<p>一切的开始 <s>万恶之源</s> 是某Tover说想在他博客上养一只Miku，还想要小的，然后……本着自己的npy能宠一定宠的原则，就去把pjsk资源解包+解密了（具体请自己折腾，版权问题本文不提供现成资源）。</p><p>然而没想到解出来发现小Miku的模型是用spine做的，而<strong>能找到的绝大多数文章都是在hexo里添加live2d而不是spine</strong>，于是开始了漫漫魔改路。得益于之前的魔改把Melody主题的结构摸清楚了，才能知道哪些代码放哪里怎么用hhh（折腾只有一次和无数次？</p><a id="more"></a><p>效果展示：<a href="https://c10udlnk.top">https://c10udlnk.top</a></p><img src="/p/blogsFor-hexo-puttingLivelySpineModels/image-20211101191625607.png" class="" title="image-20211101191625607"><blockquote><p>参考文章</p><ul><li>解密方法出处（脚本用python读文件写就很简单了hhh）：<a href="https://www.bilibili.com/read/cv7921411/">【世界计划 多彩舞台】关于Project SEKAI游戏资源的提取 - 哔哩哔哩</a></li><li>在hexo中添加spine模型：<a href="https://jin-yuhan.github.io/posts/4eb44f55/">在博客中添加明日方舟小人 - Stalo Fantasia♪</a></li></ul></blockquote><h1 id="before-all"><a class="markdownIt-Anchor" href="#before-all"></a> Before all</h1><p>一个spine模型应该有以下几个必备文件：</p><ul><li><code>xxx.skel</code>：骨架</li><li><code>xxx.png</code>：贴图</li><li><code>xxx.atlas</code>：纹理图集</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>一切的开始 <s>万恶之源</s> 是某Tover说想在他博客上养一只Miku，还想要小的，然后……本着自己的npy能宠一定宠的原则，就去把pjsk资源解包+解密了（具体请自己折腾，版权问题本文不提供现成资源）。</p><p>然而没想到解出来发现小Miku的模型是用spine做的，而<strong>能找到的绝大多数文章都是在hexo里添加live2d而不是spine</strong>，于是开始了漫漫魔改路。得益于之前的魔改把Melody主题的结构摸清楚了，才能知道哪些代码放哪里怎么用hhh（折腾只有一次和无数次？</p><a id="more"></a><p>效果展示：<a href="https://c10udlnk.top">https://c10udlnk.top</a></p><img src="/p/blogsFor-hexo-puttingLivelySpineModels/image-20211101191625607.png" class="" title="image-20211101191625607"><blockquote><p>参考文章</p><ul><li>解密方法出处（脚本用python读文件写就很简单了hhh）：<a href="https://www.bilibili.com/read/cv7921411/">【世界计划 多彩舞台】关于Project SEKAI游戏资源的提取 - 哔哩哔哩</a></li><li>在hexo中添加spine模型：<a href="https://jin-yuhan.github.io/posts/4eb44f55/">在博客中添加明日方舟小人 - Stalo Fantasia♪</a></li></ul></blockquote><h1 id="before-all"><a class="markdownIt-Anchor" href="#before-all"></a> Before all</h1><p>一个spine模型应该有以下几个必备文件：</p><ul><li><code>xxx.skel</code>：骨架</li><li><code>xxx.png</code>：贴图</li><li><code>xxx.atlas</code>：纹理图集</li></ul><p>在主题文件的源目录中新增一个名为``</p><h1 id="and"><a class="markdownIt-Anchor" href="#and"></a> And…</h1><p>相较于参考文章（<a href="https://jin-yuhan.github.io/posts/4eb44f55/">在博客中添加明日方舟小人 - Stalo Fantasia♪</a>）的improve：</p><ol><li></li></ol><p>一些TODO：</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;一切的开始 &lt;s&gt;万恶之源&lt;/s&gt; 是某Tover说想在他博客上养一只Miku，还想要小的，然后……本着自己的npy能宠一定宠的原则，就去把pjsk资源解包+解密了（具体请自己折腾，版权问题本文不提供现成资源）。&lt;/p&gt;

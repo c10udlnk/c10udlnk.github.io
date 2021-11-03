@@ -171,6 +171,9 @@ MySpine.prototype = {
         this.playVoice(this.getVoice("interact")))
     },
     getUrl: function(t) {
+        // a-half-flag
+        var secret = "ZmxhZ3tEb191X2g0dmVfYQ==";
+        var key = "You will never find me~";
         return this.urlPrefix + t
     },
     getAnimationList: function(t) {

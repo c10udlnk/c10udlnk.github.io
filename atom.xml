@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.top/"/>
-  <updated>2021-11-28T04:46:49.684Z</updated>
+  <updated>2022-01-25T15:31:52.389Z</updated>
   <id>https://c10udlnk.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【wp】HWS计划2021硬件安全冬令营线上选拔赛</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022HWSTrial/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022HWSTrial/</id>
+    <published>2022-01-25T14:18:45.000Z</published>
+    <updated>2022-01-25T15:31:52.389Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天打完的选拔赛，超级无敌难得过来及时更新（被好多师傅催来着哈哈哈，ddl第一生产力。&lt;/p&gt;
+&lt;p&gt;只能说这次比赛太幸运了，能碰到这么多逆向题，&lt;s&gt;甚至还有两道流落在Misc和Crypto的apk&lt;/s&gt;，相对来说没什么固件题（固件好菜，RW嗑了八个多小时没嗑出来TAT），那肯定开冲√&lt;/p&gt;
+&lt;p&gt;感谢师傅们手下留情╰(*°▽°*)╯&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+    <category term="Crypto" scheme="https://c10udlnk.top/tags/Crypto/"/>
+    
+    <category term="PWN" scheme="https://c10udlnk.top/tags/PWN/"/>
+    
+  </entry>
   
   <entry>
     <title>Reading Code rapidly</title>

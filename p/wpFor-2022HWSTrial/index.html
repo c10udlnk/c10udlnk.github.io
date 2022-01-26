@@ -144,7 +144,7 @@
 <p>第一张图不太像二维码（四周补上的话data区缺太多），按着这个思路搜索其他的二维码发现一种特征在中间的Aztec code。</p>
 <p>（赛后听凌邪师傅说枪的“阿兹特克”就是指这个Aztec，人傻了.jpg）</p>
 <p>于是按照格式用photoshop拼了一下~~（做工极度粗糙，管他的能扫就行）~~</p>
-<img src="wpFor-2022HWSTrial/微信截图_20220123163205.png" alt="微信截图_20220123163205" style="zoom:50%;" />
+<img src="/p/wpFor-2022HWSTrial/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220123163205.png" class="" title="微信截图_20220123163205">
 <p>找到了（好像是唯一的）在线解码器：<a target="_blank" rel="noopener" href="https://products.aspose.app/barcode/zh-hans/recognize/aztec#">https://products.aspose.app/barcode/zh-hans/recognize/aztec#</a></p>
 <img src="/p/wpFor-2022HWSTrial/image-20220123163515394.png" class="" title="image-20220123163515394">
 <p>发现解码成功！</p>
@@ -157,24 +157,26 @@
 <p>然后直接去找这个字符串的交叉引用，果然看到了一个check函数</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124160914172.png" class="" title="image-20220124160914172">
 <p>ooo000粗略的看起来是一个base64，sub_4AE8有一点混淆，通过调用的分析和一些典型操作（比如初始化s盒、xor，那几个图里已命名的函数）能大概看出来是个魔改rc4，<strong>从xor操作看出除了正常的rc4异或以外还异或了当前的序号</strong>。比较的v17是已知数组off_17180。</p>
-<p><img src="wpFor-2022HWSTrial/image-20220124162345164-16431747493751.png" alt="image-20220124162345164" style="zoom:50%;" /><img src="wpFor-2022HWSTrial/image-20220124162408263.png" alt="image-20220124162408263" style="zoom:50%;" /><img src="wpFor-2022HWSTrial/image-20220124162420829-16431747580992.png" alt="image-20220124162420829" style="zoom:50%;" /></p>
+<img src="/p/wpFor-2022HWSTrial/image-20220124162345164-16431747493751.png" class="" title="image-20220124162345164">
+<img src="/p/wpFor-2022HWSTrial/image-20220124162408263.png" class="" title="image-20220124162408263">
+<img src="/p/wpFor-2022HWSTrial/image-20220124162420829-16431747580992.png" class="" title="image-20220124162420829">
 <p>在genKey里，密钥通过一个倒着的表和一些计算得出</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124162553728.png" class="" title="image-20220124162553728">
 <img src="/p/wpFor-2022HWSTrial/image-20220124162604899.png" class="" title="image-20220124162604899">
 <p>所以可以根据他的方法将密钥算出来，同时在rc4的结果上遍历xor序号就能拿到第一部分的结果</p>
-<img src="wpFor-2022HWSTrial/image-20220124163001750.png" alt="image-20220124163001750" style="zoom:50%;" />
+<img src="/p/wpFor-2022HWSTrial/image-20220124163001750.png" class="" title="image-20220124163001750">
 <p>ooo000的魔改在取数的时候取的是x^(x&gt;&gt;3)而不是x</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124163120723.png" class="" title="image-20220124163120723">
 <p>因为这个改动比较大，选择手写base64解码</p>
-<img src="wpFor-2022HWSTrial/image-20220124163222781.png" alt="image-20220124163222781" style="zoom:50%;" />
-<img src="wpFor-2022HWSTrial/image-20220124163241225.png" alt="image-20220124163241225" style="zoom:50%;" />
+<img src="/p/wpFor-2022HWSTrial/image-20220124163222781.png" class="" title="image-20220124163222781">
+<img src="/p/wpFor-2022HWSTrial/image-20220124163241225.png" class="" title="image-20220124163241225">
 <p>invshift是以前比赛中用过的对x^(x&gt;&gt;3)算法的逆向函数（一招鲜吃遍天了属于是</p>
-<img src="wpFor-2022HWSTrial/image-20220124163329514.png" alt="image-20220124163329514" style="zoom:50%;" />
+<img src="/p/wpFor-2022HWSTrial/image-20220124163329514.png" class="" title="image-20220124163329514">
 <p>算出来以后发现只拿到了后半部分，flag应该是一个uuid，前面少了八个字节</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124163427892.png" class="" title="image-20220124163427892">
 <p>于是跑回去翻java层，发现这个包其实是有个main2activity的（下次搜索一定少搜一点555，绝了</p>
 <p>这里一看就是主函数了</p>
-<img src="wpFor-2022HWSTrial/image-20220124215445481.png" alt="image-20220124215445481" style="zoom: 50%;" />
+<img src="/p/wpFor-2022HWSTrial/image-20220124215445481.png" class="" title="image-20220124215445481">
 <p>比对前五字节是&quot;flag{“和末尾字节的”}&quot;，把中间的部分提取出来，检查[0:3]是&quot;e25&quot;，剩下五位爆破md5</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124104800696.png" class="" title="image-20220124104800696">
 <p>一个比较坑的地方在hexdigits是改了表的！！！！！！出题人其心可诛！！！！！！（划掉</p>
@@ -199,7 +201,8 @@
 <p>看到附件给了apk，啪的一下就点进来了，很快啊（x</p>
 <p>是个kotlin写的apk，以前没逆什么kotlin的经验，一通瞎做搞出来的orz</p>
 <p>直接用jeb看（类似于看平时apk的java层），翻包名看到flag，感觉是个重点包，定位到主行为函数</p>
-<p><img src="wpFor-2022HWSTrial/image-20220124150927504.png" alt="image-20220124150927504" style="zoom: 50%;" /><img src="wpFor-2022HWSTrial/image-20220124150952531-16431747689823.png" alt="image-20220124150952531" style="zoom: 80%;" /></p>
+<img src="/p/wpFor-2022HWSTrial/image-20220124150927504.png" class="" title="image-20220124150927504">
+<img src="/p/wpFor-2022HWSTrial/image-20220124150952531-16431747689823.png" class="" title="image-20220124150952531">
 <p>可以看到很明显的check，是把当前的时间做了一个md5塞进大括号里，再拼上用户名和密码，最后再做一个md5跟已知字符串比较。这里的md5取的是[8:24]↓</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124152902690.png" class="" title="image-20220124152902690">
 <p>hour我直接大胆猜测是4，前面看到有特判</p>

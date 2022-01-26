@@ -157,7 +157,7 @@
 <p>然后直接去找这个字符串的交叉引用，果然看到了一个check函数</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124160914172.png" class="" title="image-20220124160914172">
 <p>ooo000粗略的看起来是一个base64，sub_4AE8有一点混淆，通过调用的分析和一些典型操作（比如初始化s盒、xor，那几个图里已命名的函数）能大概看出来是个魔改rc4，<strong>从xor操作看出除了正常的rc4异或以外还异或了当前的序号</strong>。比较的v17是已知数组off_17180。</p>
-<p><img src="../../../_CTF_/_CONTEST_/2022hwswintercamp/wp/image-20220124162345164.png" alt="image-20220124162345164" style="zoom:50%;" /><img src="wpFor-2022HWSTrial/image-20220124162408263.png" alt="image-20220124162408263" style="zoom:50%;" /><img src="../../../_CTF_/_CONTEST_/2022hwswintercamp/wp/image-20220124162420829.png" alt="image-20220124162420829" style="zoom:50%;" /></p>
+<p><img src="wpFor-2022HWSTrial/image-20220124162345164-16431747493751.png" alt="image-20220124162345164" style="zoom:50%;" /><img src="wpFor-2022HWSTrial/image-20220124162408263.png" alt="image-20220124162408263" style="zoom:50%;" /><img src="wpFor-2022HWSTrial/image-20220124162420829-16431747580992.png" alt="image-20220124162420829" style="zoom:50%;" /></p>
 <p>在genKey里，密钥通过一个倒着的表和一些计算得出</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124162553728.png" class="" title="image-20220124162553728">
 <img src="/p/wpFor-2022HWSTrial/image-20220124162604899.png" class="" title="image-20220124162604899">
@@ -199,7 +199,7 @@
 <p>看到附件给了apk，啪的一下就点进来了，很快啊（x</p>
 <p>是个kotlin写的apk，以前没逆什么kotlin的经验，一通瞎做搞出来的orz</p>
 <p>直接用jeb看（类似于看平时apk的java层），翻包名看到flag，感觉是个重点包，定位到主行为函数</p>
-<p><img src="wpFor-2022HWSTrial/image-20220124150927504.png" alt="image-20220124150927504" style="zoom: 50%;" /><img src="../../../_CTF_/_CONTEST_/2022hwswintercamp/wp/image-20220124150952531.png" alt="image-20220124150952531" style="zoom: 80%;" /></p>
+<p><img src="wpFor-2022HWSTrial/image-20220124150927504.png" alt="image-20220124150927504" style="zoom: 50%;" /><img src="wpFor-2022HWSTrial/image-20220124150952531-16431747689823.png" alt="image-20220124150952531" style="zoom: 80%;" /></p>
 <p>可以看到很明显的check，是把当前的时间做了一个md5塞进大括号里，再拼上用户名和密码，最后再做一个md5跟已知字符串比较。这里的md5取的是[8:24]↓</p>
 <img src="/p/wpFor-2022HWSTrial/image-20220124152902690.png" class="" title="image-20220124152902690">
 <p>hour我直接大胆猜测是4，前面看到有特判</p>

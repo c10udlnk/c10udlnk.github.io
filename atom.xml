@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.top/"/>
-  <updated>2022-02-25T07:09:51.944Z</updated>
+  <updated>2022-03-02T01:27:07.761Z</updated>
   <id>https://c10udlnk.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【wp】2022SUSCTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022SUSCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022SUSCTF/</id>
+    <published>2022-03-02T00:40:12.000Z</published>
+    <updated>2022-03-02T01:27:07.761Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;逆向手终于来整理逆向啦（喜大普奔，可能会有其他两个逆向题的复现+1？&lt;/p&gt;
+&lt;p&gt;有幸苟在Top14，队友们tql！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
   
   <entry>
     <title>【wp】2022TQLCTF</title>

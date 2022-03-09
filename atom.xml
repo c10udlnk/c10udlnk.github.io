@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.top/"/>
-  <updated>2022-03-02T01:27:07.761Z</updated>
+  <updated>2022-03-09T09:33:30.129Z</updated>
   <id>https://c10udlnk.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【wp】2022D^3CTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022D3CTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022D3CTF/</id>
+    <published>2022-03-09T00:31:51.000Z</published>
+    <updated>2022-03-09T09:33:30.129Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上周末因为各种原因没怎么打hhh，唯一在有空嗑的题都是赛后一个小时内解出来的🤣（没看wp，瞄了一眼解题人数好像是简单题xd。&lt;/p&gt;
+&lt;p&gt;薛定谔的音游题复现，咕——&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
   
   <entry>
     <title>【wp】2022SUSCTF</title>

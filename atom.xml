@@ -6,7 +6,7 @@
   <link href="https://c10udlnk.top/atom.xml" rel="self"/>
   
   <link href="https://c10udlnk.top/"/>
-  <updated>2022-03-09T09:33:30.129Z</updated>
+  <updated>2022-05-11T02:29:05.023Z</updated>
   <id>https://c10udlnk.top/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wpFor-2022SlothTrial</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022SlothTrial/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022SlothTrial/</id>
+    <published>2022-05-10T08:39:58.000Z</published>
+    <updated>2022-05-11T02:29:05.023Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上周末的Sloth选拔赛，趁着还有余温先来补补自出题的wp。&lt;/p&gt;
+&lt;p&gt;整个RE部分只有checkininin有一个解，大哭，逆向手岌岌可危（&lt;/p&gt;
+&lt;p&gt;仓库传送门：&lt;a href=&quot;https://github.com/scnu-sloth/hsctf-2022-trial&quot;&gt;scnu-sloth/hsctf-2022-trial: Sloth 2022 选拔赛 题目及wp&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+    <category term="华师CTF" scheme="https://c10udlnk.top/tags/%E5%8D%8E%E5%B8%88CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wpFor-2022MRCTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022MRCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022MRCTF/</id>
+    <published>2022-04-26T08:14:37.000Z</published>
+    <updated>2022-04-27T01:05:01.314Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;来复盘一下MRCTF有输出的几个题，又成了杂项队hhh。&lt;/p&gt;
+&lt;img src=&quot;/p/wpFor-2022MRCTF/image-20220426163516287.png&quot; class=&quot;&quot; title=&quot;image-20220426163516287&quot;&gt;
+&lt;p&gt;比赛还撞上补课，太顶了TAT。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
   
   <entry>
     <title>【wp】2022D^3CTF</title>

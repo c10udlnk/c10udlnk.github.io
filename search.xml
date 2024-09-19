@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> zero2one/入门 </tag>
-            
             <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
             
             <tag> 折腾经历 </tag>
             
@@ -53,11 +53,11 @@
             
             <tag> Reverse </tag>
             
+            <tag> Misc </tag>
+            
             <tag> wp </tag>
             
             <tag> 华师CTF </tag>
-            
-            <tag> Misc </tag>
             
         </tags>
       
@@ -144,9 +144,9 @@
             
             <tag> Reverse </tag>
             
-            <tag> wp </tag>
-            
             <tag> Misc </tag>
+            
+            <tag> wp </tag>
             
         </tags>
       
@@ -175,11 +175,11 @@
             
             <tag> Reverse </tag>
             
-            <tag> PWN </tag>
+            <tag> Misc </tag>
             
             <tag> wp </tag>
             
-            <tag> Misc </tag>
+            <tag> PWN </tag>
             
             <tag> Crypto </tag>
             
@@ -194,7 +194,7 @@
       <link href="p/blogsFor-ComSec-readingCodes/"/>
       <url>p/blogsFor-ComSec-readingCodes/</url>
       
-        <content type="html"><![CDATA[<style type="text/css">    .reveal .left_items{         text-align: left;        font-size: 28px;    }    .reveal .subtitles{        text-shadow: 5px 5px 10px #39C5BB;    }    .reveal .subtitle1{        color: #921AFF;        text-shadow: 3px 3px 3px #0080FF;    }    .reveal ul{         display: block;     }</style><h1 id="Reading-Code-rapidly"><a href="#Reading-Code-rapidly" class="headerlink" title="Reading Code rapidly"></a>Reading Code rapidly</h1><blockquote><p>By c10udlnk</p></blockquote><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211126164041910.png"></p><p>&#x3D;&#x3D;&#x3D;</p><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><br><ol><li>逆向分析</li><li>源码学习</li><li>接口使用</li><li>工具魔改</li></ol><p>&#x3D;&#x3D;</p><h2 id="一个很重要很重要…的技巧"><a href="#一个很重要很重要…的技巧" class="headerlink" title="一个很重要很重要…的技巧"></a>一个很重要很重要…的技巧</h2><br><p>从</p><h3 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h3><p>到</p><h3 id="细致"><a href="#细致" class="headerlink" title="细致"></a>细致</h3><p>&#x3D;&#x3D;</p><h3 id="抽象-1"><a href="#抽象-1" class="headerlink" title="抽象"></a>抽象</h3><ul><li>函数名</li><li>函数定义</li><li>参数和返回值</li></ul><p>&#x3D;&#x3D;</p><h3 id="细致-1"><a href="#细致-1" class="headerlink" title="细致"></a>细致</h3><ul><li>某功能的具体实现</li><li>某些数据的数据类型</li><li>一些微不足道 <small><del>（有时候非常重要）</del></small> 的细节<ul><li>末尾有无补0</li><li>有无字符串反转</li><li>大端处理还是小端处理</li><li>密码算法常量有无魔改</li><li>…</li></ul></li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">逆向分析</h2><p>&#x3D;&#x3D;</p><h3 id="找到感兴趣的逻辑"><a href="#找到感兴趣的逻辑" class="headerlink" title="找到感兴趣的逻辑"></a>找到感兴趣的逻辑</h3><h4 id="关键字符串"><a href="#关键字符串" class="headerlink" title="关键字符串"></a>关键字符串</h4><h4 id="关键函数"><a href="#关键函数" class="headerlink" title="关键函数"></a>关键函数</h4><h4 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a>动态调试</h4><h4 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h4><p>&#x3D;&#x3D;</p><h3 id="In-CTF…"><a href="#In-CTF…" class="headerlink" title="In CTF…"></a>In CTF…</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128101038255.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128101103520.png"></p><p>&#x3D;&#x3D;</p><h3 id="某软件分析"><a href="#某软件分析" class="headerlink" title="某软件分析"></a>某软件分析</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128101555978.png"></p><p>&#x3D;&#x3D;</p><h3 id="In-Another-CTF…"><a href="#In-Another-CTF…" class="headerlink" title="In Another CTF…"></a>In Another CTF…</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128104321059.png"></p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128103850221.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128104802439.png"></p><p>&#x3D;&#x3D;</p><ul><li>逆向游戏逻辑（写挂，防外挂，游戏制作学习……）</li><li>破解软件</li><li>写注册机</li><li><a href="http://csapp.cs.cmu.edu/public/labs.html">CSAPP - Bomb Lab</a></li><li>……</li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">源码学习</h2><p>&#x3D;&#x3D;</p><h3 id="主函数入手"><a href="#主函数入手" class="headerlink" title="主函数入手"></a>主函数入手</h3><h4 id="随着函数调用逐层剖析"><a href="#随着函数调用逐层剖析" class="headerlink" title="随着函数调用逐层剖析"></a>随着函数调用逐层剖析</h4><p>&#x3D;&#x3D;</p><h3 id="rijndael-fst-3-0"><a href="#rijndael-fst-3-0" class="headerlink" title="rijndael-fst-3.0"></a>rijndael-fst-3.0</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128110935779.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128111501028.png"></p><p>&#x3D;&#x3D;</p><ul><li>源码学习（AES&#x2F;SHA&#x2F;……）</li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">接口使用</h2><p>&#x3D;&#x3D;</p><h3 id="传参和返回值"><a href="#传参和返回值" class="headerlink" title="传参和返回值"></a>传参和返回值</h3><h4 id="梳理数据通路"><a href="#梳理数据通路" class="headerlink" title="梳理数据通路"></a>梳理数据通路</h4><h4 id="命令行参数-or-交互"><a href="#命令行参数-or-交互" class="headerlink" title="命令行参数 or 交互"></a>命令行参数 or 交互</h4><p>&#x3D;&#x3D;</p><h3 id="rijndael-fst-3-0-1"><a href="#rijndael-fst-3-0-1" class="headerlink" title="rijndael-fst-3.0"></a>rijndael-fst-3.0</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128112428343.png"></p><p>&#x3D;&#x3D;</p><ul><li>实习&#x2F;工作（在原有代码的基础上调接口 or 写文档）</li><li>使用工具</li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">工具魔改</h2><p>&#x3D;&#x3D;</p><h3 id="按需寻找"><a href="#按需寻找" class="headerlink" title="按需寻找"></a>按需寻找</h3><ul><li>兼容（新版本or新平台）<ul><li>根据报错信息修改</li><li>根据新版本的添加修改</li></ul></li><li>魔改功能<ul><li>定位功能</li><li>实行魔改</li></ul></li></ul><p>&#x3D;&#x3D;</p><h3 id="兼容新版本"><a href="#兼容新版本" class="headerlink" title="兼容新版本"></a>兼容新版本</h3><p>实例1：<a href="https://c10udlnk.topwpfor-2021qwb/#%E9%AD%94%E6%94%B9stegosaurus">【wp】2021强网杯-ExtremelySlow</a>（魔改stegosaurus使其兼容3.10）</p><p>实例2：<a href="https://c10udlnk.topblogsfor-hexo-puttinglivelyspinemodels/#spine-skeleton-binaryjs">在你的博客里放一只可爱的Spine Model吧~</a>（魔改解析skel高版本工具）</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128113144163.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128113345500.png"></p><p>&#x3D;&#x3D;</p><h3 id="兼容新平台"><a href="#兼容新平台" class="headerlink" title="兼容新平台"></a>兼容新平台</h3><p>实例：<a href="https://c10udlnk.topblogsfor-hexo-addingdigitalraininmelody/">Melody主题的背景代码雨特效</a></p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128113811705.png"></p><p>&#x3D;&#x3D;</p><h3 id="魔改功能"><a href="#魔改功能" class="headerlink" title="魔改功能"></a>魔改功能</h3><p>实例：还是<a href="https://c10udlnk.topblogsfor-hexo-puttinglivelyspinemodels/#spine-skeleton-binaryjs">在你的博客里放一只可爱的Spine Model吧~</a>（魔改spine控制代码）</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128124636046.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128123954374.png"></p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128124117396.png"></p><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">End...?</h2><p>&#x3D;&#x3D;</p><h3 id="缓冲区溢出"><a href="#缓冲区溢出" class="headerlink" title="缓冲区溢出"></a>缓冲区溢出</h3><ul><li>跟逆向破解的区别</li><li>更接近底层</li><li>利用对外接口，不改变程序逻辑</li><li><a href="http://csapp.cs.cmu.edu/public/labs.html">CSAPP - Buffer Lab</a></li></ul><p>&#x3D;&#x3D;&#x3D;</p><h1 id="End"><a href="#End" class="headerlink" title="End!"></a>End!</h1><ul><li><p><a href="https://c10udlnk.top/">https://c10udlnk.top/</a></p></li><li><p><a href="https://github.com/c10udlnk">https://github.com/c10udlnk</a></p></li><li><p><a href="mailto:&#99;&#x31;&#x30;&#x75;&#x64;&#108;&#110;&#x6b;&#x40;&#109;&#46;&#115;&#99;&#x6e;&#117;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;">&#99;&#x31;&#x30;&#x75;&#x64;&#108;&#110;&#x6b;&#x40;&#109;&#46;&#115;&#99;&#x6e;&#117;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;</a></p></li></ul>]]></content>
+        <content type="html"><![CDATA[<style type="text/css">    .reveal .left_items{         text-align: left;        font-size: 28px;    }    .reveal .subtitles{        text-shadow: 5px 5px 10px #39C5BB;    }    .reveal .subtitle1{        color: #921AFF;        text-shadow: 3px 3px 3px #0080FF;    }    .reveal ul{         display: block;     }</style><h1 id="Reading-Code-rapidly"><a href="#Reading-Code-rapidly" class="headerlink" title="Reading Code rapidly"></a>Reading Code rapidly</h1><blockquote><p>By c10udlnk</p></blockquote><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211126164041910.png"></p><p>&#x3D;&#x3D;&#x3D;</p><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><br><ol><li>逆向分析</li><li>源码学习</li><li>接口使用</li><li>工具魔改</li></ol><p>&#x3D;&#x3D;</p><h2 id="一个很重要很重要…的技巧"><a href="#一个很重要很重要…的技巧" class="headerlink" title="一个很重要很重要…的技巧"></a>一个很重要很重要…的技巧</h2><br><p>从</p><h3 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h3><p>到</p><h3 id="细致"><a href="#细致" class="headerlink" title="细致"></a>细致</h3><p>&#x3D;&#x3D;</p><h3 id="抽象-1"><a href="#抽象-1" class="headerlink" title="抽象"></a>抽象</h3><ul><li>函数名</li><li>函数定义</li><li>参数和返回值</li></ul><p>&#x3D;&#x3D;</p><h3 id="细致-1"><a href="#细致-1" class="headerlink" title="细致"></a>细致</h3><ul><li>某功能的具体实现</li><li>某些数据的数据类型</li><li>一些微不足道 <small><del>（有时候非常重要）</del></small> 的细节<ul><li>末尾有无补0</li><li>有无字符串反转</li><li>大端处理还是小端处理</li><li>密码算法常量有无魔改</li><li>…</li></ul></li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">逆向分析</h2><p>&#x3D;&#x3D;</p><h3 id="找到感兴趣的逻辑"><a href="#找到感兴趣的逻辑" class="headerlink" title="找到感兴趣的逻辑"></a>找到感兴趣的逻辑</h3><h4 id="关键字符串"><a href="#关键字符串" class="headerlink" title="关键字符串"></a>关键字符串</h4><h4 id="关键函数"><a href="#关键函数" class="headerlink" title="关键函数"></a>关键函数</h4><h4 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a>动态调试</h4><h4 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h4><p>&#x3D;&#x3D;</p><h3 id="In-CTF…"><a href="#In-CTF…" class="headerlink" title="In CTF…"></a>In CTF…</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128101038255.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128101103520.png"></p><p>&#x3D;&#x3D;</p><h3 id="某软件分析"><a href="#某软件分析" class="headerlink" title="某软件分析"></a>某软件分析</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128101555978.png"></p><p>&#x3D;&#x3D;</p><h3 id="In-Another-CTF…"><a href="#In-Another-CTF…" class="headerlink" title="In Another CTF…"></a>In Another CTF…</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128104321059.png"></p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128103850221.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128104802439.png"></p><p>&#x3D;&#x3D;</p><ul><li>逆向游戏逻辑（写挂，防外挂，游戏制作学习……）</li><li>破解软件</li><li>写注册机</li><li><a href="http://csapp.cs.cmu.edu/public/labs.html">CSAPP - Bomb Lab</a></li><li>……</li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">源码学习</h2><p>&#x3D;&#x3D;</p><h3 id="主函数入手"><a href="#主函数入手" class="headerlink" title="主函数入手"></a>主函数入手</h3><h4 id="随着函数调用逐层剖析"><a href="#随着函数调用逐层剖析" class="headerlink" title="随着函数调用逐层剖析"></a>随着函数调用逐层剖析</h4><p>&#x3D;&#x3D;</p><h3 id="rijndael-fst-3-0"><a href="#rijndael-fst-3-0" class="headerlink" title="rijndael-fst-3.0"></a>rijndael-fst-3.0</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128110935779.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128111501028.png"></p><p>&#x3D;&#x3D;</p><ul><li>源码学习（AES&#x2F;SHA&#x2F;……）</li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">接口使用</h2><p>&#x3D;&#x3D;</p><h3 id="传参和返回值"><a href="#传参和返回值" class="headerlink" title="传参和返回值"></a>传参和返回值</h3><h4 id="梳理数据通路"><a href="#梳理数据通路" class="headerlink" title="梳理数据通路"></a>梳理数据通路</h4><h4 id="命令行参数-or-交互"><a href="#命令行参数-or-交互" class="headerlink" title="命令行参数 or 交互"></a>命令行参数 or 交互</h4><p>&#x3D;&#x3D;</p><h3 id="rijndael-fst-3-0-1"><a href="#rijndael-fst-3-0-1" class="headerlink" title="rijndael-fst-3.0"></a>rijndael-fst-3.0</h3><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128112428343.png"></p><p>&#x3D;&#x3D;</p><ul><li>实习&#x2F;工作（在原有代码的基础上调接口 or 写文档）</li><li>使用工具</li></ul><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">工具魔改</h2><p>&#x3D;&#x3D;</p><h3 id="按需寻找"><a href="#按需寻找" class="headerlink" title="按需寻找"></a>按需寻找</h3><ul><li>兼容（新版本or新平台）<ul><li>根据报错信息修改</li><li>根据新版本的添加修改</li></ul></li><li>魔改功能<ul><li>定位功能</li><li>实行魔改</li></ul></li></ul><p>&#x3D;&#x3D;</p><h3 id="兼容新版本"><a href="#兼容新版本" class="headerlink" title="兼容新版本"></a>兼容新版本</h3><p>实例1：<a href="https://c10udlnk.topwpfor-2021qwb/#%E9%AD%94%E6%94%B9stegosaurus">【wp】2021强网杯-ExtremelySlow</a>（魔改stegosaurus使其兼容3.10）</p><p>实例2：<a href="https://c10udlnk.topblogsfor-hexo-puttinglivelyspinemodels/#spine-skeleton-binaryjs">在你的博客里放一只可爱的Spine Model吧~</a>（魔改解析skel高版本工具）</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128113144163.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128113345500.png"></p><p>&#x3D;&#x3D;</p><h3 id="兼容新平台"><a href="#兼容新平台" class="headerlink" title="兼容新平台"></a>兼容新平台</h3><p>实例：<a href="https://c10udlnk.topblogsfor-hexo-addingdigitalraininmelody/">Melody主题的背景代码雨特效</a></p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128113811705.png"></p><p>&#x3D;&#x3D;</p><h3 id="魔改功能"><a href="#魔改功能" class="headerlink" title="魔改功能"></a>魔改功能</h3><p>实例：还是<a href="https://c10udlnk.topblogsfor-hexo-puttinglivelyspinemodels/#spine-skeleton-binaryjs">在你的博客里放一只可爱的Spine Model吧~</a>（魔改spine控制代码）</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128124636046.png"></p><p>&#x3D;&#x3D;</p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128123954374.png"></p><p><img src="/p/blogsFor-ComSec-readingCodes/image-20211128124117396.png"></p><p>&#x3D;&#x3D;&#x3D;</p><h2 class="subtitles">End...?</h2><p>&#x3D;&#x3D;</p><h3 id="缓冲区溢出"><a href="#缓冲区溢出" class="headerlink" title="缓冲区溢出"></a>缓冲区溢出</h3><ul><li>跟逆向破解的区别</li><li>更接近底层</li><li>利用对外接口，不改变程序逻辑</li><li><a href="http://csapp.cs.cmu.edu/public/labs.html">CSAPP - Buffer Lab</a></li></ul><p>&#x3D;&#x3D;&#x3D;</p><h1 id="End"><a href="#End" class="headerlink" title="End!"></a>End!</h1><ul><li><p><a href="https://c10udlnk.top/">https://c10udlnk.top/</a></p></li><li><p><a href="https://github.com/c10udlnk">https://github.com/c10udlnk</a></p></li><li><p><a href="mailto:&#x63;&#49;&#48;&#x75;&#x64;&#x6c;&#x6e;&#x6b;&#x40;&#109;&#46;&#x73;&#99;&#x6e;&#x75;&#x2e;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;">&#x63;&#49;&#48;&#x75;&#x64;&#x6c;&#x6e;&#x6b;&#x40;&#109;&#46;&#x73;&#99;&#x6e;&#x75;&#x2e;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;</a></p></li></ul>]]></content>
       
       
       <categories>
@@ -239,11 +239,11 @@
             
             <tag> Reverse </tag>
             
+            <tag> Misc </tag>
+            
             <tag> wp </tag>
             
             <tag> 华师CTF </tag>
-            
-            <tag> Misc </tag>
             
         </tags>
       
@@ -268,9 +268,9 @@
       
         <tags>
             
-            <tag> zero2one/入门 </tag>
-            
             <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
             
             <tag> 折腾经历 </tag>
             
@@ -301,9 +301,9 @@
             
             <tag> Reverse </tag>
             
-            <tag> zero2one/入门 </tag>
-            
             <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
             
         </tags>
       
@@ -357,9 +357,9 @@
       
         <tags>
             
-            <tag> zero2one/入门 </tag>
-            
             <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
             
             <tag> 折腾经历 </tag>
             
@@ -388,9 +388,9 @@
             
             <tag> CTF </tag>
             
-            <tag> wp </tag>
-            
             <tag> Misc </tag>
+            
+            <tag> wp </tag>
             
             <tag> Crypto </tag>
             
@@ -417,9 +417,9 @@
       
         <tags>
             
-            <tag> zero2one/入门 </tag>
-            
             <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
             
             <tag> 折腾经历 </tag>
             
@@ -448,9 +448,9 @@
             
             <tag> CTF </tag>
             
-            <tag> wp </tag>
-            
             <tag> Misc </tag>
+            
+            <tag> wp </tag>
             
         </tags>
       
@@ -535,9 +535,9 @@
             
             <tag> CTF </tag>
             
-            <tag> wp </tag>
-            
             <tag> Misc </tag>
+            
+            <tag> wp </tag>
             
         </tags>
       
@@ -595,9 +595,9 @@
             
             <tag> Reverse </tag>
             
-            <tag> wp </tag>
-            
             <tag> Misc </tag>
+            
+            <tag> wp </tag>
             
         </tags>
       
@@ -653,9 +653,9 @@
             
             <tag> CTF </tag>
             
-            <tag> wp </tag>
-            
             <tag> Misc </tag>
+            
+            <tag> wp </tag>
             
         </tags>
       
@@ -767,9 +767,9 @@
       
         <tags>
             
-            <tag> zero2one/入门 </tag>
-            
             <tag> u5eful </tag>
+            
+            <tag> zero2one/入门 </tag>
             
         </tags>
       

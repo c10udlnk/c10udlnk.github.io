@@ -1,0 +1,504 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Reverse for fun =v="><meta name="keywords" content="CTF,Reverse,zero2one/入门,u5eful"><meta name="author" content="c10udlnk,undefined"><meta name="copyright" content="c10udlnk"><title>Reverse for fun =v= | c10udlnk's Blog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reset.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/theme/sky.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/monokai.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="c10udlnk's Blog" type="application/atom+xml">
+</head><body><div class="reveal"><div class="slides"><section data-markdown data-separator="===" data-separator-vertical="==" data-charset="utf-8"><script type="text/template">
+<style type="text/css">
+    .reveal .left_items{ 
+        text-align: left;
+        font-size: 28px;
+    }
+    .reveal .subtitles{
+        text-shadow: 5px 5px 10px #39C5BB;
+    }
+    .reveal .subtitle1{
+        color: #921AFF;
+        text-shadow: 3px 3px 3px #0080FF;
+    }
+    .reveal ul{ 
+        display: block; 
+    }
+</style>
+
+
+# <font color="#921AFF">Reverse</font>
+
+### for
+
+## fun!!!!!!
+
+> CTF逆向基础篇
+>
+>  -- By <font color="#0080FF">c10udlnk </font><small> (a Sloth RE CTFer</small>
+
+===
+
+<h2 class="subtitles">逆向工程概述</h2>
+
+什么是<font color="red">“逆向”</font>？
+
+<font color="red">“逆向”</font>究竟做些什么？
+
+<font color="red">“逆向”</font>怎么做？
+
+==
+
+<p class="left_items">逆向工程（Reverse Engineering，简称RE）在软件领域一般是指通过分析程序结构、功能、行为等，<font color="red">掌握其总体逻辑</font>。</p>
+
+<h3 class="subtitle1">一些应用</h3>
+
+- 软件破解
+- 软件保护
+- 软件补丁
+- 游戏外挂
+- ……
+
+==
+
+<h3 class="subtitle1">逆向分析方法</h3>
+
+#### 静态分析法
+
+<p class="left_items">静态分析法是指<font color="red">在不执行代码的情况下</font>，对代码进行静态分析的方法。例如通过分析程序获取其类型、大小、字符串等相关信息，通过反汇编、反编译工具查看内部代码、分析代码结构、获取代码运行逻辑。</p>
+
+![](image-20211022211237635.png)
+
+#### 动态分析法
+
+<p class="left_items">动态分析法是指<font color="red">在程序文件的执行过程中</font>对代码行为进行分析的方法。通过借助相关调试器我们可以观察程序行为，分析程序内部结构和原理。</p>
+
+==
+
+<h3 class="subtitle1">打补丁 && 破解</h3>
+
+<p class="left_items">对应用程序或者进程内存内容的更改，如Windows更新就是一个打补丁的例子，目的是修复程序漏洞，另一方面修改某些商业软件的注册逻辑或者逆向注册算法则常被称之为破解。</p>
+
+<p class="left_items">Crackme，公开给别人破解的小程序，主要分为以下几类：</p>
+
+1. KeyGenMe：要求别人做出它的keygen（注册机）
+2. ReverseMe：要求别人把它的算法做出逆向分析
+3. UnpackMe：要求别人把它成功脱壳
+
+==
+
+<h3 class="subtitle1">CTF - Reverse</h3>
+
+<p class="left_items"><bold>CTF竞赛</bold>中的逆向题目一般都是以<font color="red">逆向分析加密算法</font>为主，在此基础上加入花指令、反调试、壳、虚拟机、控制流混淆、多进程/线程技术等多种软件保护技术以延缓或者阻挡攻击者的破解。</p>
+
+<small>可以很简单，也可以非常难，难题以综合密码学知识和Linux/Windows系统底层原理为主。</small>
+
+![](image-20211023114519818.png)
+
+==
+
+<h3 class="subtitle1">一般解题步骤</h3>
+
+1. 获取程序的相关信息（文件类型、源语言、有无加壳……）
+2. 根据信息使用对应的工具
+3. 定位关键代码（关键字符串定位、逻辑定位……）
+4. 结合静态分析和动态分析根据程序逻辑逆向推导出攻击代码
+
+
+
+<p class="left_items"><font color="red">静态分析：</font>看反编译器的结果进行分析。</p>
+
+<p class="left_items">分析过程不会被程序检测到，可以让一些反调试手段无效。</p>
+
+<p class="left_items"><font color="red">动态分析：</font>通过调试器对程序进行调试，通过程序的动态执行过程来分析。</p>
+
+<p class="left_items">分析过程不易受到垃圾代码影响，逻辑复杂的代码可以通过动态调试对功能进行猜测。</p>
+
+===
+
+<h2 class="subtitles">汇编基础</h2>
+
+什么是<font color="red">汇编语言</font>？
+
+<font color="red">寄存器</font>、运行栈、函数调用约定……
+
+来讲点<font color="red">汇编</font>指令集~吧
+
+==
+
+<h3 class="subtitle1">什么是汇编语言</h3>
+
+> <small>CSAPP: ... assembly code, a textual representation of the machine code giving the individual instructions in the program ...</small>
+
+- 是一种底层的计算机语言，并与机器指令一一对应
+- 汇编语言直接控制/描述CPU的操作
+
+==
+
+<h3 class="subtitle1">寄存器</h3>
+
+- 是中央处理器内用来暂存指令、数据和地址的电脑存储器。
+- 寄存器的存贮容量有限，读写速度非常快。
+- 在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的运行。 
+- 寄存器位于存储器层次结构的最顶端，也是CPU可以读写的最快的存储器
+
+==
+
+![](image-20211022215438705.png)
+
+==
+
+<h3 class="subtitle1">寄存器分类</h3>（以X86为例）
+
+- 通用寄存器：EAX、EBX、ECX、EDX、ESI、EDI、EBP、ESP
+- 指令指针寄存器：EIP（指向当前要执行的指令地址）
+- 标志寄存器：EFLAGS（程序根据标志存器众状态的值控制程序的分支语句的跳转）
+- 段寄存器：CS、DS、SS、ES、FS、GS
+- 特殊寄存器：DR0-DR7（可用于设置硬件断点）
+
+==
+
+<h3 class="subtitle1">汇编指令集</h3>
+
+<p class="left_items">x86汇编代码有两种记法：Intel 和 AT&T。常用的逆向分析工具如IDA Pro、Ollydbg<font color="red">通常使用Intel记法</font>，所以这里主要以Intel语法为例。</p>
+
+<p class="left_items">Intel 和 AT&T语法的区别：</p>
+
+<small>
+
+1. 前缀：AT&T寄存器前缀有'%'，立即数前缀有'$'；但在Intel中并没有这些前缀。
+2. 后缀：在Intel中，通过在数字后面添加'h'来表示十六进制；而在AT&T中则在数字前面添加'0x'，同时intel的指令中并没有后缀。
+3. 操作数方向: AT&T中第一个参数为源操作数，第二个参数为目标操作数。但在Intel中则是相反。
+
+</small>
+
+==
+
+指令的类型通常分为3种：
+
+- 数据移动指令：mov、lea、push、pop
+- 逻辑运算指令：add、sub、mul、div、xor、or、and
+- 流程控制指令：jmp、je、jz（……）、call、ret、leave
+
+==
+
+<h4 class="subtitle1">mov</h4>
+
+<p class="left_items">mov指令可以把第二个参数中的值复制到第一个参数中，该指令可在寄存器和寄存器之间操作，也可以在寄存器和内存之间操作，但不能在内存和内存中操作。</p>
+
+<small>
+
+|       语法       |             例子             |
+| :--------------: | :--------------------------: |
+| mov 	reg, reg | mov 	ebx, dword ptr [eax] |
+| mov	reg, mem  |       mov 	ebx, eax       |
+| mov	mem, reg  |      mov 	eax, 0x10       |
+| mov 	reg, con |                              |
+| mov	mem, con  |                              |
+|                  |                              |
+
+</small>
+
+==
+
+<h4 class="subtitle1">lea</h4>
+
+<p class="left_items">lea： “load effective address”，用于把内存地址赋值给操作数。</p>
+
+<small>
+
+|      语法       |                             例子                             |
+| :-------------: | :----------------------------------------------------------: |
+| lea	reg, mem | lea	rax, [rbx]<br><font color="#39C5BB">;等价于mov	rax,rbx</font> |
+|                 | lea	rax, [rax+rbx]<br><font color="#39C5BB">;等价于add	rax,rbx</font> |
+
+</small>
+
+==
+
+<h4 class="subtitle1">push</h4>
+
+<p class="left_items">push指令调用时，会先把esp（栈顶指针）减4，并将参数复制到栈顶当中</p>
+
+<h4 class="subtitle1">pop</h4>
+
+<p class="left_items">pop指令为push的逆操作，调用时会把esp（栈顶指针）指向的数据复制到操作数中，然后对ESP加4</p>
+
+<small>
+
+|                   语法                    |                             例子                             |
+| :---------------------------------------: | :----------------------------------------------------------: |
+| push	reg<br>push	mem<br>push	con | push	rdi<br><font color="#39C5BB">;等价于esp-=4;[esp]=rdi</font> |
+|         pop	reg<br>pop	mem          | pop	rdi<br/><font color="#39C5BB">;等价于rdi=[esp];esp+=4</font> |
+
+</small>
+
+==
+
+<h4 class="subtitle1">逻辑运算</h4>
+
+逻辑运算指令以`add`指令为例，其余双目运算符类似。
+
+<p class="left_items">add:  将两参数相加并存储到目标参数中。在语法中，必须要至少有一个参数为寄存器。</p>
+
+<small>
+
+|                             语法                             |      例子      |
+| :----------------------------------------------------------: | :------------: |
+| add	reg, reg<br>add	mem, reg<br>add	reg, mem<br>add 	reg, con<br>add	mem, con | add 	eax,10 |
+
+</small>
+
+==
+
+<h4 class="subtitle1">流程控制</h4>
+
+<p class="left_items">在汇编中，我们通常用标签以及跳转指令来控制流程，例如：</p>
+
+```assembly
+begin:  add	eax,1
+        mov	edi,eax
+        jmp	begin
+```
+
+<p class="left_items">汇编运行到最后一句的时候，执行jmp begin，程序执行跳到begin标签处。</p>
+
+通常跳转都会和cmp（比较指令）和一起使用。
+
+==
+
+<h4 class="subtitle1">流程控制</h4>
+
+<p class="left_items">cmp：比较指令，将两个操作数的值进行比较，比较的结果会存在状态寄存器中，但不会改变操作数的值。</p>
+
+```assembly
+cmp	reg, reg
+cmp	mem, reg
+cmp	reg, mem
+cmp	reg, con
+```
+
+<p class="left_items">与跳转指令结合使用：</p>
+
+```assembly
+cmp ebx, eax  ;将ebx和eax进行比较
+je  label     ;如果比较结果相等的话则进行跳转equal
+```
+
+<p class="left_items">其他跳转指令：</p>
+
+`jne`（不相等）、 `jg`（大于）、`jge`（大于等于）、`jl`（小于）、`jle`（小于等于）……
+
+==
+
+<h4 class="subtitle1">流程控制</h4>
+
+<p class="left_items">call：函数调用</p>
+
+```assembly
+call func
+;相当于push eip | jmp func
+```
+
+<p class="left_items">ret：函数返回</p>
+
+```assembly
+ret
+;相当于pop eip
+```
+
+<p class="left_items">leave：还原ebp、esp</p>
+
+```assembly
+leave
+;相当于mov esp, ebp | pop ebp
+```
+
+===
+
+<h2 class="subtitles">相关工具</h2>
+
+锵锵~
+
+<font color="red">常用工具</font>和<font color="red">最常用工具的使用方法</font>都在这里~
+
+==
+
+<h3 class="subtitle1">实验环境</h3>
+
+<small>
+
+- <font color="red">操作系统：</font>Windows + Linux虚拟机/服务器/WSL2
+- <font color="red">查看PE信息：</font>ExeinfoPE、PEID、LordPE……
+- <font color="red">反汇编/反编译：</font>IDA7.5/IDA7.0，Ollydbg，ghidra……
+- <font color="red">IDA插件：</font>findcrypt3、keypatch、lazyIDA……
+- <font color="red">调试：</font>IDA7.5/IDA7.0（多平台反汇编、反编译软件，内置Windows、Linux、MacOS、ARM等多平台调试器），Ollydbg（Win32反汇编工具、调试器），WinDbg（Windows内核调试器），GDB（Linux平台调试器）……
+- <font color="red">少见语言反编译</font>：dnSpy（.Net）、JEB（apk）、jd-gui（Java字节码）……
+- <font color="red">参考书籍：</font>**加密与解密4** 、汇编语言、CSAPP、逆向工程核心原理
+
+</small>
+
+==
+
+<h3 class="subtitle1">IDAPro</h3>
+
+The IDA Disassembler and Debugger is an interactive, programmable, extensible, multi-processor disassembler hosted on Windows, Linux, or Mac OS X. 
+
+- Disassembler
+- Debugger
+- Interactive
+- Programmable
+
+==
+
+![](image-20211023125101532.png)
+
+==
+
+<h3 class="subtitle1">一些快捷键</h3>
+
+- `F5`：反编译
+- `TAB`：反汇编窗口、反编译窗口切换
+- `shift + F12`：查看字符串
+- `x`：交叉引用
+- `/`：注释
+- `n`：修改标识符
+- `ENTER / 双击`：进入函数（跳转到鼠标指向的位置）
+- `g`：跳转到某一地址
+- `ESC`：后退上一位置
+- `crtl + s`：查看区段
+
+==
+
+<h3 class="subtitle1">一些快捷键</h3>
+
+- `p`：create function
+- `c`：covert to code
+- `d`：covert to data
+- `h`：covert to hex
+- `r`：covert to ascii
+- `a`：covert to string
+- `u`：undefine
+
+==
+
+<h3 class="subtitle1">HexRays Decompiler</h3>
+
+![](image-20211023130040921.png)
+
+![](image-20211023130101470.png)
+
+==
+
+<h3 class="subtitle1">动态调试</h3>
+
+动态调试教程传送门 -> [https://c10udlnk.top/p/reSkillsOn-Debugging](https://c10udlnk.top/p/reSkillsOn-Debugging)
+
+- `F2`：CC断点
+- `F4`：执行到所指向的位置
+- `F7`：单步执行（步入）
+- `F8`：单步执行（步过）
+- `F9`：执行到下一断点
+
+调试时，数据、堆栈、寄存器、汇编代码都可以直接修改。
+
+===
+
+<h2 class="subtitles">一点练习</h2>
+
+既然你已经学会Hello world了，
+
+那我们就来<font color="red">实践一下</font>吧~
+
+==
+
+<h3 class="subtitle1">实验步骤</h3>
+
+<small>
+
+1. 通过静态分析和动态调试分析程序执行逻辑
+2. 通过分析程序执行逻辑还原Check算法
+3. 逆向Check算法获取flag
+
+</small>
+
+|   Demo    |          关键点          |
+| :-------: | :----------------------: |
+| Xor_Win32 |    xor、win32动态调试    |
+| Xor_Linux |    xor、linux动态调试    |
+| babyMaze  | 读懂伪代码，了解程序逻辑 |
+|  base64   |     常见编码算法分析     |
+
+===
+
+<h2 class="subtitles">打广告时间……</h2>
+
+<small>
+
+1. 2021年华师CTF新生赛就要开始了！欢迎大家踊跃报名！
+
+   有炒鸡丰富的奖品等着你们，还有机会加入Sloth跟我们一起玩yo~ >v<
+
+   （详细时间安排关注@ISCNU公众号）
+
+2. HSCTF{Sloth}安全吹水群👇
+
+==
+
+![](image-20211023172643781.png)
+
+</small>
+</script></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/zoom/zoom.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/search/search.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/notes/notes.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/math/math.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js"></script><script>Reveal.initialize({
+  mouseWheel: false,
+  transition: 'convex',
+  transitionSpeed: 'default',
+  parallaxBackgroundImage: '',
+  parallaxBackgroundSize: '',
+  parallaxBackgroundHorizontal: '',
+  parallaxBackgroundVertical: '',
+  autoSlide: false,
+  loop: false,
+  controlsLayout: 'bottom-right', // Determines where controls appear, "edges" or "bottom-right"
+  controlsBackArrows: 'faded',
+  progress: true,
+  showNotes: false,
+  autoPlayMedia: false,
+  backgroundTransition: 'fade',
+  markdown: {
+    smartypants: true
+  },
+  plugins: [
+  // Search
+  RevealSearch,
+  // Speaker notes
+  RevealNotes,
+  // Zoom in and out with Alt+click
+  RevealZoom,
+  // MathJax
+  RevealMath,
+  // Markdown
+  RevealMarkdown,
+  // Highlight
+  RevealHighlight,
+  ],
+  dependencies: [
+    //- { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js', condition: //- function() { return !!document.querySelector( '[data-markdown]' ); } },
+    // Syntax highlight for <code> elements
+    //- { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js', async: true, callback: function() {
+    //-   // issue #218
+    //-   setTimeout(function () {
+    //-     hljs.initHighlighting();
+    //-   }, 0)
+    //- } },
+  ]
+});
+</script><script>console.log(
+  "plugins search: ", Reveal.hasPlugin( 'search' ),
+  ", plugins markdown: ", Reveal.hasPlugin( 'markdown' ),
+  ", plugins highlight: ", Reveal.hasPlugin( 'highlight' ),
+);</script><!-- hexo injector body_end start -->
+    <div class="myspine-spine-widget"></div>
+    <script src="/js/third-party/myspine/spine-widget.js"></script>
+    <script src="/js/third-party/myspine/spine-skeleton-binary.js"></script>
+    <script src="/js/third-party/myspine/myspine.js"></script>
+    <link type="text/css" href="/css/_third-party/myspine.css"></link>
+    <script>
+        new MySpine({
+            spineDir: "/spine_models/",
+            models: [{"name":"sd_21miku_normal_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_band_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_idol_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_night_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_street_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_wonder_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"}],
+            styles: {"widget":{"width":"200px","height":"200px"},"voiceText":{"color":"#e6e6e6"}},
+            behaviors: {"start":{"animation":"w_emu_run01_f","voice":"","text":"Ohhhhh好耶"},"idle":{"maxMinutes":1,"animations":[{"name":"m_cool_idle01_f","loop":false},{"name":"m_cool_joy01_f","loop":false},{"name":"m_happy_idle01_f","loop":false},{"name":"m_happy_joy01_f","loop":false},{"name":"m_normal_idle01_f","loop":false},{"name":"m_normal_joy01_f","loop":false},{"name":"m_staff_idle01_f","loop":false},{"name":"n_general_wait_01_f","loop":false},{"name":"pose_default","loop":false},{"name":"u_vbsmen_battledore00_f","loop":false},{"name":"u_vbswomen_battledore00_f","loop":false},{"name":"w_adult_idle01_f","loop":false},{"name":"w_adult_joy01_f","loop":false},{"name":"w_cool_idle01_f","loop":false},{"name":"w_cool_joy01_f","loop":false},{"name":"w_cute_idle01_f","loop":false},{"name":"w_cute_joy01_f","loop":false},{"name":"w_happy_idle01_f","loop":false},{"name":"w_happy_joy01_f","loop":false},{"name":"w_normal_idle01_f","loop":false},{"name":"w_normal_joy01_f","loop":false},{"name":"w_pure_idle01_f","loop":false},{"name":"w_pure_joy01_f","loop":false},{"name":"w_staff_idle01_f","loop":false}],"voices":[{"voice":"","text":"不买立省百分百"}]},"interact":{"maxPlaySec":3,"animations":[{"name":"w_normal_joy01_b","loop":false},{"name":"m_cool_angry01_f","loop":false},{"name":"m_cool_doubt01_f","loop":false},{"name":"m_cool_laugh01_f","loop":false},{"name":"m_cool_listen01_f","loop":false},{"name":"m_cool_sad01_f","loop":false},{"name":"m_cool_surprise01_f","loop":false},{"name":"m_cool_talk01_f","loop":false},{"name":"m_happy_angry01_f","loop":false},{"name":"m_happy_doubt01_f","loop":false},{"name":"m_happy_laugh01_f","loop":false},{"name":"m_happy_listen01_f","loop":false},{"name":"m_happy_sad01_f","loop":false},{"name":"m_happy_surprise01_f","loop":false},{"name":"m_happy_talk01_f","loop":false},{"name":"m_normal_angry01_f","loop":false},{"name":"m_normal_doubt01_f","loop":false},{"name":"m_normal_laugh01_f","loop":false},{"name":"m_normal_listen01_f","loop":false},{"name":"m_normal_surprise01_f","loop":false},{"name":"m_normal_talk01_f","loop":false},{"name":"m_normal_walk01_b","loop":false},{"name":"m_normal_walk01_f","loop":false},{"name":"m_tsukasa_run01_f","loop":false},{"name":"n_general_walk_01_b","loop":false},{"name":"n_general_walk_01_f","loop":false},{"name":"u_liondancerobot_run_01_f","loop":false},{"name":"u_liondancerobot_run_02_f","loop":false},{"name":"u_vbsmen_battledore01_f","loop":false},{"name":"u_vbsmen_battledore02_f","loop":false},{"name":"u_vbsmen_battledore03_f","loop":false},{"name":"u_vbsmen_battledore04_f","loop":false},{"name":"u_vbswomen_battledore01_f","loop":false},{"name":"u_vbswomen_battledore02_f","loop":false},{"name":"u_vbswomen_battledore03_f","loop":false},{"name":"u_vbswomen_battledore04_f","loop":false},{"name":"w_adult_angry01_f","loop":false},{"name":"w_adult_doubt01_f","loop":false},{"name":"w_adult_laugh01_f","loop":false},{"name":"w_adult_listen01_f","loop":false},{"name":"w_adult_sad01_f","loop":false},{"name":"w_adult_surprise01_f","loop":false},{"name":"w_adult_talk01_f","loop":false},{"name":"w_cool_angry01_f","loop":false},{"name":"w_cool_doubt01_f","loop":false},{"name":"w_cool_laugh01_f","loop":false},{"name":"w_cool_listen01_f","loop":false},{"name":"w_cool_sad01_f","loop":false},{"name":"w_cool_surprise01_f","loop":false},{"name":"w_cool_talk01_f","loop":false},{"name":"w_cute_angry01_f","loop":false},{"name":"w_cute_angry02_f","loop":false},{"name":"w_cute_doubt01_f","loop":false},{"name":"w_cute_laugh01_f","loop":false},{"name":"w_cute_listen01_f","loop":false},{"name":"w_cute_sad01_f","loop":false},{"name":"w_cute_surprise01_f","loop":false},{"name":"w_cute_talk01_f","loop":false},{"name":"w_emu_run02_f","loop":false},{"name":"w_happy_angry01_f","loop":false},{"name":"w_happy_angry02_f","loop":false},{"name":"w_happy_doubt01_f","loop":false},{"name":"w_happy_doubt02_f","loop":false},{"name":"w_happy_laugh01_f","loop":false},{"name":"w_happy_listen01_f","loop":false},{"name":"w_happy_sad01_f","loop":false},{"name":"w_happy_surprise01_f","loop":false},{"name":"w_happy_talk01_f","loop":false},{"name":"w_normal_laugh01_f","loop":false},{"name":"w_normal_listen01_f","loop":false},{"name":"w_normal_talk01_f","loop":false},{"name":"w_normal_walk01_b","loop":false},{"name":"w_normal_walk01_f","loop":false},{"name":"w_pure_angry01_f","loop":false},{"name":"w_pure_doubt01_f","loop":false},{"name":"w_pure_laugh01_f","loop":false},{"name":"w_pure_listen01_f","loop":false},{"name":"w_pure_sad01_f","loop":false},{"name":"w_pure_surprise01_f","loop":false},{"name":"w_pure_talk01_f","loop":false},{"name":"z_mesh_templete","loop":false},{"name":"z_test_F_negi01","loop":false}],"voices":[{"voice":"","text":"既见未来，为何不buy"}]}}
+        });
+    </script>
+    <!-- hexo injector body_end end --></body></html>

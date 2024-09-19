@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="CTF：从0到1 -&gt; zero2one"><meta name="keywords" content="CTF,Reverse,zero2one/入门"><meta name="author" content="c10udlnk"><meta name="copyright" content="c10udlnk"><title>CTF：从0到1 -&gt; zero2one | c10udlnk's Blog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到你搜索的这个呀>^<（FOR ${query}）"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.2.0'
+} </script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="c10udlnk's Blog" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经阅读 -&gt;</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0x01-%E5%85%B3%E4%BA%8ECTF"><span class="toc-text">0x01 关于CTF</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%85%A0-%E4%B8%80%E7%82%B9%E7%AE%80%E4%BB%8B"><span class="toc-text">Ⅰ. 一点简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%85%A1-%E4%BA%BF%E7%82%B9%E7%AE%80%E4%BB%8B"><span class="toc-text">Ⅱ. 亿点简介</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x02-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E2%80%A6"><span class="toc-text">0x02 从入门到…</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%85%A0-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B"><span class="toc-text">Ⅰ. 新手教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E4%B8%BB%E6%94%BB%E6%96%B9%E5%90%91"><span class="toc-text">1）选择一个主攻方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E8%BE%B9%E7%BB%83%E8%BE%B9%E5%AD%A6%EF%BC%8C%E5%88%B7%E9%A2%98%E5%85%A5%E9%97%A8"><span class="toc-text">2）边练边学，刷题入门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%85%A1-%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8"><span class="toc-text">Ⅱ. 必先利其器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x03-%E5%AE%89%E5%88%A9%E4%B8%80%E4%BA%9B%E5%89%8D%E4%BA%BA%E7%9A%84%E8%82%A9%E8%86%80"><span class="toc-text">0x03 安利一些前人的肩膀</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%85%A0-%E4%B8%80%E4%BA%9B%E4%B9%A6"><span class="toc-text">Ⅰ. 一些书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%85%A1-%E4%B8%80%E4%BA%9B%E7%BD%91%E7%AB%99"><span class="toc-text">Ⅱ. 一些网站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E5%BC%BA%E6%8E%A8%E5%8D%8E%E5%B8%88CTF%E6%96%B0%E7%94%9F%E8%B5%9B%E7%BB%99%E6%83%B3%E5%85%A5%E9%97%A8%E7%9A%84%E5%B0%8F%E6%9C%8B%E5%8F%8B%E4%BB%AC%EF%BC%81"><span class="toc-text">最后强推华师CTF新生赛给想入门的小朋友们！</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/c10udlnk=v=.jpg"></div><div class="author-info__name text-center">c10udlnk</div><div class="author-info__description text-center">A RE CTFer, a s0Ity f1sh... &lt;。)#)))≦</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/c10udlnk">do not Follow Me</a></div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/ToverPomelo">just Follow my \Tover/</a></div><hr><div class="author-info-articles"><a class="author-info-articles__linkbf article-meta" target="_blank" rel="noopener" href="https://tover.xyz"><span class="pull-left">\Tover/ \Tover/ \Tover/</span><span class="pull-right">jmp → </span></a><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">41</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">12</span></a><a class="author-info-articles__links article-meta" href="/links"><span class="pull-left">友链</span><span class="pull-right">∞</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/lijiang-tower.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">c10udlnk's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/archives">po5ts</a><a class="site-page" href="/tags">t4gs</a><a class="site-page" href="/categories">categ0ries</a><a class="site-page" href="/slides">slid3s</a><a class="site-page" href="/links">l1nks</a><a class="site-page" href="/p/blogsFor-AboutMe-Pinned">Who Am I</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">CTF：从0到1 -&gt; zero2one</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-11-10</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Others/">Others</a><div class="post-meta-wordcount"><span>Words cnt: </span><span class="word-count">5.1k</span><span class="post-meta__separator">|</span><span>Need time: 16 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>本篇blog首发<strong>0xffff论坛</strong>（<a target="_blank" rel="noopener" href="https://0xffff.one/d/769">CTF：从0到1-&gt;zero2one - 0xFFFF</a>），中间有各位大佬补充，集成在个人博客这里。是一点CTF的入门心得吧，希望能给想玩CTF的小朋友们一点帮助。</p>
+<p>这里还只是个划水摸鱼的萌新（捂头）有什么写错的地方烦请大佬们多多补充谢谢0v0</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="0x01-关于CTF"><a href="#0x01-关于CTF" class="headerlink" title="0x01 关于CTF"></a>0x01 关于CTF</h1><h2 id="Ⅰ-一点简介"><a href="#Ⅰ-一点简介" class="headerlink" title="Ⅰ. 一点简介"></a>Ⅰ. 一点简介</h2><p>CTF（Capture The Flag，夺旗赛），就是通过程序分析、攻防对抗等形式，从比赛平台的题目中得到一串具有一定格式的字符串（被称为flag）或其他内容，并将其提交到平台上以夺得分数。</p>
+<h2 id="Ⅱ-亿点简介"><a href="#Ⅱ-亿点简介" class="headerlink" title="Ⅱ. 亿点简介"></a>Ⅱ. 亿点简介</h2><p>详细简介这东西，前人有简介的话当然引用前人的了（捂头跑路）。感觉目前来说看到最完整的介绍要数CTFHub里的了 <del>（要不是因为要去拿彩蛋的flag估计我也不会看到这些介绍hhh）</del> 。</p>
+<p>CTF简介：<a target="_blank" rel="noopener" href="https://writeup.ctfhub.com/Skill/CTF%E5%9F%BA%E7%A1%80/22435.html">CTF简介 | CTFHub</a></p>
+<p>关于CTF的竞赛模式：<a target="_blank" rel="noopener" href="https://writeup.ctfhub.com/Skill/CTF%E5%9F%BA%E7%A1%80/44044.html">竞赛模式 | CTFHub</a></p>
+<p>关于CTF的比赛形式：<a target="_blank" rel="noopener" href="https://writeup.ctfhub.com/Skill/CTF%E5%9F%BA%E7%A1%80/52169.html">比赛形式 | CTFHub</a></p>
+<p>关于CTF的题目类型：<a target="_blank" rel="noopener" href="https://writeup.ctfhub.com/Skill/CTF%E5%9F%BA%E7%A1%80/63374.html">题目类型 | CTFHub</a></p>
+<h1 id="0x02-从入门到…"><a href="#0x02-从入门到…" class="headerlink" title="0x02 从入门到…"></a>0x02 从入门到…</h1><h2 id="Ⅰ-新手教程"><a href="#Ⅰ-新手教程" class="headerlink" title="Ⅰ. 新手教程"></a>Ⅰ. 新手教程</h2><h3 id="1）选择一个主攻方向"><a href="#1）选择一个主攻方向" class="headerlink" title="1）选择一个主攻方向"></a>1）选择一个主攻方向</h3><p>在读完上面的亿点简介（尤其是题目类型）以后，可以<strong>试图寻找自己对哪个方向更感兴趣</strong>（web，reverse&#x2F;逆向，pwn&#x2F;二进制，crypto&#x2F;密码学）。为什么不选misc呢？因为杂项实在是太杂，建议团队三个人都或多或少地刷一下，<del>华师CTF新生赛里杂项类是为数不多能做出来的题目了（捂头跑）</del>。</p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602829881-697439-20201016143101.png" alt="CTF方向分类"></p>
+<p>我的话目前是个摸鱼的逆向手，所以对逆向方面比较熟悉（吧，打算往pwn方向延伸。</p>
+<p>对几个方向的一点点理解是：</p>
+<ul>
+<li><p>感觉 <em><strong>web</strong></em> 相当于前端的杂项，听说web包括的方面很多很杂，做起来令人头大（想问具体的就去敲web手吧[甩锅]）。</p>
+</li>
+<li><p><em><strong>逆向</strong></em> 上我感觉算是比较简单也比较累的一个方向，入门的话只要能读得懂C&#x2F;C++源代码就完全ojbk，后期可能需要人肉反汇编&amp;反编译，<del>做题的时候十分需要感受宁静hhhh</del>。</p>
+</li>
+<li><p><em><strong>pwn</strong></em> 则是简单逆向+漏洞利用，入门可能比较难（？<del>但是新生赛里说不定就有输入十六个b就能出flag的究极简单题[手动狗头]</del>），毕竟需要在读懂程序逻辑（一般这里的程序逻辑没逆向那么难）以后，发现能利用的漏洞（比如堆栈溢出&#x2F;重复free等），如果对计算机内部处理比较感兴趣的同学可以试试？</p>
+</li>
+<li><p><em><strong>密码学</strong></em> 感觉是万物归宗（x），后期无论做什么题都有可能遇到密码学（比如上次ciscn逆向到最后是一道TEA解密的问题），very需要数论基础。</p>
+</li>
+</ul>
+<p>组队的时候，可以先组人再分方向，也可以通过方向来选人，最理想的状态是三人方向不同，优势互补。</p>
+<hr>
+<p><strong>关于web方向的入门感谢<a target="_blank" rel="noopener" href="http://fxizenta.design/">@Fxizenta</a> 大佬补充【把大佬回复贴回来，原回复指路帖子6L】</strong></p>
+<blockquote>
+<p><em><strong>隔壁的摸鱼web来补充一下web入门</strong></em></p>
+<p><strong>0x00 入门建议</strong></p>
+<p>web方向应该算是比较难入门的方向（尤其对于无基础的萌新），完全无基础的同学建议从<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/">w3school</a>开始吧，期间也可以做一些简单的题（题库上面的dalao说的都挺不错的），学习web方向如果没有学习过前端、协议、命令行等基础的知识的话，在前期是挺任意有错败感的，这里建议在做题中思考了很长时间发现完全没有思路，建议可以直接去看write up，在从wp中学习dalao们的思路，<strong>很重要的一点是</strong>，在wp中有什么发现自己不明白的，建议善用搜索引擎，把题目的思路了解清楚。</p>
+<p><strong>0x01 web常用工具</strong></p>
+<p><strong>1. Burp Suite</strong></p>
+<p>web题常用工具，功能十分强大，常用于用于抓包、发包、爆破，可以在官网下载到社区版</p>
+<p>bp的配置和简单功能解释：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u011723630/article/details/80315507">https://blog.csdn.net/u011723630/article/details/80315507</a></p>
+<p><strong>2. kali</strong></p>
+<p>Kali 是一个基于 Debian 的 Linux 发行版。它的目标就是为了简单：在一个实用的工具包里尽可能多的包含渗透和审计工具。Kali 实现了这个目标。大多数做安全测试的开源工具都被囊括在内。</p>
+<p>kali下载： <a target="_blank" rel="noopener" href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a></p>
+<p><strong>3. sqlmap</strong></p>
+<p>用于sql注入，功能十分强大包含了盲注，布尔注入，cookie注入等等常见注入方式的扫描和利用，还可以自己定制绕过方法，绕过黑白名单限制。下载github上可以找到</p>
+<p><strong>4. dirsearch</strong></p>
+<p>用于站点扫描，包括扫秒常见的.git,.svn,.apk等备份文件，以及域名下的子目录（不过有个缺点是他只扫描常见的命名规则下的子目录名，所以还是有一定的局限性）。下载github上有</p>
+<p><strong>5. hackbar</strong></p>
+<p>一个浏览器插件，虽然他的功能bp都有，但是对比起bp他有一个巨大优势就是方便（老懒狗了），f12就可以开始使用，提供post和简单编码解码的功能。在Chrome和Firefox的插件商城都可以找到。<strong>ps：</strong>访问Chrome插件商城需要魔法（狗头）</p>
+<p><strong>0x02 学习推荐</strong></p>
+<p><strong>1. ctfwiki</strong></p>
+<p>据说每一位ctf选手都是从这里开始的，不止web选手哦，其他方向的选手也可以去看看</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ctf-wiki/ctf-wiki">https://github.com/ctf-wiki/ctf-wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.x10sec.org/">https://wiki.x10sec.org/</a></p>
+<p><strong>2. 打好基础</strong></p>
+<p>无基础直接莽上来的话，你可能会完全一头雾水，如果是完全没有基础的同学建议先学C&#x2F;C++,一起还是从先学会一个编程语言的基础使用开始吧，然后就可以开始学会一个脚本语言（如python），学习php（至少要看得懂），还可以看看端口知识，传输协议知识等等，最重要的一点，要变做题边学习，如果单单把重心放在flag，而不是做题的学习过程，那么你会失去很多，也会失去打ctf最珍贵的东西。</p>
+<p>最后附上最近刚刚结束的Tencent CTF中的奖励于你我共勉吧<br> <img src="https://static.0xffff.one/assets/files/2020-10-16/1602832895-674209-image.png" alt="TCTF - Prize"></p>
+</blockquote>
+<hr>
+<h3 id="2）边练边学，刷题入门"><a href="#2）边练边学，刷题入门" class="headerlink" title="2）边练边学，刷题入门"></a>2）边练边学，刷题入门</h3><p>CTF比赛过程中跟其他比赛最大的不同点就是<strong>能在互联网查找资料，赛后还（或许）能搜到一些题目的wp（即write up，类似于答案解析）</strong>。</p>
+<p>如果已经发现了自己感兴趣的方向，那必然是极好的，接下来就可以在一些刷题网站（如CTFHub、攻防世界、Bugku CTF等，在0x03中会有详细介绍）中，选择该方向的题目进行练习。刚开始的时候，或许还不懂面对题目应该做什么，那么可以选择在网上找这道题目的wp（如这道题目在攻防世界上，名为easyre，那么可以搜索“攻防世界 easyre”，就能看到它的解题思路）。</p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602829869-597928-20201016143012.png" alt="题目wp搜索"></p>
+<p>当然，如果没有找到方向也不用担心，可以各个方向的题都试试跟着wp做一下，或许能在做题的过程中发现兴趣点呢hhh。</p>
+<p><strong>初学者可以直接跟着wp复现得到flag，但跟着做的过程中也要学到做题的思路和思考方向。</strong> 在学了一些题目以后，就可以尝试自己做一些题啦，能做出就成就感up，没做出就继续看wp o(<em>￣▽￣</em>)ブ。当然，也不是每道题都有wp，但不用担心，这些网站在新手区放的经典题基本上都会有wp的。</p>
+<p><strong>CTF的学习过程其实更像是积累经验的过程</strong>，在做每一道题、打每一场比赛的赛中和赛后能学到新的知识点，也能知道自己在什么方面有所不足、哪些点因为粗心忽略掉了。 <del>（就像音游一样都要多练</del></p>
+<p>同时，也别忘了很重要的 <strong>“自造轮子”</strong> ，CTF是用自己的电脑进行比赛的，也就是说会很依赖本地的库和脚本。万一碰到不能去互联网查资料的&amp;#?%@比赛（真的存在XD），就意味着你需要用本地脚本进行某个密码算法（比如TEA）的解密，如果没有本地轮子就只能现打了，还是很费时间的orz。<br>（p.s. 在找不到在线解密的网站时，有本地的解密代码也很方便）</p>
+<p><em><strong>比赛入门强推：华师CTF新生赛</strong></em></p>
+<h2 id="Ⅱ-必先利其器"><a href="#Ⅱ-必先利其器" class="headerlink" title="Ⅱ. 必先利其器"></a>Ⅱ. 必先利其器</h2><p>无论哪个方向，写脚本用的语言建议首选Python。<del>（Python是世界上最好的语言！！）</del></p>
+<p>Reverse：</p>
+<ul>
+<li>IDA pro（yyds！反汇编+反编译必备；ida使用小技巧：<a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/4205">IDA Pro7.0使用技巧总结</a>）</li>
+<li>Ollydbg（简称OD，一个动态调试工具）</li>
+<li>WinHex或者010 editor（读||复制粘贴十六进制机器码的工具）</li>
+<li>Ghidra（一个支持反编译mips64的工具）</li>
+<li>PEiD或者ExEinfo PE（查壳工具）</li>
+<li>uncompyle6（.pyc反编译为.py的工具；<a target="_blank" rel="noopener" href="https://www.cnblogs.com/pcat/p/11625300.html">uncompyle6安装使用方法</a>）</li>
+<li>pintool（二进制插桩找输入；<a target="_blank" rel="noopener" href="https://github.com/wagiro/pintool">Pintool</a>或者<a target="_blank" rel="noopener" href="https://github.com/ChrisTheCoolHut/PinCTF">PinCTF</a>；<del>有坑，目前还没折腾出来orz 有成功的小伙伴拍我一下谢谢！</del> 2020.11 update：装上了！才发现有坑是因为没有升级wsl的问题（捂头。整理于&#x3D;&gt;<a href="https://c10udlnk.top/p/toolsOf-Pintool/">【从无到有】Pintool安装&amp;使用</a>）</li>
+<li>angr（超强的符号执行引擎，vm题利器(x)；项目地址：<a target="_blank" rel="noopener" href="https://github.com/angr/angr">angr</a>，例题：<a target="_blank" rel="noopener" href="https://github.com/angr/angr-doc">angr-doc</a>，题库：<a target="_blank" rel="noopener" href="https://github.com/jakespringer/angr_ctf">angr_ctf</a>，对于这个题库自己写了个<a href="https://c10udlnk.top/p/logFor-Angr-CTF/">angr_ctf刷题小记</a>，非题解）</li>
+<li>unicorn（CPU仿真器框架，提供hook；项目地址：<a target="_blank" rel="noopener" href="https://github.com/unicorn-engine/unicorn">unicorn-engine</a>）</li>
+<li>…（想到什么再补好了XD</li>
+</ul>
+<p>Pwn：</p>
+<ul>
+<li>pwntools（pwn必备；<a target="_blank" rel="noopener" href="https://pwntoolsdocinzh-cn.readthedocs.io/en/master/intro.html">中文文档</a>）</li>
+<li>gdb（动态调试；<a target="_blank" rel="noopener" href="https://blog.csdn.net/aptx4869_li/article/details/81566541">插件控制</a>）</li>
+<li>…</li>
+</ul>
+<p>简单加解密？（misc）：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://ctf.ssleye.com/">CTF在线工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ssleye.com/">SSL在线工具</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.splitbrain.org/services/ook">Brainf**k&#x2F;Ook解密</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Acmesec/CTFCrackTools">CTFCrackTools</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/yifeng-lee/ctftools">ctftools</a></li>
+</ul>
+<p>别的方向暂时还无，建议搜索引擎走起QvQ</p>
+<h1 id="0x03-安利一些前人的肩膀"><a href="#0x03-安利一些前人的肩膀" class="headerlink" title="0x03 安利一些前人的肩膀"></a>0x03 安利一些前人的肩膀</h1><h2 id="Ⅰ-一些书"><a href="#Ⅰ-一些书" class="headerlink" title="Ⅰ. 一些书"></a>Ⅰ. 一些书</h2><p><strong>【读过给“o”标志，简单说一下读后感；未读过给“x”标志，简介从网络上搬过来，仅供参考。】</strong></p>
+<ol>
+<li><p>《CTF特训营：技术详解、解题方法与竞赛技巧》_<strong>【o】【全方向】</strong>_</p>
+<p>这本书里包括Web、Reverse、PWN、Crypto、APK、IoT六个部分，据说是面向初学者的一本书。但是从阅读体验来看，<strong>感觉不太适合一点都没接触过CTF的小白（连一道题都没做过的这种）</strong>，至少在看到的逆向和pwn部分是这样。</p>
+<p>不过，它虽然没有手把手带你入门的详细步骤，但有的是<strong>干货max</strong>。如果读者是做过一点题的咸鱼选手（比如我），就会感觉学到了超多，里面介绍和总结了很多实用的技巧和某一部分的详细题型。很多方法就是提一嘴，让你知道有这个东西，但具体该怎么用、用的时候该注意什么，就得自己去领悟了。</p>
+<p>总结：感觉本书适合 <em>跟着wp做了一些题目并能独立做出几道的初学者</em> 及 _想要往别的方向发展的现役选手_。</p>
+<p>&#x2F;* 本书勘误表：<a target="_blank" rel="noopener" href="https://github.com/FlappyPig/CTF_SPECIAL_TRAINING_CAMP">https://github.com/FlappyPig/CTF_SPECIAL_TRAINING_CAMP</a> *&#x2F;</p>
+</li>
+<li><p>《从0到1:CTFer成长之路》_<strong>【o】【全方向】</strong>_</p>
+<p>2020.12 update：是NU1L战队出的一本入门书。从读完的逆向part来说，感觉比起上一本而言这个才是<strong>real从0到1</strong>：页数++++，0是真的0，1也是真的1（目前只能理解到0-&gt;0.9的样子，tcl）。<br>先说从0的部分，很多基础操作都是一步步带着走的，相信<strong>零基础也能毫无难度的上手</strong>。而且本书还有配套练习的crackme，有点小型wp复现的感觉了。同时<strong>干货也有很多</strong>，ida部分推荐了一些实用插件+其他还安利了很多挺有用的工具。btw，提一下它的angr起步讲的真的很详细，至少让我get到了几个常用的优化点+认识到了看文档的重要性。<br>然后是到1的部分，感觉有很多巧妙的高级操作，往上进阶的部分讲了很多（虽然书里说是说“冰山一角”）。<del>至于说到0.9是因为自制pintool那里暂时不太能理解，菜鸡还是先用着别人的开源pintool吧（捂头）</del><br>总结：这本书强推给 <em>零基础的小朋友们</em> （至少逆向是这样的），并且建议在 <em>增强理论学习的同时可以跟着实践一下</em> ，效果更佳。</p>
+<p>&#x2F;* 本书勘误表：<a target="_blank" rel="noopener" href="https://book.nu1l.com/tasks/#/pages/others/bugs?id">https://book.nu1l.com/tasks/#/pages/others/bugs?id</a> *&#x2F;</p>
+</li>
+<li><p>《加密与解密》_<strong>【o】【Reverse &amp;&amp; PWN】</strong>_</p>
+<p><strong>加解密yyds！！绝对是值得反复读的好书&#x3D;v&#x3D;</strong></p>
+<p>虽然有点厚都是跳着看的hhh，但是打基础真的很棒。</p>
+<p>推荐阅读路线（亲测）是基础篇-&gt;调试篇（了解学习IDA和OD&#x2F;WinDbg&#x2F;…的大致用法）-&gt;解密篇（大概看看会出到的密码算法）-&gt;脱壳篇&amp;&amp;保护篇（感觉主要是脱壳和反调试）-&gt;PE部分（走基础）-&gt;剩下没看的。</p>
+<p>&#x2F;* 本书勘误表：<a target="_blank" rel="noopener" href="https://bbs.pediy.com/thread-247429.htm">https://bbs.pediy.com/thread-247429.htm</a> *&#x2F;</p>
+</li>
+<li><p>《逆向工程权威指南（<a target="_blank" rel="noopener" href="https://beginners.re/">RE4B</a>）》_<strong>【x】【Reverse】</strong>_</p>
+<p>【本书专注于软件的逆向工程，是写给初学者的一本经典指南。全书共分为12个部分，共102章，涉及X86&#x2F;X64、ARM&#x2F;ARM-64、MIPS、Java&#x2F;JVM等重要话题，堪称是逆向工程技术百科全书。除了详细讲解，本书来给出了很多习题来帮助读者巩固所学的知识，附录部分给出了习题的解答。】</p>
+<p>是一本在很多逆向方向入门帖里都会安利的书hhhh</p>
+</li>
+<li><p>《汇编语言》_<strong>【o】【Reverse &amp;&amp; PWN】</strong>_</p>
+<p>这本书我觉得是汇编入门宝典，虽然讲的是16位的古早8086CPU，但是把汇编的机制搞懂了以后，再看看x86&#x2F;64和8086的区别就可以迅速用到题目里面。（比如vm的反汇编）</p>
+<p>我觉得在学习汇编上跟别的语言不同的是，<strong>最重要不是语法，而是计算机程序的运行过程、数据存储布局等底层的东西</strong> ，而这本书在这方面讲的很通俗易懂不枯燥，推荐xn。</p>
+</li>
+<li><p>《图解密码技术》_<strong>【o】【Crypto】</strong>_</p>
+<p>（大致看了一些部分）就是一本很有趣的讲密码学的书！建议从前言看起发现彩蛋√</p>
+<p>因为去年刚开学那会是抱着随便了解了解的心态看的，所以可能对里面专业的东西没怎么记得住，为了避免误解我还是搬一段简介吧↓</p>
+<p>【本书以图配文的形式，详细讲解了6种最重要的密码技术：对称密码、公钥密码、单向散列函数、消息认证码、数字签名和伪随机数生成器。第一部分讲述了密码技术的历史沿革、对称密码、分组密码模式（包括ECB、CBC、CFB、OFB、CTR）、公钥、混合密码系统。第二部分重点介绍了认证方面的内容，涉及单向散列函数、消息认证码、数字签名、证书等。第三部分讲述了密钥、随机数、PGP、SSL&#x2F;TLS 以及密码技术在现实生活中的应用。】</p>
+<p><strong>2021.06 upd</strong>：上个月又把这本书摸出来补完了，感觉这本书偏向科普类型，涉及的范围很广但是没有很深入地讲（比如具体加密实现什么的），吸引兴趣倒是很可以hhh。</p>
+</li>
+<li><p>《白帽子讲web安全》_<strong>【x】【Web】</strong>_</p>
+<p>【在互联网时代，数据安全与个人隐私受到了前所未有的挑战，各种新奇的攻击技术层出不穷。如何才能更好地保护我们的数据？本书将带你走进Web安全的世界，让你了解Web安全的方方面面。黑客不再变得神秘，攻击技术原来我也可以会，小网站主自己也能找到正确的安全道路。大公司是怎么做安全的，为什么要选择这样的方案呢？你能在本书中找到答案。详细的剖析，让你不仅能“知其然”，更能“知其所以然”。</p>
+<p>本书是根据作者若干年实际工作中积累下来的丰富经验而写成的，在解决方案上具有极强的可操作性，深入分析了各种错误的解决方案与误区，对安全工作者有很好的参考价值。安全开发流程与运营的介绍，对同行业的工作具有指导意义。】</p>
+<p>给完全没有了解的隔壁web方向推荐一波&lt;(＿　＿)&gt;</p>
+</li>
+<li><p>CSAPP（深入理解计算机系统） <em><strong>【o】【Reverse &amp;&amp; PWN】</strong></em></p>
+<p>推一个大佬们的学习指南&#x2F;资源汇总：<a target="_blank" rel="noopener" href="https://0xffff.one/d/684">【CMU-CSAPP】2015 CMU 15-213 CSAPP资源汇总</a></p>
+<p>同样是没有折腾完的一本书（瘫）想对计算机底层方面有更深层次了解的朋友们可以试着阅读一番&#x3D;v&#x3D;</p>
+</li>
+</ol>
+<h2 id="Ⅱ-一些网站"><a href="#Ⅱ-一些网站" class="headerlink" title="Ⅱ. 一些网站"></a>Ⅱ. 一些网站</h2><ol>
+<li><p><a target="_blank" rel="noopener" href="https://ctf.scnu.edu.cn/library/knowledge">华师CTF</a></p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602829742-473567-20201016142841.png" alt="华师CTF"></p>
+<p>是一个宝藏集合网站！不仅仅是一个报名网站（去年），里面的知识清单&amp;训练场也大有乾坤，建议都扫一遍&#x3D;v&#x3D;</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://0xffff.one/t/ctf">0xFFFF</a></p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602823777-31069-20201015220754.png" alt="0xFFFF"></p>
+<p>是一个很多dalao水的论坛！干货很多实名安利！</p>
+<p>不只是CTF区，其他的区也有很多好玩的帖子，建议多逛 <del>（潜水玩家捂头跑路）</del>。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/task">攻防世界</a>【刷题网站】</p>
+<p><img src="/p/blogsFor-CTF-Starters/image-20201204183259043.png" alt="攻防世界"></p>
+<p>这里有一个专门刷题的答题区，准备新生赛的话可以考虑一下把对应方向的新手练习区按上面说的方法刷一遍hhh（其实感觉新手练习区有些题目也是偏难的XD）</p>
+<p>而且有些比赛也是在这个平台上举办的，先搞个账号不亏2333。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.ctfhub.com/#/index">CTFHub</a>【刷题网站】</p>
+<p><img src="/p/blogsFor-CTF-Starters/image-20201204183407950.png" alt="CTFHub"></p>
+<p>这个网站其实是一个hub一样的集合类网站，这个技能树看起来包括的方面还挺全的 <del>（就是还没多少题orz 毕竟新站）</del></p>
+<p>不过赛事中心&amp;历年真题&amp;工具部分还是挺不错的，想复盘可以去找找题目，需要什么工具可以找找（说不定就找到了</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ctf.pediy.com/itembank.htm">看雪</a>【刷题网站？】</p>
+<p><img src="/p/blogsFor-CTF-Starters/image-20201204183531161.png" alt="看雪-CTF题库"></p>
+<p>打个问号是因为我觉得它还是更偏向于论坛hhh 刷题这块的功能没怎么用过。</p>
+<p>论坛还是很不错的，有很多干货&amp;资源分享&gt;&lt;</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/">吾爱破解</a></p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602829653-253485-5fd7df3e-ad40-48bb-b532-99f7885845ec.png" alt="吾爱破解"></p>
+<p>也是个干货&amp;&amp;资源的论坛集合，安利！</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges">Bugku CTF</a>【刷题网站】</p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602829634-986459-bugku.png" alt="Bugku CTF"></p>
+<p>刷题网站+1，各个方向的题目分类很明确，不过难度好像没按顺序排？杂项题目类型还是挺丰富的，建议安排一下。</p>
+<p>不过新生赛以后也没用这个刷过题了&#x3D; &#x3D;可能有理解偏差x</p>
+</li>
+<li><p>CTF wiki（<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/">https://wiki.x10sec.org/</a> or <a target="_blank" rel="noopener" href="https://ctf-wiki.github.io/ctf-wiki/">https://ctf-wiki.github.io/ctf-wiki/</a>）</p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602835121-514430-20201016155731.png" alt="CTF wiki"></p>
+<p>经楼下web大佬提醒，补充一个CTF各种基础知识大全的网站！</p>
+<p>像逆向方面我觉得题型写得比较全，<del>看完说不定对新生赛有用（手动狗头</del></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.yuque.com/0xffff.one/cs-learning/eng3v3">0xFFFF CS Wiki - 信息安全</a></p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-16/1602853022-889389-20201016205454.png" alt="0xFFFF CS Wiki - 信息安全"></p>
+<p>突然发现0xFFFF CS Wiki上有给CTF的介绍和一些网站的集合，mark一下。</p>
+<p>（看到pwn部分整理了少而精的链接，试图增加pwn的工具ing</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://firmianay.gitbooks.io/ctf-all-in-one/content/">CTF All In One</a></p>
+<p><img src="https://static.0xffff.one/assets/files/2020-10-20/1603161493-103441-20201020103752.png" alt="CTF All In One"></p>
+<p>一个CTF相关的百科全书！各个方向的入门基础&amp;题目&amp;工具都挺全的，有时间可以刷一下0v0</p>
+</li>
+</ol>
+<h1 id="最后强推华师CTF新生赛给想入门的小朋友们！"><a href="#最后强推华师CTF新生赛给想入门的小朋友们！" class="headerlink" title="最后强推华师CTF新生赛给想入门的小朋友们！"></a>最后强推华师CTF新生赛给想入门的小朋友们！</h1><p>华师CTF新生赛是一个非常非常友好的入门起点，如果**你感兴趣的话，快关注今年的CTF新生赛呀(づ◡ど)**。不仅奖品丰富实用（至少是我参加那么多比赛以来拿到最多奖品的一个），还能顺便入门CTF，何乐而不为呢2333 &gt;v&lt;</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">c10udlnk</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="https://c10udlnk.top/p/blogsFor-CTF-Starters/">https://c10udlnk.top/p/blogsFor-CTF-Starters/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://c10udlnk.top">c10udlnk's Blog</a> (https://c10udlnk.top)！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CTF/">CTF</a><a class="post-meta__tags" href="/tags/Reverse/">Reverse</a><a class="post-meta__tags" href="/tags/zero2one-%E5%85%A5%E9%97%A8/">zero2one/入门</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/p/toolsOf-IDAold/"><i class="fa fa-chevron-left">  </i><span>【从无到有】配置IDA7.0</span></a></div><div class="next-post pull-right"><a href="/p/blogsFor-AboutMe-Pinned/"><span>-=-=-= About Me -=-=-=</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '3fff94cdba288d81026d',
+  clientSecret: 'e449b106b98b508de4e3ab3658f46444d26f420f',
+  repo: 'c10udlnk.github.io',
+  owner: 'c10udlnk',
+  admin: 'c10udlnk',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer class="footer-bg" style="background-image: url(/lijiang-tower.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2020 - 2024 By c10udlnk</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text"><u><a target="_blank" rel="noopener" href="https://tover.xyz">密码学是二进制人的自我修养 =v=</a></u></div><div class="busuanzi"><script src="/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script src="/js/search/local-search.js"></script><script src="/js/DigitalRain.js"></script><script src="/live2d-widget/autoload.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">想要搜什么呢~</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search...?"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></div><!-- hexo injector body_end start -->
+    <div class="myspine-spine-widget"></div>
+    <script src="/js/third-party/myspine/spine-widget.js"></script>
+    <script src="/js/third-party/myspine/spine-skeleton-binary.js"></script>
+    <script src="/js/third-party/myspine/myspine.js"></script>
+    <link type="text/css" href="/css/_third-party/myspine.css"></link>
+    <script>
+        new MySpine({
+            spineDir: "/spine_models/",
+            models: [{"name":"sd_21miku_normal_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_band_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_idol_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_night_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_street_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_wonder_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"}],
+            styles: {"widget":{"width":"200px","height":"200px"},"voiceText":{"color":"#e6e6e6"}},
+            behaviors: {"start":{"animation":"w_emu_run01_f","voice":"","text":"Ohhhhh好耶"},"idle":{"maxMinutes":1,"animations":[{"name":"m_cool_idle01_f","loop":false},{"name":"m_cool_joy01_f","loop":false},{"name":"m_happy_idle01_f","loop":false},{"name":"m_happy_joy01_f","loop":false},{"name":"m_normal_idle01_f","loop":false},{"name":"m_normal_joy01_f","loop":false},{"name":"m_staff_idle01_f","loop":false},{"name":"n_general_wait_01_f","loop":false},{"name":"pose_default","loop":false},{"name":"u_vbsmen_battledore00_f","loop":false},{"name":"u_vbswomen_battledore00_f","loop":false},{"name":"w_adult_idle01_f","loop":false},{"name":"w_adult_joy01_f","loop":false},{"name":"w_cool_idle01_f","loop":false},{"name":"w_cool_joy01_f","loop":false},{"name":"w_cute_idle01_f","loop":false},{"name":"w_cute_joy01_f","loop":false},{"name":"w_happy_idle01_f","loop":false},{"name":"w_happy_joy01_f","loop":false},{"name":"w_normal_idle01_f","loop":false},{"name":"w_normal_joy01_f","loop":false},{"name":"w_pure_idle01_f","loop":false},{"name":"w_pure_joy01_f","loop":false},{"name":"w_staff_idle01_f","loop":false}],"voices":[{"voice":"","text":"不买立省百分百"}]},"interact":{"maxPlaySec":3,"animations":[{"name":"w_normal_joy01_b","loop":false},{"name":"m_cool_angry01_f","loop":false},{"name":"m_cool_doubt01_f","loop":false},{"name":"m_cool_laugh01_f","loop":false},{"name":"m_cool_listen01_f","loop":false},{"name":"m_cool_sad01_f","loop":false},{"name":"m_cool_surprise01_f","loop":false},{"name":"m_cool_talk01_f","loop":false},{"name":"m_happy_angry01_f","loop":false},{"name":"m_happy_doubt01_f","loop":false},{"name":"m_happy_laugh01_f","loop":false},{"name":"m_happy_listen01_f","loop":false},{"name":"m_happy_sad01_f","loop":false},{"name":"m_happy_surprise01_f","loop":false},{"name":"m_happy_talk01_f","loop":false},{"name":"m_normal_angry01_f","loop":false},{"name":"m_normal_doubt01_f","loop":false},{"name":"m_normal_laugh01_f","loop":false},{"name":"m_normal_listen01_f","loop":false},{"name":"m_normal_surprise01_f","loop":false},{"name":"m_normal_talk01_f","loop":false},{"name":"m_normal_walk01_b","loop":false},{"name":"m_normal_walk01_f","loop":false},{"name":"m_tsukasa_run01_f","loop":false},{"name":"n_general_walk_01_b","loop":false},{"name":"n_general_walk_01_f","loop":false},{"name":"u_liondancerobot_run_01_f","loop":false},{"name":"u_liondancerobot_run_02_f","loop":false},{"name":"u_vbsmen_battledore01_f","loop":false},{"name":"u_vbsmen_battledore02_f","loop":false},{"name":"u_vbsmen_battledore03_f","loop":false},{"name":"u_vbsmen_battledore04_f","loop":false},{"name":"u_vbswomen_battledore01_f","loop":false},{"name":"u_vbswomen_battledore02_f","loop":false},{"name":"u_vbswomen_battledore03_f","loop":false},{"name":"u_vbswomen_battledore04_f","loop":false},{"name":"w_adult_angry01_f","loop":false},{"name":"w_adult_doubt01_f","loop":false},{"name":"w_adult_laugh01_f","loop":false},{"name":"w_adult_listen01_f","loop":false},{"name":"w_adult_sad01_f","loop":false},{"name":"w_adult_surprise01_f","loop":false},{"name":"w_adult_talk01_f","loop":false},{"name":"w_cool_angry01_f","loop":false},{"name":"w_cool_doubt01_f","loop":false},{"name":"w_cool_laugh01_f","loop":false},{"name":"w_cool_listen01_f","loop":false},{"name":"w_cool_sad01_f","loop":false},{"name":"w_cool_surprise01_f","loop":false},{"name":"w_cool_talk01_f","loop":false},{"name":"w_cute_angry01_f","loop":false},{"name":"w_cute_angry02_f","loop":false},{"name":"w_cute_doubt01_f","loop":false},{"name":"w_cute_laugh01_f","loop":false},{"name":"w_cute_listen01_f","loop":false},{"name":"w_cute_sad01_f","loop":false},{"name":"w_cute_surprise01_f","loop":false},{"name":"w_cute_talk01_f","loop":false},{"name":"w_emu_run02_f","loop":false},{"name":"w_happy_angry01_f","loop":false},{"name":"w_happy_angry02_f","loop":false},{"name":"w_happy_doubt01_f","loop":false},{"name":"w_happy_doubt02_f","loop":false},{"name":"w_happy_laugh01_f","loop":false},{"name":"w_happy_listen01_f","loop":false},{"name":"w_happy_sad01_f","loop":false},{"name":"w_happy_surprise01_f","loop":false},{"name":"w_happy_talk01_f","loop":false},{"name":"w_normal_laugh01_f","loop":false},{"name":"w_normal_listen01_f","loop":false},{"name":"w_normal_talk01_f","loop":false},{"name":"w_normal_walk01_b","loop":false},{"name":"w_normal_walk01_f","loop":false},{"name":"w_pure_angry01_f","loop":false},{"name":"w_pure_doubt01_f","loop":false},{"name":"w_pure_laugh01_f","loop":false},{"name":"w_pure_listen01_f","loop":false},{"name":"w_pure_sad01_f","loop":false},{"name":"w_pure_surprise01_f","loop":false},{"name":"w_pure_talk01_f","loop":false},{"name":"z_mesh_templete","loop":false},{"name":"z_test_F_negi01","loop":false}],"voices":[{"voice":"","text":"既见未来，为何不buy"}]}}
+        });
+    </script>
+    <!-- hexo injector body_end end --></body></html>

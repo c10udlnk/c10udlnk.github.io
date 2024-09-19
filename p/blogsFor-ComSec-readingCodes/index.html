@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Reading Code rapidly"><meta name="keywords" content="CTF,Reverse,u5eful"><meta name="author" content="c10udlnk,undefined"><meta name="copyright" content="c10udlnk"><title>Reading Code rapidly | c10udlnk's Blog</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reset.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/theme/sky.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/monokai.css"><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="c10udlnk's Blog" type="application/atom+xml">
+</head><body><div class="reveal"><div class="slides"><section data-markdown data-separator="===" data-separator-vertical="==" data-charset="utf-8"><script type="text/template">
+<style type="text/css">
+    .reveal .left_items{ 
+        text-align: left;
+        font-size: 28px;
+    }
+    .reveal .subtitles{
+        text-shadow: 5px 5px 10px #39C5BB;
+    }
+    .reveal .subtitle1{
+        color: #921AFF;
+        text-shadow: 3px 3px 3px #0080FF;
+    }
+    .reveal ul{ 
+        display: block; 
+    }
+</style>
+
+
+# Reading Code rapidly
+
+> By c10udlnk
+
+==
+
+![](image-20211126164041910.png)
+
+===
+
+## 目的
+
+<br>
+
+1. 逆向分析
+2. 源码学习
+3. 接口使用
+4. 工具魔改
+
+==
+
+## 一个很重要很重要...的技巧
+
+<br>
+
+从
+
+### 抽象
+
+到
+
+### 细致
+
+==
+
+### 抽象
+
+- 函数名
+- 函数定义
+- 参数和返回值
+
+==
+
+### 细致
+
+- 某功能的具体实现
+- 某些数据的数据类型
+- 一些微不足道 <small>~~（有时候非常重要）~~</small> 的细节
+  - 末尾有无补0
+  - 有无字符串反转
+  - 大端处理还是小端处理
+  - 密码算法常量有无魔改
+  - ...
+
+===
+
+<h2 class="subtitles">逆向分析</h2>
+
+==
+
+### 找到感兴趣的逻辑
+
+#### 关键字符串
+
+#### 关键函数
+
+#### 动态调试
+
+#### 常识
+
+==
+
+### In CTF...
+
+![](image-20211128101038255.png)
+
+==
+
+![](image-20211128101103520.png)
+
+==
+
+### 某软件分析
+
+![](image-20211128101555978.png)
+
+==
+
+### In Another CTF...
+
+![](image-20211128104321059.png)
+
+![](image-20211128103850221.png)
+
+==
+
+![](image-20211128104802439.png)
+
+==
+
+- 逆向游戏逻辑（写挂，防外挂，游戏制作学习……）
+- 破解软件
+- 写注册机
+- [CSAPP - Bomb Lab](http://csapp.cs.cmu.edu/public/labs.html)
+- ……
+
+===
+
+<h2 class="subtitles">源码学习</h2>
+
+==
+
+### 主函数入手
+
+#### 随着函数调用逐层剖析
+
+==
+
+### rijndael-fst-3.0
+
+![](image-20211128110935779.png)
+
+==
+
+![](image-20211128111501028.png)
+
+==
+
+- 源码学习（AES/SHA/……）
+
+===
+
+<h2 class="subtitles">接口使用</h2>
+
+==
+
+### 传参和返回值
+
+#### 梳理数据通路
+
+#### 命令行参数 or 交互
+
+==
+
+### rijndael-fst-3.0
+
+![](image-20211128112428343.png)
+
+==
+
+- 实习/工作（在原有代码的基础上调接口 or 写文档）
+- 使用工具
+
+===
+
+<h2 class="subtitles">工具魔改</h2>
+
+==
+
+### 按需寻找
+
+- 兼容（新版本or新平台）
+  - 根据报错信息修改
+  - 根据新版本的添加修改
+- 魔改功能
+  - 定位功能
+  - 实行魔改
+
+==
+
+### 兼容新版本
+
+实例1：[【wp】2021强网杯-ExtremelySlow](https://c10udlnk.topwpFor-2021qwb/#%E9%AD%94%E6%94%B9stegosaurus)（魔改stegosaurus使其兼容3.10）
+
+实例2：[在你的博客里放一只可爱的Spine Model吧~](https://c10udlnk.topblogsFor-hexo-puttingLivelySpineModels/#spine-skeleton-binaryjs)（魔改解析skel高版本工具）
+
+![](image-20211128113144163.png)
+
+==
+
+![](image-20211128113345500.png)
+
+==
+
+### 兼容新平台
+
+实例：[Melody主题的背景代码雨特效](https://c10udlnk.topblogsFor-hexo-addingDigitalRainInMelody)
+
+![](image-20211128113811705.png)
+
+==
+
+### 魔改功能
+
+实例：还是[在你的博客里放一只可爱的Spine Model吧~](https://c10udlnk.topblogsFor-hexo-puttingLivelySpineModels/#spine-skeleton-binaryjs)（魔改spine控制代码）
+
+![](image-20211128124636046.png)
+
+==
+
+![](image-20211128123954374.png)
+
+![](image-20211128124117396.png)
+
+===
+
+<h2 class="subtitles">End...?</h2>
+
+==
+
+### 缓冲区溢出
+
+- 跟逆向破解的区别
+- 更接近底层
+- 利用对外接口，不改变程序逻辑
+- [CSAPP - Buffer Lab](http://csapp.cs.cmu.edu/public/labs.html)
+
+===
+
+# End!
+
+- https://c10udlnk.top/
+
+- https://github.com/c10udlnk
+
+- c10udlnk@m.scnu.edu.cn
+</script></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/zoom/zoom.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/search/search.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/notes/notes.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/math/math.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js"></script><script>Reveal.initialize({
+  mouseWheel: false,
+  transition: 'convex',
+  transitionSpeed: 'default',
+  parallaxBackgroundImage: '',
+  parallaxBackgroundSize: '',
+  parallaxBackgroundHorizontal: '',
+  parallaxBackgroundVertical: '',
+  autoSlide: false,
+  loop: false,
+  controlsLayout: 'bottom-right', // Determines where controls appear, "edges" or "bottom-right"
+  controlsBackArrows: 'faded',
+  progress: true,
+  showNotes: false,
+  autoPlayMedia: false,
+  backgroundTransition: 'fade',
+  markdown: {
+    smartypants: true
+  },
+  plugins: [
+  // Search
+  RevealSearch,
+  // Speaker notes
+  RevealNotes,
+  // Zoom in and out with Alt+click
+  RevealZoom,
+  // MathJax
+  RevealMath,
+  // Markdown
+  RevealMarkdown,
+  // Highlight
+  RevealHighlight,
+  ],
+  dependencies: [
+    //- { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js', condition: //- function() { return !!document.querySelector( '[data-markdown]' ); } },
+    // Syntax highlight for <code> elements
+    //- { src: 'https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js', async: true, callback: function() {
+    //-   // issue #218
+    //-   setTimeout(function () {
+    //-     hljs.initHighlighting();
+    //-   }, 0)
+    //- } },
+  ]
+});
+</script><script>console.log(
+  "plugins search: ", Reveal.hasPlugin( 'search' ),
+  ", plugins markdown: ", Reveal.hasPlugin( 'markdown' ),
+  ", plugins highlight: ", Reveal.hasPlugin( 'highlight' ),
+);</script><!-- hexo injector body_end start -->
+    <div class="myspine-spine-widget"></div>
+    <script src="/js/third-party/myspine/spine-widget.js"></script>
+    <script src="/js/third-party/myspine/spine-skeleton-binary.js"></script>
+    <script src="/js/third-party/myspine/myspine.js"></script>
+    <link type="text/css" href="/css/_third-party/myspine.css"></link>
+    <script>
+        new MySpine({
+            spineDir: "/spine_models/",
+            models: [{"name":"sd_21miku_normal_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_band_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_idol_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_night_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_street_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"},{"name":"sd_21miku_wonder_r/","skin":"default","atlas":"sekai_atlas.atlas","skeleton":"sekai_atlas.skel"}],
+            styles: {"widget":{"width":"200px","height":"200px"},"voiceText":{"color":"#e6e6e6"}},
+            behaviors: {"start":{"animation":"w_emu_run01_f","voice":"","text":"Ohhhhh好耶"},"idle":{"maxMinutes":1,"animations":[{"name":"m_cool_idle01_f","loop":false},{"name":"m_cool_joy01_f","loop":false},{"name":"m_happy_idle01_f","loop":false},{"name":"m_happy_joy01_f","loop":false},{"name":"m_normal_idle01_f","loop":false},{"name":"m_normal_joy01_f","loop":false},{"name":"m_staff_idle01_f","loop":false},{"name":"n_general_wait_01_f","loop":false},{"name":"pose_default","loop":false},{"name":"u_vbsmen_battledore00_f","loop":false},{"name":"u_vbswomen_battledore00_f","loop":false},{"name":"w_adult_idle01_f","loop":false},{"name":"w_adult_joy01_f","loop":false},{"name":"w_cool_idle01_f","loop":false},{"name":"w_cool_joy01_f","loop":false},{"name":"w_cute_idle01_f","loop":false},{"name":"w_cute_joy01_f","loop":false},{"name":"w_happy_idle01_f","loop":false},{"name":"w_happy_joy01_f","loop":false},{"name":"w_normal_idle01_f","loop":false},{"name":"w_normal_joy01_f","loop":false},{"name":"w_pure_idle01_f","loop":false},{"name":"w_pure_joy01_f","loop":false},{"name":"w_staff_idle01_f","loop":false}],"voices":[{"voice":"","text":"不买立省百分百"}]},"interact":{"maxPlaySec":3,"animations":[{"name":"w_normal_joy01_b","loop":false},{"name":"m_cool_angry01_f","loop":false},{"name":"m_cool_doubt01_f","loop":false},{"name":"m_cool_laugh01_f","loop":false},{"name":"m_cool_listen01_f","loop":false},{"name":"m_cool_sad01_f","loop":false},{"name":"m_cool_surprise01_f","loop":false},{"name":"m_cool_talk01_f","loop":false},{"name":"m_happy_angry01_f","loop":false},{"name":"m_happy_doubt01_f","loop":false},{"name":"m_happy_laugh01_f","loop":false},{"name":"m_happy_listen01_f","loop":false},{"name":"m_happy_sad01_f","loop":false},{"name":"m_happy_surprise01_f","loop":false},{"name":"m_happy_talk01_f","loop":false},{"name":"m_normal_angry01_f","loop":false},{"name":"m_normal_doubt01_f","loop":false},{"name":"m_normal_laugh01_f","loop":false},{"name":"m_normal_listen01_f","loop":false},{"name":"m_normal_surprise01_f","loop":false},{"name":"m_normal_talk01_f","loop":false},{"name":"m_normal_walk01_b","loop":false},{"name":"m_normal_walk01_f","loop":false},{"name":"m_tsukasa_run01_f","loop":false},{"name":"n_general_walk_01_b","loop":false},{"name":"n_general_walk_01_f","loop":false},{"name":"u_liondancerobot_run_01_f","loop":false},{"name":"u_liondancerobot_run_02_f","loop":false},{"name":"u_vbsmen_battledore01_f","loop":false},{"name":"u_vbsmen_battledore02_f","loop":false},{"name":"u_vbsmen_battledore03_f","loop":false},{"name":"u_vbsmen_battledore04_f","loop":false},{"name":"u_vbswomen_battledore01_f","loop":false},{"name":"u_vbswomen_battledore02_f","loop":false},{"name":"u_vbswomen_battledore03_f","loop":false},{"name":"u_vbswomen_battledore04_f","loop":false},{"name":"w_adult_angry01_f","loop":false},{"name":"w_adult_doubt01_f","loop":false},{"name":"w_adult_laugh01_f","loop":false},{"name":"w_adult_listen01_f","loop":false},{"name":"w_adult_sad01_f","loop":false},{"name":"w_adult_surprise01_f","loop":false},{"name":"w_adult_talk01_f","loop":false},{"name":"w_cool_angry01_f","loop":false},{"name":"w_cool_doubt01_f","loop":false},{"name":"w_cool_laugh01_f","loop":false},{"name":"w_cool_listen01_f","loop":false},{"name":"w_cool_sad01_f","loop":false},{"name":"w_cool_surprise01_f","loop":false},{"name":"w_cool_talk01_f","loop":false},{"name":"w_cute_angry01_f","loop":false},{"name":"w_cute_angry02_f","loop":false},{"name":"w_cute_doubt01_f","loop":false},{"name":"w_cute_laugh01_f","loop":false},{"name":"w_cute_listen01_f","loop":false},{"name":"w_cute_sad01_f","loop":false},{"name":"w_cute_surprise01_f","loop":false},{"name":"w_cute_talk01_f","loop":false},{"name":"w_emu_run02_f","loop":false},{"name":"w_happy_angry01_f","loop":false},{"name":"w_happy_angry02_f","loop":false},{"name":"w_happy_doubt01_f","loop":false},{"name":"w_happy_doubt02_f","loop":false},{"name":"w_happy_laugh01_f","loop":false},{"name":"w_happy_listen01_f","loop":false},{"name":"w_happy_sad01_f","loop":false},{"name":"w_happy_surprise01_f","loop":false},{"name":"w_happy_talk01_f","loop":false},{"name":"w_normal_laugh01_f","loop":false},{"name":"w_normal_listen01_f","loop":false},{"name":"w_normal_talk01_f","loop":false},{"name":"w_normal_walk01_b","loop":false},{"name":"w_normal_walk01_f","loop":false},{"name":"w_pure_angry01_f","loop":false},{"name":"w_pure_doubt01_f","loop":false},{"name":"w_pure_laugh01_f","loop":false},{"name":"w_pure_listen01_f","loop":false},{"name":"w_pure_sad01_f","loop":false},{"name":"w_pure_surprise01_f","loop":false},{"name":"w_pure_talk01_f","loop":false},{"name":"z_mesh_templete","loop":false},{"name":"z_test_F_negi01","loop":false}],"voices":[{"voice":"","text":"既见未来，为何不buy"}]}}
+        });
+    </script>
+    <!-- hexo injector body_end end --></body></html>

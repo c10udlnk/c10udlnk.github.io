@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>c10udlnk&#39;s Blog</title>
+  
+  
+  <link href="https://c10udlnk.top/atom.xml" rel="self"/>
+  
+  <link href="https://c10udlnk.top/"/>
+  <updated>2024-09-19T06:40:55.879Z</updated>
+  <id>https://c10udlnk.top/</id>
+  
+  <author>
+    <name>c10udlnk</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Melody主题Slide的bug修复和魔改系列</title>
+    <link href="https://c10udlnk.top/p/blogsFor-hexo-fixedSlideBugsInMelody/"/>
+    <id>https://c10udlnk.top/p/blogsFor-hexo-fixedSlideBugsInMelody/</id>
+    <published>2022-07-06T07:31:59.000Z</published>
+    <updated>2024-09-19T06:40:55.879Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天刚好又碰到一个Melody主题Slide页面嵌入的bug，干脆就把之前碰到的做个集合好了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="折腾经历" scheme="https://c10udlnk.top/tags/%E6%8A%98%E8%85%BE%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2022Sloth选拔赛</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022SlothTrial/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022SlothTrial/</id>
+    <published>2022-05-10T08:39:58.000Z</published>
+    <updated>2024-09-19T06:40:55.881Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上周末的Sloth选拔赛，趁着还有余温先来补补自出题的wp。&lt;/p&gt;
+&lt;p&gt;整个RE部分只有checkininin有一个解，大哭，逆向手岌岌可危（&lt;/p&gt;
+&lt;p&gt;仓库传送门：&lt;a href=&quot;https://github.com/scnu-sloth/hsctf-2022-trial&quot;&gt;scnu-sloth&amp;#x2F;hsctf-2022-trial: Sloth 2022 选拔赛 题目及wp&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="华师CTF" scheme="https://c10udlnk.top/tags/%E5%8D%8E%E5%B8%88CTF/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2022D^3CTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022D3CTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022D3CTF/</id>
+    <published>2022-03-09T00:31:51.000Z</published>
+    <updated>2024-09-19T06:40:55.887Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt; 上周末因为各种原因没怎么打hhh，唯一在有空嗑的题都是赛后一个小时内解出来的🤣（没看wp，瞄了一眼解题人数好像是简单题xd。&lt;/p&gt;
+&lt;p&gt;薛定谔的音游题复现，咕——&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2022SUSCTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022SUSCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022SUSCTF/</id>
+    <published>2022-03-02T00:40:12.000Z</published>
+    <updated>2024-09-19T06:40:55.883Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;逆向手终于来整理逆向啦（喜大普奔，可能会有其他两个逆向题的复现+1？&lt;/p&gt;
+&lt;p&gt;有幸苟在Top14，队友们tql！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2022TQLCTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022TQLCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022TQLCTF/</id>
+    <published>2022-02-23T01:02:21.000Z</published>
+    <updated>2024-09-19T06:40:55.886Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前天打完的TQLCTF，来总结一下自己独立输出的几个题（可能会有其他题的复现？咕咕咕了x&lt;/p&gt;
+&lt;p&gt;队友们tqltql！有被带飞到！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】HWS计划2022硬件安全冬令营线上选拔赛</title>
+    <link href="https://c10udlnk.top/p/wpFor-2022HWSTrial/"/>
+    <id>https://c10udlnk.top/p/wpFor-2022HWSTrial/</id>
+    <published>2022-01-25T14:18:45.000Z</published>
+    <updated>2024-09-19T06:40:55.889Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天打完的选拔赛，超级无敌难得过来及时更新（被好多师傅催来着哈哈哈，ddl第一生产力。&lt;/p&gt;
+&lt;p&gt;只能说这次比赛太幸运了，能碰到这么多逆向题，&lt;del&gt;甚至还有两道流落在Misc和Crypto的apk&lt;/del&gt;，相对来说没什么固件题（固件好菜，RW嗑了八个多小时没嗑出来TAT），那肯定开冲√&lt;/p&gt;
+&lt;p&gt;感谢师傅们手下留情╰(*°▽°*)╯&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="PWN" scheme="https://c10udlnk.top/tags/PWN/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+    <category term="Crypto" scheme="https://c10udlnk.top/tags/Crypto/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reading Code rapidly</title>
+    <link href="https://c10udlnk.top/p/blogsFor-ComSec-readingCodes/"/>
+    <id>https://c10udlnk.top/p/blogsFor-ComSec-readingCodes/</id>
+    <published>2021-11-23T11:56:07.000Z</published>
+    <updated>2024-09-19T06:40:55.887Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;style type=&quot;text/css&quot;&gt;
+    .reveal .left_items{ 
+        text-align: left;
+        font-size: 28px;
+    }
+    .reveal .subtitles{
+        t</summary>
+      
+    
+    
+    
+    <category term="Train" scheme="https://c10udlnk.top/categories/Train/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021Sloth选拔赛</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021SlothTrial/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021SlothTrial/</id>
+    <published>2021-11-15T14:05:36.000Z</published>
+    <updated>2024-09-19T06:40:55.890Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;良心发现来把几百年前选拔赛的wp补了，毕竟热身赛有放fufu那道misc（逃&lt;/p&gt;
+&lt;p&gt;放个仓库传送门：&lt;a href=&quot;https://github.com/scnu-sloth/hsctf-2021-trial&quot;&gt;scnu-sloth&amp;#x2F;hsctf-2021-trial: ISCNU x Sloth 网络安全研究组 2021 选拔赛 题目及wp&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="华师CTF" scheme="https://c10udlnk.top/tags/%E5%8D%8E%E5%B8%88CTF/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在你的博客里放一只可爱的Spine Model吧~</title>
+    <link href="https://c10udlnk.top/p/blogsFor-hexo-puttingLivelySpineModels/"/>
+    <id>https://c10udlnk.top/p/blogsFor-hexo-puttingLivelySpineModels/</id>
+    <published>2021-11-01T07:30:47.000Z</published>
+    <updated>2024-09-19T06:40:55.883Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一切的开始 &lt;del&gt;万恶之源&lt;/del&gt; 是某Tover说想在他博客上养一只Miku，还想要小的，然后……本着自己的npy能宠一定宠的原则，就去把pjsk资源解包+解密了（具体请自己折腾，版权问题本文不提供现成资源）。&lt;/p&gt;
+&lt;p&gt;然而没想到解出来发现小Miku的模型是用spine做的，而&lt;strong&gt;能找到的绝大多数文章都是在hexo里添加live2d而不是spine&lt;/strong&gt;，于是开始了漫漫魔改路。得益于之前的魔改把Melody主题的结构摸清楚了，才能知道哪些代码放哪里怎么用hhh（折腾只有一次和无数次？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="折腾经历" scheme="https://c10udlnk.top/tags/%E6%8A%98%E8%85%BE%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reverse for fun =v=</title>
+    <link href="https://c10udlnk.top/p/trainFor-REfreshman/"/>
+    <id>https://c10udlnk.top/p/trainFor-REfreshman/</id>
+    <published>2021-10-22T11:36:51.000Z</published>
+    <updated>2024-09-19T06:50:54.781Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;style type=&quot;text/css&quot;&gt;
+    .reveal .left_items{ 
+        text-align: left;
+        font-size: 28px;
+    }
+    .reveal .subtitles{
+        t</summary>
+      
+    
+    
+    
+    <category term="Train" scheme="https://c10udlnk.top/categories/Train/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021绿城杯</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021lcb/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021lcb/</id>
+    <published>2021-10-07T06:36:25.000Z</published>
+    <updated>2024-09-19T06:40:55.885Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;终于良心发现回来水wp的博客了&amp;#x3D; &amp;#x3D;&lt;/p&gt;
+&lt;p&gt;做完RE以后跑去做Misc结果到比赛结束都没做出来，早知道就提早下班了（bushi，有LSB隐写的wp请速dd我T.T&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL/WSL2迁移笔记</title>
+    <link href="https://c10udlnk.top/p/blogsFor-migrating-wsl/"/>
+    <id>https://c10udlnk.top/p/blogsFor-migrating-wsl/</id>
+    <published>2021-09-24T08:20:35.000Z</published>
+    <updated>2024-09-19T06:40:55.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;WSL默认把虚拟磁盘装在C盘，所以很容易导致C盘爆炸&amp;#x3D; &amp;#x3D;&lt;/p&gt;
+&lt;p&gt;为了帮C盘减轻负担，于是有了这篇WSL的迁移笔记。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="折腾经历" scheme="https://c10udlnk.top/tags/%E6%8A%98%E8%85%BE%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021DASCTF July X CBCTF 4th</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021JulyDASCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021JulyDASCTF/</id>
+    <published>2021-08-01T12:41:56.000Z</published>
+    <updated>2024-09-19T06:40:55.882Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;第一天打dfjk去了，打完回来看发现逆向一道Golang一道lua，不太想啃，于是干脆光速转行做杂项&amp;#x3D; &amp;#x3D;&lt;/p&gt;
+&lt;p&gt;也没想到能差一题就ak杂项了（逃。学到很多，顺手总结总结（RE手要跑路啦）。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;回头有空复现一下剩下的那道杂项和那个lua逆向（咕咕咕&lt;/del&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+    <category term="Crypto" scheme="https://c10udlnk.top/tags/Crypto/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Melody主题的背景代码雨特效</title>
+    <link href="https://c10udlnk.top/p/blogsFor-hexo-addingDigitalRainInMelody/"/>
+    <id>https://c10udlnk.top/p/blogsFor-hexo-addingDigitalRainInMelody/</id>
+    <published>2021-07-14T07:15:20.000Z</published>
+    <updated>2024-09-19T06:40:55.885Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一个多月前折腾完的melody主题上的背景代码雨特效，今天终于良心发现来填坑了）&lt;/p&gt;
+&lt;p&gt;顺便吐槽一句melody相关的资料真的好少，完全靠自己看主题源码+和其他主题对比来摸索，这大概就是开荒的痛并快乐着吧T.T。（形成用户生态是有多重要.jpg&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="折腾经历" scheme="https://c10udlnk.top/tags/%E6%8A%98%E8%85%BE%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021强网杯-ExtremelySlow</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021qwb/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021qwb/</id>
+    <published>2021-07-12T07:05:33.000Z</published>
+    <updated>2024-09-19T06:40:55.879Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;继续填坑ing，是强网杯的一道Misc题&lt;code&gt;ExtremelySlow&lt;/code&gt;，跟npy合力做的一道杂项题（双双转行Misc手就离谱x），当时捞了个七血，可惜这个题最后被打穿了（&lt;/p&gt;
+&lt;p&gt;赛中的大概思路就是把传的一个一个字节按顺序提取出来并复原出传输的文件，因为两个工具都不兼容python3.10所以直接手逆pyc+手抠隐写字节码，最后拿到flag。&lt;/p&gt;
+&lt;p&gt;这里还进行了一点赛后改进，包括魔改stegosaurus兼容到3.10。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021CISCN华南赛区分区赛-BadGameAndCrazy</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021CISCNsemifinal/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021CISCNsemifinal/</id>
+    <published>2021-07-09T08:22:05.000Z</published>
+    <updated>2024-09-19T06:40:55.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;考完期末就来填一下坑，顺便总结一下逆向题目中的密码算法识别，是分区赛搞了大半天磕出来的一道逆向题&lt;code&gt;BadGameAndCrazy&lt;/code&gt;，这道题真的是&lt;strong&gt;各种原装密码算法的大杂烩&lt;/strong&gt;，非常值得总结（终于不是MISC了Ohhhhh，&lt;del&gt;虽然是因为没有杂项题可以做&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;做完以后以为这个题这么简单会被打穿的（毕竟就是堆了一堆密码算法+爆破密钥这样，自己推完密码算法以后才发现hint直接给出来了就离谱555555），结果出乎意料地跟一血失之交臂拿了二血，最后也只是几个队解了而已（隐约记得是五六个队来着&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【CSAPP】以CTFer的方式打开BufferLab</title>
+    <link href="https://c10udlnk.top/p/csappLAB-BufferLab/"/>
+    <id>https://c10udlnk.top/p/csappLAB-BufferLab/</id>
+    <published>2021-06-21T08:43:30.000Z</published>
+    <updated>2024-09-19T06:40:55.885Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;[WARNING]&lt;/strong&gt; 本文是对CSAPP附带的Buffer Lab的究极指北，PWN小白趁机来练习使用pwntools和gdb &amp;amp;&amp;amp; 用老朋友IDA查看程序逻辑（可以说是抄小路了x。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CSAPP_lab" scheme="https://c10udlnk.top/categories/CSAPP-lab/"/>
+    
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="CSAPP" scheme="https://c10udlnk.top/tags/CSAPP/"/>
+    
+    <category term="PWN" scheme="https://c10udlnk.top/tags/PWN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021春秋杯-BabySteg</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021chunqiucap-BabySteg/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021chunqiucap-BabySteg/</id>
+    <published>2021-05-30T03:20:03.000Z</published>
+    <updated>2024-09-19T06:40:55.886Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这次个人赛难度真的undingable，就只能做做杂项苟着这样子，re手转行做misc警告（&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021ISCC</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021iscc/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021iscc/</id>
+    <published>2021-05-26T03:41:56.000Z</published>
+    <updated>2024-09-19T06:40:55.889Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ISCC的wp，没想着打这比赛，就是单纯来看看题嘿嘿 :-)&lt;/p&gt;
+&lt;p&gt;后面太忙就没怎么看了，下了题目有空回来做一下。老规矩，标了TO DO的是还没写完的（。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021CISCN初赛</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021CISCNprelude/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021CISCNprelude/</id>
+    <published>2021-05-22T13:55:04.000Z</published>
+    <updated>2024-09-19T06:40:55.891Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上周末打的CISCN初赛，发现没整理wp来火速补上。&lt;/p&gt;
+&lt;p&gt;这次RE属实拉跨，就做了俩签到题，做完就去摸MISC了，冲刺卷还能摸出个robot是我没想到的。（以及想看零解HMI的wp，翻了半天没翻到check我可好奇死了x&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE套路 - 关于逆向常客花指令</title>
+    <link href="https://c10udlnk.top/p/reSkillsOn-ALLaboutJunkCode/"/>
+    <id>https://c10udlnk.top/p/reSkillsOn-ALLaboutJunkCode/</id>
+    <published>2021-05-18T05:24:22.000Z</published>
+    <updated>2024-09-19T06:40:55.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;此文用来整理和分析做题过程中所遇到的那些花指令，必然持续更新。&lt;/p&gt;
+&lt;p&gt;关于花指令的介绍见：&lt;a href=&quot;https://wizardforcel.gitbooks.io/re-for-beginners/content/Part-III/Chapter-50.html&quot;&gt;花指令 · 逆向工程入门指南&lt;/a&gt;，这里只总结例子啦~&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021红帽杯-PicPic</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021RedHat-PicPic/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021RedHat-PicPic/</id>
+    <published>2021-05-09T14:42:24.000Z</published>
+    <updated>2024-09-19T06:40:55.887Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记一道折腾了我大半天的题，今天红帽杯Misc的PicPic，最后六点多一点做出来了（比赛六点结束😭血亏323pt）。感觉做这个题的时候把所有关于fft代码实现的博客和加解密相关的论文都翻了个遍，短时间内应该不想再看到它了（&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Misc" scheme="https://c10udlnk.top/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的自定义多交互live2d折腾经历</title>
+    <link href="https://c10udlnk.top/p/blogsFor-My-twisty-experience-on-Live2d/"/>
+    <id>https://c10udlnk.top/p/blogsFor-My-twisty-experience-on-Live2d/</id>
+    <published>2021-05-02T13:35:59.000Z</published>
+    <updated>2024-09-19T06:40:55.891Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在&lt;a href=&quot;https://m0d1.top/&quot;&gt;@m0d1&lt;/a&gt; 大佬的督促(?)下有了这篇复盘。不过因为可能很多地方讲得不全面+理解不够深入，故不打算把这篇当成是教程&amp;#x2F;指南，那就算是一个指北吧&amp;#x3D; &amp;#x3D;&lt;/p&gt;
+&lt;p&gt;（划重点：不是教程！不是教程！不是教程！ &lt;/p&gt;
+&lt;p&gt;省流简介：机缘巧合之下看到了&lt;a href=&quot;https://github.com/stevenjoezhang/live2d-widget&quot;&gt;stevenjoezhang&amp;#x2F;live2d-widget&lt;/a&gt;的多交互live2d，有点心动但是模型太少不太合口味；又是一个机缘巧合之下看到了&lt;a href=&quot;https://github.com/Eikanya/Live2d-model&quot;&gt;Eikanya&amp;#x2F;Live2d-model&lt;/a&gt;中有收集解包食物语的live2d模型，发现了本命菜，顿时动力++，感觉能结合live2d-widget提供的cdn&amp;#x2F;api接口来将心仪的模型导入进去，折腾两个晚上终于成功了呜呜呜呜呜。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+    <category term="折腾经历" scheme="https://c10udlnk.top/tags/%E6%8A%98%E8%85%BE%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021MAR-DASCTF_逆向</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021MARDASCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021MARDASCTF/</id>
+    <published>2021-03-28T06:41:04.000Z</published>
+    <updated>2024-09-19T06:40:55.885Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天打完的MAR DASCTF，来复个盘~&lt;/p&gt;
+&lt;p&gt;不过就re做了3&amp;#x2F;4然后有事提前开溜了hhh，拿了drinkSomeTea和replace的三血心满意足（蜜汁三血执念。&lt;/p&gt;
+&lt;p&gt;感觉这回的出题人好喜欢TEA啊（正好最近在整理加解密算法），就是TEA和XTEA都出了却不带XXTEA玩有点可惜&amp;#x2F;doge。&lt;/p&gt;
+&lt;p&gt;扫雷也复盘完了！好耶！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2021V&amp;NCTF</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021VNCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021VNCTF/</id>
+    <published>2021-03-14T13:36:11.000Z</published>
+    <updated>2024-09-19T06:40:55.886Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天打完的V&amp;amp;NCTF公开赛，做题的时候没记过程，现在来复现一下。&lt;/p&gt;
+&lt;p&gt;最后排名Top 18，三道RE+两道杂项（wp没啥可放的hhh）+一道web，感觉re题目还是挺好的，难度适中点赞，尤其pc逆向还是两个算you法xi题，纯模拟好评，算法题不好评（x。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="Web" scheme="https://c10udlnk.top/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何从无到有搭建属于你的hexo博客</title>
+    <link href="https://c10udlnk.top/p/blogsFor-Enjoying-hexo/"/>
+    <id>https://c10udlnk.top/p/blogsFor-Enjoying-hexo/</id>
+    <published>2021-03-06T01:11:44.000Z</published>
+    <updated>2024-09-19T06:40:55.884Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;文如标题，如何利用从无到有搭建属于你的hexo博客，完全面向小白的喂饭式指南。&lt;/p&gt;
+&lt;p&gt;其实这类入门指南网上一搜一大把，这就是我一开始没有边装边记录的原因（可能就跟别的文章完全一致了），现在用了一段hexo以后顺带整合一些技巧，这篇Blog最重要的原因还是给网络部的小伙伴们备课吧。&lt;/p&gt;
+&lt;p&gt;一边备课一边水Blog，计划通hhhh。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】HWS计划2021硬件安全冬令营线上选拔赛</title>
+    <link href="https://c10udlnk.top/p/wpFor-2021HWSTrial/"/>
+    <id>https://c10udlnk.top/p/wpFor-2021HWSTrial/</id>
+    <published>2021-02-02T01:59:44.000Z</published>
+    <updated>2024-09-19T06:40:55.881Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;逆向手在夹缝中艰难求生系列。&lt;/p&gt;
+&lt;p&gt;这篇真的存粹是做题笔记了，对内核驱动啥的不太懂，pwn也不会，能做出来的题都是硬逆出来的（&lt;/p&gt;
+&lt;p&gt;childre最后死活没整出来，后来看大佬的wp才知道对子进程有修改(。)呜呜呜多进程真的不太会啊。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2020XCTF_逆向</title>
+    <link href="https://c10udlnk.top/p/wpFor-2020XCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2020XCTF/</id>
+    <published>2020-12-29T04:07:24.000Z</published>
+    <updated>2024-09-19T06:40:55.880Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前几天的XCTF最后一场终于打完了，三场比赛下来对逆向部分的大概感觉是从第一场的啥都不会做到后来的终于能有参与度了TvT，至少后两场的题目都是pc逆向，虽然特殊架构但好歹能做（tcl&lt;/p&gt;
+&lt;p&gt;本文是三场XCTF所有逆向题目的wp+复现整理。赛中拿到了7&amp;#x2F;10的flag，很多是跟着队里的大佬做出来的（tqltql），这边就试着独立复现一下，至少打完应该长长记性（&lt;/p&gt;
+&lt;p&gt;官方wp出了，借助wp提供的思路复现填坑√。（9&amp;#x2F;10）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2020ChaMd5圣诞题</title>
+    <link href="https://c10udlnk.top/p/wpFor-2020chamd5XMAS/"/>
+    <id>https://c10udlnk.top/p/wpFor-2020chamd5XMAS/</id>
+    <published>2020-12-28T11:43:34.000Z</published>
+    <updated>2024-09-19T06:40:55.878Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;圣诞莫得安排于是跑去做了一下ChaMd5的圣诞题，不得不说让我这个逆向手很有做misc的成就感哈哈哈（误）。既然活动都结束了就来放一下wp吧，顺便整理一下批量处理文件的方法（pyinstaller批量解包+批量补文件头转格式+python和命令行的批量自动交互）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【从无到有】qira在Ubuntu 18.04下的安装&amp;使用</title>
+    <link href="https://c10udlnk.top/p/toolsOf-Qira-on-ubuntu-1804/"/>
+    <id>https://c10udlnk.top/p/toolsOf-Qira-on-ubuntu-1804/</id>
+    <published>2020-12-19T06:52:31.000Z</published>
+    <updated>2024-09-19T06:40:55.886Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;有大佬安利了qira这款可回溯的调试器，于是试图在wsl上装（ubuntu 18.04），无奈在18.04上安装时的报错基本没找到什么有效的解决方法（甚至还找到明确说18.04装不了的说法），又懒得装16.04，于是只好试图自己摸索解决问题，幸好通过硬看源码解决了各种坑hhhh。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Tools" scheme="https://c10udlnk.top/categories/Tools/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE套路/从EASYHOOK学inline hook</title>
+    <link href="https://c10udlnk.top/p/reSkillsOn-Inline-hook/"/>
+    <id>https://c10udlnk.top/p/reSkillsOn-Inline-hook/</id>
+    <published>2020-12-16T12:46:47.000Z</published>
+    <updated>2024-09-19T06:40:55.883Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文通过攻防世界Reverse答题进阶区的一道EASYHOOK，大致了解一下inline hook的流程。&lt;/p&gt;
+&lt;p&gt;P.S. 查了一下wp大多是直接动态调试看的&amp;#x3D; &amp;#x3D;，感觉并不能很深刻地理解hook。看流程其实有两个方法，除了动态识别流程以外，还可以静态分析流程（虽然比较麻烦但能更容易理解？实战的时候还是直接动调吧）。&lt;/p&gt;
+&lt;p&gt;P.S.S. 本文并非wp，只是记录关键hook部分罢了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE套路/从crackme学nsPack手动脱壳</title>
+    <link href="https://c10udlnk.top/p/reSkillsOn-Unpack-from-nsPack/"/>
+    <id>https://c10udlnk.top/p/reSkillsOn-Unpack-from-nsPack/</id>
+    <published>2020-12-16T11:12:44.000Z</published>
+    <updated>2024-09-19T06:40:55.891Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;刷题总得学到什么，不能刷完就忘了怎么做了（。），于是有了这个RE套路的子系列——从例题学技巧。&lt;/p&gt;
+&lt;p&gt;本文通过攻防世界Reverse答题进阶区的一道crackme，记录nsPack北斗壳的手工脱壳流程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE套路 - 关于使用IDA 7.0前端进行的动态调试</title>
+    <link href="https://c10udlnk.top/p/reSkillsOn-Debugging/"/>
+    <id>https://c10udlnk.top/p/reSkillsOn-Debugging/</id>
+    <published>2020-12-14T11:02:24.000Z</published>
+    <updated>2024-09-19T06:40:55.891Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;整理一下&lt;strong&gt;IDA 7.0&lt;/strong&gt;下几种常见文件类型的动态调试。&lt;/p&gt;
+&lt;p&gt;环境是win10+WSL2（WSL1调Linux文件一直有bug搞不定&amp;#x3D; &amp;#x3D;建议升2）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>历年真题刷题小记</title>
+    <link href="https://c10udlnk.top/p/logFor-RealProbs-in-adworld-XCTF/"/>
+    <id>https://c10udlnk.top/p/logFor-RealProbs-in-adworld-XCTF/</id>
+    <published>2020-12-09T00:35:39.000Z</published>
+    <updated>2024-09-19T06:40:55.884Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;是收录在攻防世界真题区的刷题记录，在网上找到的wp大多是各战队比赛时的简单思路，没有很具体的做法，所以想着写个刷题小记当伪wp，顺便也想趁机给自己总结和记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="刷题log" scheme="https://c10udlnk.top/categories/%E5%88%B7%E9%A2%98log/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE套路 - 关于pyinstaller打包文件的复原</title>
+    <link href="https://c10udlnk.top/p/reSkillsOn-Pyinstaller-extracted-to-python/"/>
+    <id>https://c10udlnk.top/p/reSkillsOn-Pyinstaller-extracted-to-python/</id>
+    <published>2020-12-04T11:09:38.000Z</published>
+    <updated>2024-09-19T06:40:55.883Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;因为见到好多re题都是这个图标 ↓ 的exe，于是决定总结一下这种python题目的套路（其实是怕太久没遇到就忘了怎么做了。&lt;/p&gt;
+&lt;p&gt;P.S. 前几天XCTF遇到一道极其少见的pyinstaller打包elf的逆向题，于是对本文进行了更新，添加解包elf内容，并更名为”关于pyinstaller打包文件的复原”，记录pyinstaller打包后的exe和elf如何解包-&amp;gt;反编译-&amp;gt;获得py源码的过程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Skills" scheme="https://c10udlnk.top/categories/Skills/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="u5eful" scheme="https://c10udlnk.top/tags/u5eful/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【从无到有】Pintool安装&amp;使用</title>
+    <link href="https://c10udlnk.top/p/toolsOf-Pintool/"/>
+    <id>https://c10udlnk.top/p/toolsOf-Pintool/</id>
+    <published>2020-11-27T11:03:08.000Z</published>
+    <updated>2024-09-19T06:40:55.882Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;是一套完整的Pintool入门流程，之前说坑多没装上是因为用的还只是wsl+没有虚拟机，现在（折腾完wsl2+装了vmware以后）终于可以用上Pintool了！&lt;/p&gt;
+&lt;p&gt;亲测&lt;code&gt;wsl2&lt;/code&gt;和&lt;code&gt;Kali-linux 2020.2&lt;/code&gt;都能成功（且步骤相同&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Tools" scheme="https://c10udlnk.top/categories/Tools/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【wp】2020HSCTF_PC逆向</title>
+    <link href="https://c10udlnk.top/p/wpFor-2020HSCTF/"/>
+    <id>https://c10udlnk.top/p/wpFor-2020HSCTF/</id>
+    <published>2020-11-27T05:46:00.000Z</published>
+    <updated>2024-09-19T06:40:55.890Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;是HSCTF2020新生赛的PC逆向部分的wp，尽量往详细写啦，希望能给师傅们提供良好的复现体验。&lt;/p&gt;
+&lt;p&gt;本次Reverse基本都为送分题，旨在&lt;strong&gt;科普和引导&lt;/strong&gt;逆向入门&amp;#x3D;v&amp;#x3D;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Write up" scheme="https://c10udlnk.top/categories/Write-up/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="wp" scheme="https://c10udlnk.top/tags/wp/"/>
+    
+    <category term="华师CTF" scheme="https://c10udlnk.top/tags/%E5%8D%8E%E5%B8%88CTF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>angr_ctf刷题小记</title>
+    <link href="https://c10udlnk.top/p/logFor-Angr-CTF/"/>
+    <id>https://c10udlnk.top/p/logFor-Angr-CTF/</id>
+    <published>2020-11-11T00:43:55.000Z</published>
+    <updated>2024-09-19T06:40:55.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;（&amp;amp;&amp;amp;angr入门？&lt;/p&gt;
+&lt;p&gt;超级无敌久之前划水的时候发现了一个可以用来逐步学习angr的题库：&lt;a href=&quot;https://github.com/jakespringer/angr_ctf/&quot;&gt;angr_ctf&lt;/a&gt;。&lt;br&gt;刚好angr写脚本不太熟练，故开始（约等于从零开始的）学习并做下记录 &lt;del&gt;（方便后人踩坑&lt;/del&gt; 。&lt;/p&gt;
+&lt;p&gt;持续更新ing…&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="刷题log" scheme="https://c10udlnk.top/categories/%E5%88%B7%E9%A2%98log/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【从无到有】配置IDA7.0</title>
+    <link href="https://c10udlnk.top/p/toolsOf-IDAold/"/>
+    <id>https://c10udlnk.top/p/toolsOf-IDAold/</id>
+    <published>2020-11-10T13:54:51.000Z</published>
+    <updated>2024-09-19T06:40:55.878Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在折腾新机，旧机有些东西没有备份（。）导致很多东西要重装一遍，顺便记录一下IDA及各插件的安装方法。&lt;/p&gt;
+&lt;p&gt;环境是win10，IDA版本为v7.0（&lt;a href=&quot;https://www.52pojie.cn/thread-675251-1-1.html&quot;&gt;IDA Pro 7.0 绿色版&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;每个插件带一个下载地址&amp;amp;&amp;amp;安装方法，features摘自各个项目的主页&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Tools" scheme="https://c10udlnk.top/categories/Tools/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CTF：从0到1 -&gt; zero2one</title>
+    <link href="https://c10udlnk.top/p/blogsFor-CTF-Starters/"/>
+    <id>https://c10udlnk.top/p/blogsFor-CTF-Starters/</id>
+    <published>2020-11-10T09:05:20.000Z</published>
+    <updated>2024-09-19T06:40:55.892Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本篇blog首发&lt;strong&gt;0xffff论坛&lt;/strong&gt;（&lt;a href=&quot;https://0xffff.one/d/769&quot;&gt;CTF：从0到1-&amp;gt;zero2one - 0xFFFF&lt;/a&gt;），中间有各位大佬补充，集成在个人博客这里。是一点CTF的入门心得吧，希望能给想玩CTF的小朋友们一点帮助。&lt;/p&gt;
+&lt;p&gt;这里还只是个划水摸鱼的萌新（捂头）有什么写错的地方烦请大佬们多多补充谢谢0v0&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+    <category term="Reverse" scheme="https://c10udlnk.top/tags/Reverse/"/>
+    
+    <category term="zero2one/入门" scheme="https://c10udlnk.top/tags/zero2one-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>-=-=-= About Me -=-=-=</title>
+    <link href="https://c10udlnk.top/p/blogsFor-AboutMe-Pinned/"/>
+    <id>https://c10udlnk.top/p/blogsFor-AboutMe-Pinned/</id>
+    <published>2020-11-10T08:05:20.000Z</published>
+    <updated>2024-09-19T06:40:55.883Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;感谢看到这个小基地的朋友们！0v0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;gt; 这里是努力修行ing的CTF逆向手 &lt;em&gt;c10udlnk&lt;/em&gt;  &amp;lt;&lt;/p&gt;
+&lt;p&gt;&amp;gt; 也是一个网络安全方向的SCNUer &amp;lt;&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Others" scheme="https://c10udlnk.top/categories/Others/"/>
+    
+    
+    <category term="CTF" scheme="https://c10udlnk.top/tags/CTF/"/>
+    
+  </entry>
+  
+</feed>
